@@ -1,9 +1,8 @@
 <template>
-  <div>
+  <div class="row">
     <section-one></section-one>
     <about></about>
     <projects></projects>
-
   </div>
 </template>
 

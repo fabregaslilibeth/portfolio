@@ -1,20 +1,27 @@
 <template>
-  <section id="contact">
+  <section class="footer text-white p-4">
 
-    <div class="col-lg-12 col-sm-12 footer">
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#skills">About</a></li>
-        <li><a href="#projects">Projects</a></li>
+    <nav class="navbar navbar-expand-lg">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item active">
+          <a class="nav-link text-white" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">Projects</a>
+        </li>
       </ul>
-      <p>Lilibeth Fabregas || CPA. Web Developer. &copy; 2019 </p>
-      <p>fabregaslilibeth@gmail.com || +63943-071-3628</p>
+    </nav>
 
-      <div>
-        <p>Disclaimer: All photos in the projects are not mine. </p>
-      </div>
+    <p>Lilibeth Fabregas || CPA. Web Developer. &copy; 2019 </p>
+    <p>fabregaslilibeth@gmail.com || +63943-071-3628</p>
 
+    <div>
+      <p>Disclaimer: All photos in the projects are not mine. </p>
     </div>
+
   </section>
 </template>
 
@@ -23,3 +30,10 @@ export default {
   name: 'Footer'
 }
 </script>
+
+<style scoped lang="scss">
+  .footer {
+    font-size: 12px;
+    background: #15211c;
+  }
+</style>
