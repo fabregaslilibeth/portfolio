@@ -1,29 +1,27 @@
 <template>
-  <div class="hello">
-    <h1>Project</h1>
+  <div>
+    {{ project.name }}
+    {{ project.description }}
   </div>
 </template>
 
 <script>
+import projects from "../projects";
 export default {
   name: 'Project',
+  data () {
+    return {
+      project: []
+    }
+  },
+  mounted () {
+    this.project = projects.find(project =>
+      project.name === this.$route.params.name
+    )
+  },
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+
 </style>

@@ -1,37 +1,107 @@
 <template>
   <section class="projects col-12" id="projects">
     <h1>PROJECTS</h1>
-    <div class="container">
-      <div class="row my-4">
 
-        <ul class="nav nav-pills mb-3 text-center mx-auto col-12" id="pills-tab" role="tablist">
-          <li class="nav-item">
-            <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#laravel" role="tab" aria-controls="laravel" aria-selected="true">Laravel</a>
+    <div class="col-11 mx-auto mt-0 box-shadow">
+      <div class="row nav-row d-flex border-bottom m-2 pt-2">
+        <ul class="nav nav-pills col-12 mx-auto w-100 p-0" id="profileTab" role="tablist">
+          <li class="nav-item col-3 border-right px-0 border-left">
+            <a class="nav-link active text-center" id="all-tab" data-toggle="pill" href="#all"
+               role="tab" aria-controls="all" aria-selected="true">
+              <p><i class="fab fa-laravel h4"></i></p>
+              <p class="sub-header mt-2 mb-0" @click.prevent="getAllProjects">ALL</p>
+            </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#vue" role="tab" aria-controls="vue" aria-selected="false">Vue</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#react" role="tab" aria-controls="react" aria-selected="false">React</a>
+          <li class="nav-item col-3 border-right px-0 border-left" v-for="category in categories" :key="category.name">
+            <a class="nav-link text-center" data-toggle="pill" href="#"
+               role="tab" :aria-controls="category.name" aria-selected="true"
+            @click.prevent="filter(category.name)">
+              <p><i class="fab fa-laravel h4"></i></p>
+              <p class="sub-header mt-2 mb-0">{{  category.name }}</p>
+            </a>
           </li>
         </ul>
-
-        <div class="tab-content" id="pills-tabContent">
-
-
-        </div>
       </div>
 
-    </div> <!-- end of container -->
+      <div class="row">
+        <div class="col-12 tab-content mx-auto" id="pills-profileContent">
+          <div class="tab-pane fade show active mb-3" id="all" role="tabpanel"
+               aria-labelledby="all-tab">
+            <div class="row justify-content-center">
+
+              <div class="col-3 p-4" v-for="project in filteredProjects" :key="project.name">
+                  <Project :project="project" />
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 </template>
 
 <script>
+import Project from "../components/Project";
+import projects from "../projects";
+
 export default {
   name: 'Projects',
+  components: { Project },
+  data() {
+    return {
+      categories: [
+        {name: 'laravel'},
+        {name: 'vue'},
+        {name: 'react'},
+      ],
+      projects: projects,
+      filteredProjects: []
+    }
+  },
+  mounted() {
+    this.getAllProjects()
+  },
+  methods: {
+    getAllProjects () {
+      this.filteredProjects = this.projects
+    },
+    filter (category) {
+      this.filteredProjects = []
+      this.projects.forEach(project => {
+        if (project.category.includes(category.toLowerCase())) {
+          this.filteredProjects.push(project)
+        }
+      })
+    }
+  }
 }
 </script>
 
 <style scoped lang="scss">
+.projects {
+  min-height: 100vh;
+}
 
+.box-shadow {
+  border: 1px solid white !important;
+}
+
+.border-bottom {
+  border-bottom: 1px solid white !important;
+}
+
+.border-right {
+  border-right: 1px solid white !important;
+}
+
+.nav-link {
+  outline: none;
+}
+
+.nav-link.active {
+  background-color: transparent !important;
+  border-bottom: none;
+  border-right: none;
+}
 </style>
