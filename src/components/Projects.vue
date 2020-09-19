@@ -8,15 +8,13 @@
           <li class="nav-item col-3 border-right px-0 border-left">
             <a class="nav-link active text-center" id="all-tab" data-toggle="pill" href="#all"
                role="tab" aria-controls="all" aria-selected="true">
-              <p><i class="fab fa-laravel h4"></i></p>
-              <p class="sub-header mt-2 mb-0" @click.prevent="getAllProjects">ALL</p>
+              <p class="sub-header my-2 mb-0" @click.prevent="getAllProjects">ALL</p>
             </a>
           </li>
           <li class="nav-item col-3 border-right px-0 border-left" v-for="category in categories" :key="category.name">
             <a class="nav-link text-center" data-toggle="pill" href="#"
                role="tab" :aria-controls="category.name" aria-selected="true"
-            @click.prevent="filter(category.name)">
-              <p><i class="fab fa-laravel h4"></i></p>
+              @click.prevent="filter(category.name)">
               <p class="sub-header mt-2 mb-0">{{  category.name }}</p>
             </a>
           </li>
@@ -29,7 +27,7 @@
                aria-labelledby="all-tab">
             <div class="row justify-content-center">
 
-              <div class="col-3 p-4" v-for="project in filteredProjects" :key="project.name">
+              <div class="col-12 col-md-3 p-4" v-for="project in filteredProjects" :key="project.name">
                   <Project :project="project" />
               </div>
 
@@ -69,7 +67,7 @@ export default {
     filter (category) {
       this.filteredProjects = []
       this.projects.forEach(project => {
-        if (project.category.includes(category.toLowerCase())) {
+        if (project.categories.includes(category.toLowerCase())) {
           this.filteredProjects.push(project)
         }
       })

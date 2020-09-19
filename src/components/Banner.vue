@@ -1,6 +1,6 @@
 <template>
   <section class="banner col-12" id="home">
-    <Navbar />
+<!--    <Navbar />-->
 
      <div class="row">
        <div class="col-12 col-md-6">
@@ -27,11 +27,11 @@
 </template>
 
 <script>
-import Navbar from "../components/Navbar";
+// import Navbar from "../components/Navbar";
 
 export default {
   name: 'SectionOne',
-  components: { Navbar }
+  // components: { Navbar }
 }
 </script>
 

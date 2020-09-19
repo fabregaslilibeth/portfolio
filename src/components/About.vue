@@ -30,7 +30,7 @@
           <h3>Skills</h3>
           <div class="d-none d-md-block">
             <p class="mx-auto">
-              <img src="../assets/home/logos.png" class="w-100" alt="Card image cap">
+              <img src="../assets/home/logos.png" class="w-50" alt="Card image cap">
             </p>
           </div>
 

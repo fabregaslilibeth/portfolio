@@ -5,7 +5,7 @@ const routes = [
     component: require('./pages/Home').default
   },
   {
-    path: '/projects/:name',
+    path: '/projects/:slug',
     name: 'Project',
     component: require('./pages/Project').default
   },

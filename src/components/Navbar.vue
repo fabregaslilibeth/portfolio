@@ -1,5 +1,5 @@
 <template>
-  <nav class="d-flex justify-content-between m-md-4">
+  <nav class="d-flex justify-content-between mb-md-4 mx-md-4 p-4 sticky-top">
     <p><a class="navbar-brand d-block d-md-none">Beth</a></p>
     <div class="form-inline">
       <button class="btn btn-outline-secondary px-4 mx-2" type="button">About</button>
