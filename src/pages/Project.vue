@@ -31,8 +31,8 @@
       <h3 class="text-left text-white">Demo</h3>
     </div>
 
-    <div class="demo p-4">
-      <iframe width="560" height="315" :src="`${project.demo}&rel=0`" allowfullscreen></iframe>
+    <div class="demo px-sm-1 py-4 px-md-4" v-for="video in project.demo" :key="video">
+      <iframe :src="`${video}&rel=0`" allowfullscreen></iframe>
     </div>
 
     <div class="divider px-4 py-2" :style="`background: linear-gradient(to right, ${project.color}, transparent)`">
@@ -41,6 +41,7 @@
     <div class="features">
       <ol class="p-4">
           <span v-for="(feature, index) in project.features" :key="index">
+              <hr :style="`background: ${project.color}50`">
            <span v-if="index%2" class="row align-items-center">
               <li class="col-12 col-md-6 my-2">{{ feature.desc }}</li>
               <p class="col-12 col-md-6 my-2"><img :src="feature.image" class="w-75 image" alt=""
@@ -51,7 +52,7 @@
                                                   @click.prevent="showImage(feature.image, feature.desc)"></p>
              <li class="col-12 col-md-6 my-2">{{ feature.desc }}</li>
            </span>
-            <hr :style="`background: ${project.color}50`">
+
           </span>
       </ol>
     </div>
@@ -130,5 +131,48 @@ export default {
 .disclaimer {
   right: 10px;
   bottom: 0;
+}
+
+.demo iframe {
+  width: 560px;
+  height: 315px;
+}
+
+ol {
+  list-style: none;
+  counter-reset: procedure-counter;
+
+}
+
+ol hr {
+  counter-increment: procedure-counter;
+  position: relative;
+}
+
+ol hr::after {
+  content: counter(procedure-counter);
+  width: 40px;
+  height: 40px;
+  background: rgba(128, 128, 128, .2);
+  border-radius: 100%;
+  font-size: 1.5rem;
+  position: absolute;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  top: -20px;
+  left: -40px;
+}
+
+@media (max-width: 768px) {
+  .demo iframe {
+    width: 350px;
+    height: 230px;
+  }
+}
+
+@media (max-width: 425px) {
+  .demo iframe {
+    width: 280px;
+    height: 164px;
+  }
 }
 </style>

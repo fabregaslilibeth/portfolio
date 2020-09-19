@@ -10,12 +10,18 @@
         </small>
       </div>
       <div class="btn-group" role="group" aria-label="Basic example">
-        <button type="button" class="btn btn-secondary"><i class="fas fa-code" title="view code"></i></button>
-        <button type="button" class="btn btn-secondary"><i class="fas fa-globe-europe" title="visit site"></i></button>
-        <button type="button" class="btn btn-secondary"><i class="fas fa-laptop" title="watch demo"></i></button>
-        <button type="button" class="btn btn-secondary"><i class="fas fa-info-circle" title="more info"
-                                                           @click.prevent="more()"></i></button>
-        <!--      <a href="#" @click.prevent="home()">Home</a>-->
+        <a :href="project.code" target="_blank" class="btn btn-outline-secondary">
+          <i class="fas fa-code" title="view code"></i>
+        </a>
+        <a :href="project.live" target="_blank" class="btn btn-outline-secondary">
+          <i class="fas fa-globe-europe" title="visit site"></i>
+        </a>
+        <a :href="project.demo" target="_blank" class="btn btn-outline-secondary">
+          <i class="fas fa-laptop" title="watch demo"></i>
+        </a>
+        <a href="#" class="btn btn-outline-secondary" @click.prevent="more()">
+          <i class="fas fa-info-circle" title="more info" ></i>
+        </a>
       </div>
     </div>
   </div>
@@ -40,7 +46,6 @@ export default {
   },
   methods: {
     more() {
-      //this.$router.push({name: 'project', params: { name: this.project.name } });
       this.$router.push({path: `/projects/${this.project.slug}`})
     },
   }
