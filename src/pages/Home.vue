@@ -1,19 +1,19 @@
 <template>
   <div class="row">
-    <section-one></section-one>
+    <banner></banner>
     <about></about>
     <projects></projects>
   </div>
 </template>
 
 <script>
-import SectionOne from "../components/SectionOne";
+import Banner from "../components/Banner";
 import About from "../components/About";
 import Projects from "../components/Projects";
 
 export default {
   name: 'Home',
-  components: { SectionOne , About , Projects }
+  components: { Banner , About , Projects }
 }
 </script>
 
