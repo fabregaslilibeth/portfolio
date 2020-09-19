@@ -162,6 +162,11 @@ ol hr::after {
   left: -40px;
 }
 
+ol span:nth-child(2n) hr::after {
+  left: unset !important;
+  right: -40px !important;
+}
+
 @media (max-width: 768px) {
   .demo iframe {
     width: 350px;
