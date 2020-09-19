@@ -1,21 +1,21 @@
 <template>
   <section class="projects col-12" id="projects">
-    <h1>PROJECTS</h1>
+    <h1 class="m-4">PROJECTS</h1>
 
     <div class="col-11 mx-auto mt-0 box-shadow">
-      <div class="row nav-row d-flex border-bottom m-2 pt-2">
+      <div class="row nav-row d-flex border-bottom">
         <ul class="nav nav-pills col-12 mx-auto w-100 p-0" id="profileTab" role="tablist">
           <li class="nav-item col-3 border-right px-0 border-left">
             <a class="nav-link active text-center" id="all-tab" data-toggle="pill" href="#all"
                role="tab" aria-controls="all" aria-selected="true">
-              <p class="sub-header my-2 mb-0" @click.prevent="getAllProjects">ALL</p>
+              <p class="sub-header mb-0 p-4 text-white" @click.prevent="getAllProjects">ALL</p>
             </a>
           </li>
           <li class="nav-item col-3 px-0" :class="index !== (categories.length - 1) ? 'border-right' : '' " v-for="(category, index) in categories" :key="category.name">
             <a class="nav-link text-center" data-toggle="pill" href="#"
                role="tab" :aria-controls="category.name" aria-selected="true"
               @click.prevent="filter(category.name)">
-              <p class="sub-header mt-2 mb-0">{{  category.name }}</p>
+              <p class="sub-header mb-0 p-4 text-white">{{  category.name }}</p>
             </a>
           </li>
         </ul>
@@ -27,7 +27,7 @@
                aria-labelledby="all-tab">
             <div class="row justify-content-center">
 
-              <div class="col-12 col-md-3 py-4 px-2" v-for="project in filteredProjects" :key="project.name">
+              <div class="col-12 col-md-3 py-4 px-4" v-for="project in filteredProjects" :key="project.name">
                   <Project :project="project" />
               </div>
 
@@ -82,7 +82,7 @@ export default {
 }
 
 .box-shadow {
-  border: 1px solid white !important;
+  border: 1px solid #213828 !important;
 }
 
 .border-bottom {
@@ -95,10 +95,16 @@ export default {
 
 .nav-link {
   outline: none;
+  background: linear-gradient(to bottom, #213828, #15211c);
+  color: white;
+}
+
+.nav-link:hover {
+  background: linear-gradient(to bottom, #213835, #1E3033);
 }
 
 .nav-link.active {
-  background-color: transparent !important;
+  background: linear-gradient(to bottom, #213835, #1E3033);
   border-bottom: none;
   border-right: none;
 }

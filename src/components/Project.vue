@@ -1,12 +1,12 @@
 <template>
-  <div class="card">
+  <div class="card project-card">
     <img class="card-img-top" :src=project.image :alt="`${project.name}-image`">
     <div class="card-body p-4">
       <h5 class="card-title">{{ project.name }}</h5>
       <p class="card-text"><small>{{ project.description }}</small></p>
       <div class="m-4">
         <small v-for="icon in icons" :key="icon">
-          <i :class="icon.icon" class="mx-2" :style="`color: ${icon.color}`"></i>{{ icon.name }}
+          <img :src="icon.image" alt="" class="icon">
         </small>
       </div>
       <div class="btn-group" role="group" aria-label="Basic example">
@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import icons from "../icons";
+import skills from "../skills";
 
 export default {
   name: 'Project',
@@ -41,7 +41,7 @@ export default {
   mounted() {
     this.icons = []
     this.project.categories.forEach(category => {
-      this.icons.push(icons.find(icon => icon.name === category))
+      this.icons.push(skills.find(icon => icon.name === category))
     })
   },
   methods: {
@@ -53,5 +53,12 @@ export default {
 </script>
 
 <style scoped>
+.icon {
+  width: 30px;
+  margin: 10px;
+}
 
+.project-card {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
 </style>
