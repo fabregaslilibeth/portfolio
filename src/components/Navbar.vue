@@ -1,9 +1,9 @@
 <template>
-  <nav class="row d-flex justify-content-between p-1 p-md-4 sticky-top custom-nav">
+  <nav class="row d-flex justify-content-between p-1 p-md-4 sticky-top custom-nav m-0">
     <h1><a class="navbar-brand mx-1 mx-md-4 d-block header logo" href="/">Beth</a></h1>
     <div class="form-inline">
-      <a href="/#about" class="btn custom-btn px-4 mx-1"><small class="font-weight-bolder">ABOUT</small></a>
-      <a href="/#projects" class="btn custom-btn px-3 mx-1"><small class="font-weight-bolder">PROJECTS</small></a>
+      <a href="/#about" class="btn custom-btn px-4 py-4 mx-1"><small class="font-weight-bolder">ABOUT</small></a>
+      <a href="/#projects" class="btn custom-btn px-3 py-4 mx-1"><small class="font-weight-bolder">PROJECTS</small></a>
     </div>
   </nav>
 </template>
