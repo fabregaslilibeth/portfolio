@@ -221,7 +221,7 @@ const projects = [
     name: "Get Inked",
     description: 'Booking system of tattoo and piercing shop.',
     categories: ['mongodb', 'express', 'react', 'graphql'],
-    image: '../../inked/home.PNG',
+    image: '/inked/home.png',
     demo: ['https://www.youtube.com/embed/i_V-VlU-iKA?start=3'],
     code: 'https://github.com/fabregaslilibeth/get-inked',
     live: 'https://get-inked.herokuapp.com/',
