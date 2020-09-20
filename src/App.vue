@@ -1,13 +1,9 @@
 <template>
-  <div id="app" class="container-fluid p-0">
+  <div id="app" class="container-fluid">
     <Navbar/>
 
     <router-view/>
-
     <Footer/>
-    <p class="position-fixed" style="z-index: 9999">
-      {{ setShowScroll ? 'angat' : 'asdasd' }}
-    </p>
   </div>
 </template>
 
@@ -22,13 +18,7 @@ export default {
     return {
     }
   },
-
   components: {Navbar, Footer},
-  computed: {
-    setShowScroll() {
-      return window.pageYOffset > 400 ? true : false
-    }
-  }
 }
 </script>
 

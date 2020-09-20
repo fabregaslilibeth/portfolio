@@ -1,8 +1,8 @@
 <template>
   <div class="col-12">
-    <h3>Skills</h3>
+    <h3 class="sub-header font-weight-bolder mt-4">Skills</h3>
     <div class="row justify-content-center">
-        <div class="col-6 col-md-1" v-for="(skill, index) in skills" :key="index">
+        <div class="col-6 col-sm-3 col-md-2" v-for="(skill, index) in skills" :key="index" style="max-width: 150px">
         <div class="position-relative skill-container m-4 text-left text-white" :style="`background: linear-gradient(${skill.background1}, ${skill.background2})`">
          <div class="skill-cont">
            <small class="p-2">{{ skill.name }}</small>
@@ -51,6 +51,7 @@ export default {
   left: 0;
   right: 0;
   overflow: hidden;
+  border-radius: 10px;
 }
 
 .skill-wrapper {

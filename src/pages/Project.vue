@@ -1,8 +1,8 @@
 <template>
-  <div class="container mx-auto">
-    <div class="position-fixed" style="left: 10px; top: 10px; z-index: 99;" @click="back"><i class="fas fa-arrow-left mr-2"></i>Back</div>
-    <div class="project-details position-relative col-12 mx-auto p-4 bg-white" data-animaton="animated slideUp">
-      <h3>{{ project.name }}</h3>
+  <div class="container mx-auto ">
+<!--    <div class="position-fixed" style="left: 100px; top: 100px; z-index: 99;" @click="back"><i class="fas fa-arrow-left mr-2"></i>Back</div>-->
+    <div class="project-details position-relative col-12 mx-auto p-4 bg-white">
+      <h3 class="pt-4">{{ project.name }}</h3>
       <h5>{{ project.description }}</h5>
       <div>
         <small v-for="icon in icons" :key="icon">
@@ -12,10 +12,10 @@
       </div>
 
       <div class="btn-group col-md-4 m-md-4 " role="group">
-        <a :href="project.code" target="_blank" class="btn btn-outline-secondary">
+        <a :href="project.code" target="_blank" class="btn custom-btn">
           <i class="fas fa-code mr-2" title="view code"></i><small class="d-none d-md-inline-block">View Code</small>
         </a>
-        <a :href="project.live" target="_blank" class="btn btn-outline-secondary">
+        <a :href="project.live" target="_blank" class="btn custom-btn">
           <i class="fas fa-globe-europe mr-2" title="visit site"></i><small class="d-none d-md-inline-block">Visit Site</small>
         </a>
       </div>
@@ -25,7 +25,7 @@
     </div>
 
     <div class="divider px-4 py-2">
-      <h3 class="text-left header"  :style="`color: ${project.color}`">DEMO</h3>
+      <h3 class="text-left header" style="color: #1E3033">Demo</h3>
     </div>
 
     <div class="demo px-sm-1 py-4 px-md-4" v-for="video in project.demo" :key="video">
@@ -33,7 +33,7 @@
     </div>
 
     <div class="divider px-4 py-2">
-      <h3 class="text-left header"  :style="`color: ${project.color}`">Pages & Features</h3>
+      <h3 class="text-left header"  style="color: #1E3033">Pages & Features</h3>
     </div>
     <div class="features">
       <ol class="p-4">
@@ -149,7 +149,6 @@ export default {
 ol {
   list-style: none;
   counter-reset: procedure-counter;
-
 }
 
 ol hr {
@@ -168,6 +167,7 @@ ol hr::after {
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
   top: -20px;
   left: -40px;
+  color: #1E3033;
 }
 
 ol span:nth-child(2n) hr::after {
@@ -180,13 +180,6 @@ ol span:nth-child(2n) hr::after {
   .demo iframe {
     width: 350px;
     height: 230px;
-  }
-}
-
-@media (max-width: 425px) {
-  .demo iframe {
-    width: 280px;
-    height: 164px;
   }
 
   .even-projects .feature-image {
@@ -202,6 +195,13 @@ ol span:nth-child(2n) hr::after {
   .image {
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
     width: 100%;
+  }
+}
+
+@media (max-width: 425px) {
+  .demo iframe {
+    width: 280px;
+    height: 164px;
   }
 }
 </style>

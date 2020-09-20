@@ -10,19 +10,38 @@ html {
 }
 
 .header {
-  color: gray;
-  font-weight: bolder;
-  text-transform: uppercase;
-  text-shadow: 1px 1px #1E3033;
+  color: #213828;
+  font-family: 'Arizonia', cursive;
+  font-size: 2rem;
 }
 
 .sub-header {
-  color: gray;
-  font-weight: bolder;
-  text-transform: uppercase;
+  color: #213828;
+  font-family: 'Raleway', sans-serif;
+  font-size: 2rem;
 }
 
+.logo {
+  cursor: pointer;
+  outline: none;
+}
+
+.logo:hover {
+  color: #1E3033;
+}
 
 .text-color {
-  color: gray;
+  color: #213828;
+}
+
+.custom-btn {
+  color: #1E3033;
+  border-color: #213828;
+  font-family: 'Arizonia', cursive;
+}
+
+.custom-btn:hover {
+  color: #fff;
+  background-color: #213828;
+  border-color: #1E3033;
 }

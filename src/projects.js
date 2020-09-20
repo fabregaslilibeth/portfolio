@@ -253,7 +253,7 @@ const projects = [
     demo: ['https://www.youtube.com/embed/t-GiamgD3VQ?start=2', 'https://www.youtube.com/embed/kdWb5fjVF58?start=2'],
     code: 'https://gitlab.com/BethLili/vue-apps',
     live: 'https://vue-apps-by-beth.herokuapp.com/to-do',
-    color: '#ebca2e',
+    color: '#2eebd1',
     features: {
       0: {
         desc: 'To do list. A simple input to start.',

@@ -1,21 +1,21 @@
 <template>
   <section class="projects col-12" id="projects">
-    <h1 class="m-4">PROJECTS</h1>
+    <h1 class="m-4 sub-header font-weight-bolder">Projects</h1>
 
     <div class="col-11 mx-auto mt-0 box-shadow">
       <div class="row nav-row d-flex border-bottom">
         <ul class="nav nav-pills col-12 mx-auto w-100 p-0" id="profileTab" role="tablist">
-          <li class="nav-item col-3 border-right px-0 border-left">
+          <li class="nav-item col-3 border-right px-0">
             <a class="nav-link active text-center" id="all-tab" data-toggle="pill" href="#all"
                role="tab" aria-controls="all" aria-selected="true">
-              <p class="sub-header mb-0 p-4 text-white" @click.prevent="getAllProjects">ALL</p>
+              <p class="mb-0 p-4 text-white" @click.prevent="getAllProjects">all</p>
             </a>
           </li>
           <li class="nav-item col-3 px-0" :class="index !== (categories.length - 1) ? 'border-right' : '' " v-for="(category, index) in categories" :key="category.name">
             <a class="nav-link text-center" data-toggle="pill" href="#"
                role="tab" :aria-controls="category.name" aria-selected="true"
               @click.prevent="filter(category.name)">
-              <p class="sub-header mb-0 p-4 text-white">{{  category.name }}</p>
+              <p class="mb-0 py-4 px-1 px-md-4 text-white">{{  category.name }}</p>
             </a>
           </li>
         </ul>
@@ -27,7 +27,7 @@
                aria-labelledby="all-tab">
             <div class="row justify-content-center">
 
-              <div class="col-12 col-md-3 py-4 px-4" v-for="project in filteredProjects" :key="project.name">
+              <div class="col-12 col-sm-6 col-lg-4 col-xl-3 py-4 px-4" v-for="project in filteredProjects" :key="project.name">
                   <Project :project="project" />
               </div>
 
