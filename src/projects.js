@@ -178,7 +178,7 @@ const projects = [
     name: 'Moshi Ramen',
     description: 'The best ramen store in town.',
     categories: ['mongodb', 'express', 'graphql'],
-    image: '../../moshi-ramen/home.PNG',
+    image: '../../moshi-ramen/home.png',
     demo: ['https://www.youtube.com/embed/382wNiBYfEU?controls=0&amp;start=4'],
     code: 'https://gitlab.com/lilibethfabregas/moshi-ramen',
     live: 'https://mighty-shelf-25146.herokuapp.com/',
@@ -230,67 +230,67 @@ const projects = [
       0: {
         desc: 'Landing page.',
         image: 'https://lh3.googleusercontent.com/V1-OW9ikY-y_M5Ou5WooYB9XhYXdcN54adpb-4dQ_LiZJiWqWeQswTVYrRjXY4MLQUPeo4h7yUAfE42yVP7AEVPkchKnquGjHGJBxocMPw1m8xJuxOAl4GzWmn3lAjjgPZJ8HXz3KZ0YmB-ydPooi1uzD2xpmYhM0IV0KnYzlPwLWOTElbgo1OHTbd8IrhLSmpMK5cEBD9J-05nBGxEAKHcC4MJk3vRMndIaHiiIa_p4KO2gRXw4XJQkNhOu5P3mQpIAJV8YgEJaf00Bn3L4UH33GJquyE-MxfiJ6mN65Wd2-n6wQi3R2E_YtCMAqZK4DGAnrufSG0PU3TokVY-QvAi_alf9QUGYSuhPpjleL2TPz3T-eqRxhyDR5jusf2zXX4Qx26RpqheJ_t0dYJ2bJRWT6S10mHn9GIAzjBNasKBfKmWNLGb3MKPTXec_8FwB8JZHf1Im9YXCauvrzKLygg-mb_qNAaznnK5Rjm5WtRdfOHCKAkR7thOsor46KPX-8asao83eR00BlF62ZpzAyr8usK8Ynx3jBiuYgBCKB9r_56hKE4pMSG9WwX4lUhteVDieB1_l0MsawfiU9is3GPaZANui7JwnVZW1LFVMoE4rXllzbmaJJ-B5mila8yPDxktA3QayGWDcXG9Oi1avV-4a6G_ERL76H4NOd3eYpPM_1AMzDT0eB2xP8r3W=w1895-h963-no?authuser=0',
-        image2: '/inked/home.PNG'
+        image2: '/inked/home.png'
       },
       1: {
         desc: 'Services and gallery. Both these can be dynamically managed by admin. Manage includes add, edit, retrieve and delete.',
         image: 'https://lh3.googleusercontent.com/R_n2CNCoAZuWta5R9Is6MjKDJP4gwcvcvF1XrEYOjZ7ytQz7FP5XoB5dAAu-YB6GwwplLXKMPZ9a5kCbTGlepQc5TWsaE9aZwRTAO2NWnwwfJqf09B_HUD-X6qVWIHjfT3FYVF5Lehgtp-VY4V-9q7OHB9PD6AePJmmkddWuAyfRXrKTPVf47yeZR-MsXonM2xWTmdjoAa96CRGZ1lwjuK8P1QZEeJyVayRwcX4LgoJzb8i2coLinp8S7XZGy9s0qh9ubwg7sDaBjkA2FZfPXIvkpC0KSpq5vas6ruJQ4yrFZqleMaMy07g_YGpQ-Hca1KA8LZ5yyJ8JuUP6UGtzHdT9OpnhJeJPsvj-to4dTxwTJe7AYtMuI8w3beuQv8NUnLJu7Gpa0Xvxy95nWCZTRooHZ5Mjdy28M3ImcBEGEqZ9wjjRLQ2hsbLqrIiYGUdYKK4ZSfvi42RKK4skNoyE9qNS7sR_LbP9jFf6zZyCYy7T1o-b25dQGqszowE0FRRNMexyK-fVCjGYpiB7TfAdzFmMCLFgaePrN1IBcro-xh34wMIw9Y28fceoyGMyjA7B50spXAFytMCJCUKUXgqtGbzTwhlbM-Kqj2XAKLVS2ms7PuVoxDq8_d_xStWW0MHS0Oj7am2mjqQUzcaBAFZx3cGThf1EBaNR1tzpsf0UZjrclCXXs2em73OwR9Rs=w1900-h960-no?authuser=0',
-        image2: '/inked/2.PNG'
+        image2: '/inked/2.png'
       },
       2: {
         desc: 'Testimonials. These can be added by users who already availed the service. But will be displayed once admin approves these for display.',
         image: 'https://lh3.googleusercontent.com/JZwJ0bY_e0EYX5hOH5FJ_DY7JPvUlJ0v51Y_YNB_6bOy8xnghA8353Ug9em1FMJwbm07f1HpMwhoMpmicRypbSlYoN2xG6l_pmChmc1Yl5s5IN9k4y9BrOolzK2B8gr-BvoXPXC9l317uPvDxH6IFXA3iWtzlfoxD5HlVUPwsTGwBUuyyWdq29svzqfhm18Aa1pnilPpuNCV7nsClF3kGnz6cLeBI6m-OXvFwhhIedz8M_wCQ-AfO41AajBdPfpnP3bcfcjL448xQnuvc9VUEC2sEXvlFFdDZSszKzaKPyQ5D9UvwYAovsTwy2WvC4ntsqC8pBEts6q1HBA_SksLcmxsDKlsyciMfmBOVRobIAYFAUGVjsSycxNX0F-vHfR0Kw10WyFMRBCBAl-QWQUVEf7NV0t-dv514cEt6WkdXtD6i67jmJhxFKtv_JChf8LGSWkca7OCiPa_MT0ny4FKQZDN_hR99HOkV72Kyi105fnKZdGIT96yIStg4byeOdXCIi7-p-6o-6uvjn8XfDTU6rqGSHk4tI_qceGLMAxsKUhArphsJ2jWokYWGcKoynrq2lBn3h0HSn1_55xYBwkERofR5JJJV3PLT31VC3aonNgZBz0Vl6sCH9PPYigqh5G7We7DF1BzfaMcSu4ZEtfI_eGkiqToNfFzV7bCzDYLMShJcSp6004zk4JKhH-u=w1899-h964-no?authuser=0',
-        image2: '/inked/3.PNG'
+        image2: '/inked/3.png'
       },
       3: {
         desc: 'This is where logged in users can make an appointment. This is also visible to non-logged in users, but their booking will not be submitted.',
         image: 'https://lh3.googleusercontent.com/s6Q0Y0_xnRjh_Fs2IjkVRr2srU5ZM-v5L0MZRF1QKUgrbPFtjzbCGEEZq9pInj5CxIJNgwRRk45s2kYi_AVQCn50AhnOsNPwUUHrRuQAKlErsnkyDstY4xiRksyag2vsUOuCy9T47_a3juHs-DHDXd8KCjDGee-2lLg1SUU7MZd7NgXOIcICUUOr0FETbgzmKKwoL6Td-cxdIWTjt76KwTIeAVqR9Q1_JuvyIK4NmHKnLhVoZ15BsZGjmhCyaB4HFGTlCzLmF4tuE8H3lLeE0e1VOe0N3mahcfmHklwbcRSOgnln2-NELPveLAZopWILl2ZQjJhn0wxT8mxOXonX-7yQTkvAEh6Foar0SB32SSOxyKhPGPIu5SqIEhUmMryUN2tV_jyCotCOXTX9KGGFmrTugbiuitROPck9cHfFkJPy7G2ssc9G-oZifUhyhdABrJffJFR8ugIeA1FsustqAxxwh8jjIJuKTqCR4BWKAK8xpOJdmWTvBAkxoLv4A9VA3QIUdrstZ0zUFasqJggBzW4neYY7o5GvslxKYDeiYuUcVCv8EK2P8GZ_hu3GvpLDI4n7aDryK2iUq7g5KLYeKgCikKLKYTBHW6A2QJ28VkxDrMPno-MuQAAQaTG4JgYgx91c0_PwpT_3Zkg4E620nFm5RMYNrdq0PSio9OVsL-rz1uFDsiuQUrtjU6wD=w1896-h952-no?authuser=0',
-        image2: '/inked/4.PNG'
+        image2: '/inked/4.png'
       },
       4: {
         desc: 'Logged in users can view their own bookings, or be notified when there is no bookings yet.',
         image: 'https://lh3.googleusercontent.com/QPFakoq28X-00ljVun2NNR_iq_Jktvscrd3VxBAprytun1szgo2m_-FxzAAO9DC2SLAfiRqYyXFy-URqgrHlQrJ0eTJHFcDMYhO1B1nUD854KT1IGSeP00JpwFgGYAUhFyeaGMVFiOcz-1CbXY5vgHvqYMJCJxRMH8PstV0wy9V9GtdjEpneEwhK53njIhY231b3Empg97dfOyBdArOB4dFZz_Res4p3Q4JlxipY4VjiF_NJR89LGbJZJ7BND2eqvRUSX3hlOugKFUgCM6rphGoVl1WYmEECwwQdM_RnWySnCPj-5lI0_eI3CgC6zz4bHYOu2EYfXmJXmcSAxBucpZCPCWoebcM-zoLvq0i4EXwAGo-b17FXNjivHhPe5lW_dUoBJ1ibXugJVhMmMsUfTiyXOChm8RjfeGJhH2MBTMU7hk-tfTbPbayzbTGTgAyal6yg-s8uPFZimOc3AO4w2ud_-tbusQxtfZtM3wb6t6CFWswvw-UEpwCWkE6OwluQFbNG5mppm7xy1mchWZWVPcbYMoWmL3eYLGWatP32hPt-v1DEqx5OdiwYnk80AIQev5mUcPJ9jL4WLZ5Nmxo5Ag9eCxkOasT24AEXnBCnsF6wywAbU1P-fQE09WBFq9Sxe5DUYu1rCE63smCdcTMaz5AKcAlsROJ4NWeVFi-_SBXyHp4V5n8LurEXYXQy=w1900-h966-no?authuser=0',
-        image2: '/inked/5.PNG'
+        image2: '/inked/5.png'
       },
       5: {
         desc: 'When logged in user has booked an appointment. Also displayed here is the service availed by the user.',
         image: 'https://lh3.googleusercontent.com/VjVsh1L-lTi6SuHgFYDOV2Zjm9If-s6yLbfaOe6bLgs_EWlLwVKjOdwxcY1ampo1m9a84wJVq_m6cysxIY9Du0-w0PNddWKprbXimSyrtp_zUm4YuPLzOwUCv60KQXfXxrBGc6jcNBHMLdjwzRPbHo61voSoCkjnSa3FruHdFCG55pKHm0SNcrMeFiHNSbFIl1ycJBx2Vnkraywutb2DqU5M-egeUPdnV1WZmggMSBZch80-ug5LMtzNcJBLxceoHq5OKalNBxHFuorsOBKmrS7AVYKTz1J8VzJNTAkyWKqVtQE81oJW8OQJcZZyLQykrQr7K2ddF3px98pOpNMrCag3qXZ72_9TBlBhB2sl9sIA_Q6Yoods_WWzlgyawAflIWTYf4sArnGjD41wEuyXkpF-02walnz_m7UYUrSLSaCfl2weUJu1SnLHM9EUPCcfW-EdAAIFKg0JtD-kc13ehN4JNxBuOjq2h3DJ9UwSfQd6wn19dtHNyTBizt9kUAzi9Wyur7bX33FBkmMG-EgMdMEgR8n0EFQMe3AvD7NKbjVb32jG-Lqlgs18uGL83qlfEUYfgF_XqdfxyUbvyOEOYHrnY51c0kCG6tsYRHcgK91-0LEVEitPHbzqyOFlJHCNLQme-6G8OXJS_TGwfR7lOInhHMEh8xsYegxnPCugu7CTAeMy8BEFLHGXwHO6=w1899-h964-no?authuser=0',
-        image2: '/inked/8.PNG'
+        image2: '/inked/8.png'
       },
       6: {
         desc: 'And as admin, they can see the booking made by the user.',
         image: 'https://lh3.googleusercontent.com/NK2hTaVMtMvYRxp96H0kCcjJ-_0luCxA2TT9BUgyWqulkw6fNA4J9vKq3gj6O5qsl0-eEFnSLsSME0VENCVbn6BhSpxiolZZSX0_XlL0eKF-QHqWvy8fwaWewC4kArBulc7plAl9EibKL-cNYVsNS-46MGp62Lc-rSTa7vMAR0SAKJtJIwHA-_-oBMKXwmPwAvnYVACrowl56abOqdNGHi76isPIIi3CvKd0-a43fdGZ3h3X_c8x3YngCJfDrF85lwi_TAUqKfZ3nzcrjtC7n7AMezHzj2vD1ABsiDd4yU-UpfkjmldoaTzb3XAU8Uw_zJreYUVq-W7eaFi6-OrhZbL7eMfw_y_2Y-uthcfLSuEe3CfBNQGXiALVKzv8m58TtFVVGHFfA8lIJHz09_u2CD9FyJdsvIzM88HrtMdWlmQInn5K1gX3r4PhEVJPVEwD64XmWulGStepJvCGWfEiQQNqtQfK3lx7Zh7SK0O6gSdwowFhPdqjy_ktJw2bXNlh4bmYP_LNXty6HLFXGcjXgsA6VW0zB3xHkO7fblnmannpEZVqroJw81IqZxaH6OehDS06r6aui7A9vjnz-5lMWxnXNdMG2kcwIalDD-HCxmpO2BygHIqh3cEFY0nliTAfDEsMc6r_2fm3ug8AxaaCdwi-JVyAl1ymzOWO_nWX19rCrp1Hi2isEHDWKQn-=w1903-h962-no?authuser=0',
-        image2: '/inked/16.PNG'
+        image2: '/inked/16.png'
       },
       7: {
         desc: 'Reviews page of logged in user.',
         image: 'https://lh3.googleusercontent.com/RZK3B5q6org1VYrplqxecd5l6izm9BSzwuxxyFOTwHMhAiptLgYj50mc8Y75vcsIwoMaBaflcH2XpyGYQSIcouxPfGFBQY9u6Ah940bEmc67eAhkSt6tL51OrJnhpHBm1ZNm2SXnvv6X0RG3o487D3dohFsq97uYS0uIj82P24be6RrXR_YH3d5HCWQYmG4B1iY6AoIS5r-n42iRi_fKSiXJvti2Qc1wUyVD_9D2e75j9z1fGU5fWAR2cl-TXMe4o60A6qvyMmf19_GwFXxGmq352weknUPkz28bM6n8ryxqJm4hzQiOoEZ4n4-A-zRQCGqzX_7RkhDcqcWOz1iMwZiPW8EL2OLvHoNTN1_cSul9JEpzbLimFmb71oxKUbRZgXw2piJ8zKiJ1EH4me99d2zOVG2ty3fcS6Z8Wap9KxdAIUXHtHw7C2ywbS2PF1henaOIGlZJk7nW5kL8e5x3wp_aLIKAn14IjAbamRwlGofOchk3GvpIX34a8vp2xza1jC3KES5boAZv9yB_gxOMHqArlrXMa5jGSwdCOFcgEGIkBxJZar7AoSvyW6bLEVu6yQ2bN2uYtzVXxp6A_BihzynbeNJ9LisOTJQLYf8w7mf6UZMWeUne5KYNCv_h9KhydiRwwdN8fIbG9AZvhP8XQfTE7GbX13H8Q9rt82fMgJsozXNFCXjFPddc_axz=w1901-h963-no?authuser=0',
-        image2: '/inked/6.PNG'
+        image2: '/inked/6.png'
       },
       8: {
         desc: 'Admin page: services. Admin can manage services: add, edit, delete.',
         image: 'https://lh3.googleusercontent.com/LkN5vQG7hTUfCi5g07a79KRUHKmtjEp33TBI-dBrc4zXqQpkAgk83NNyZQ_M0c_-r93rO_Xm7KgviVPd2SiFCaphbSC4rwJ2zfcNH8oqgRzpM57IPViFzBQT3gMNw-AbWztnhWmLhFt4O0Qpkp23N2VlByJwhIhsBa2x05TXV_UVTJmx4Kpj5QW_vcMu33QkA_bL8-VhSc3G7X4mdM9pxLttFkS4NGcCAU5MlOKr8ky8D7dwLTYUeRopskjY9svmCbu6vGfiHR9pRQ0ShkF6zGZTjMUOaGuMGQStmedIzzzftbWjISoFGltzyHlEOMMVzRzD5kP7WNfUJF4r6sEFz9GTrofUBD0BjgA7GZtfv5DVuPRKyOw8TA0nNKN0ypfkG14BTgAFRCT6bz9JTG7ZLo_PSye9uOnh1tgQzm18_RJkVGCAOEOFqvDfjy6aOU9FGoVFI8behJ2tJQAYcSBQV2pGb7_d1OPfODNm_O72dDX35-xduwwdYI9vOnmmAQyXrTM_lQBSL77ZIPTFZe3txQTU7rWor_8v2YQ2MYQtnZjjVs9x7ajHLENSNisgInWCm5oCkL7nT34ZPYPPVobjMlm1yHNZKoxVHZ2alFz26UoGcEnwRExSMzMuozNmnMaHURnXbwquM2gJ1tk-uSeaR-5E8Faa0u0NzmV3ZQyxY56lDWZqnAOE4dtDuuON=w711-h362-no?authuser=0',
-        image2: '/inked/9.PNG'
+        image2: '/inked/9.png'
       },
       9: {
         desc: 'Admin page: bookings. Admin can view all bookings, and see specific booking upon clicking the day.',
         image: 'https://lh3.googleusercontent.com/pJUncLpYLn1AsmgR5R_xRREWS6dlBj3BZ7VzKL0vTh65KyQLZSHh7hGD_lpgA515TcW_LcMTBojI9DuOmUMGitIf8rAe8Wh4FhPx9zBgLt78zxInji1pb4iKBmN6RJNV-CfJhxkigPMRJgrBZhFrYVZjqp99yWJ_rkY4tXyZ9XS2cHHjY9OxoV_QeVxUO_PUiiVKkYvF2_v0BC80SQWdGJQNylQsGGjAupCnnQARo2ZYcO4lUmAhtkgEJXY4dQvzqb4lwPZe6vFwVCDYMbk2yE1lgCtRQxuKWu0Cm1ERpWeMWkIHFMmlAm1UNnqc0_kVQlVXxixf-_cGrssk1esjcD9oucuQ_WVB29KDtGPVgb217cpLvGqbf50IttfFrBYKuWuNJHUPJhngn7LeV1Ht3qPnqzsJhHZX9rKXZIQ6hdqApp-hpuXMqBk9xR28B8clhmnCLENtbNNtJgFoLiK_Jmf1yp1G6Ask2U3quKVBEQHQur7BZNJOTd8jYS4LEi6QjOxohRocye9yTF-QPdtiom61Ir4P5n9q8xxN6X4UENw4MU8iC9tRqAEkh3qGM2HyxejiFpZyDS8hQps9ZcCWZ999LKQdDZt1iUt8NXqqy4VCSQ_wbP4jAYnd0zxdrx0jknG3hgBMEYoJoDJyLGhMnjx4_t1SCNAfDjLC7S9uNyPvizZVbmN0kR0Dxz8X=w1897-h960-no?authuser=0',
-        image2: '/inked/11.PNG'
+        image2: '/inked/11.png'
       },
       10: {
         desc: 'All reviews added by users can be viewed by admin, and can be displayed according to admin\'s discretion.',
         image: 'https://lh3.googleusercontent.com/8QR-YF7PFPnzE9kfiJq8NARPN4yt-uKgfv3CTUOfrV01i574hbxdyPBZKS-zaELiZ4hYWB9HjQpXtL5pJBIUJ3zgG8spAPBWho0t5nrnN-rMIxMUC9LsmJ7D8J8ZQ0fNrylzeSv5V7PqYsD_kzxjp2yYglp-QWfNDvx6YdD464Zf7SVlX1NaIMrC12vNjVNVX8cIWV90ubH2FgnAE9wY9MHiL9WiTYuxFKYgaskHWuPuZTEIidI8kuMLaWdA9SMpmB_PHBzA2ONJbciRtsSHkB5hi1DbwtR8UxIjgtbpRMmxLSeIKuhk_iSpRdACnk7TZgmHdza5XwZ21ArkORQAuu7Xvyf3qkK0DttDyrIgd1BSqC7nWJBs-RxBI0lqoS5z4XtiEFDtejLmGn85MbVuVxhmMYt4PP2RUUwb9yuGVUkx7g8J01sgq23E96grRknbRRKyPivBfjIARLuGzNNqxYOL5EWu3j2vGfnExKeumrfArbgPlwr4o-aAKGD-OP31-ntLfOSC_j5DvUVaovCEF7UG-ye-fH6kYp8Lp8n_UyDZeFZOFncLzoXrKtJ6tdyo6cmaUHQIB8TKGC6vGI537RFBH04WQpXTwVKFgJWwseKBbwEH3A_n3LcsUoq9PgIK2VGHxdAa7FzC31S-HrWUflvnOohhlqr1NCkAOxnuVbvlLdcTmJkBOka4FpOq=w1900-h963-no?authuser=0',
-        image2: '/inked/13.PNG'
+        image2: '/inked/13.png'
       },
       11: {
         desc: 'Admin can manage gallery: add photo url, edit photo url, and delete photo.',
         image: 'https://lh3.googleusercontent.com/J_8WwTD1yr7Mex9gMDAhMEwa7G8Xj38EnI49HGTLzvLsaJ1p2jFJ1PuhAr9bsf7CiMSYeqITCslYKPbvtGb0K-fKsVB1aDX7_QzHUfdsGxtGJ6PtQTiAtE6lh7RoKP2w1-KvQJOIkZ2UkJU4APF1X4QNV3INN83HsMxhoYpuF4d0Cf5KwpOvEB7QGPN2XeagwxhljhCW9xyt6mWj5qo3RBYXASih3ul_nvfmwl-sEYtke-drxQuD1_LAlh6r90NNG2v46S4Acba1v59b4Ei60O-oFJuRphtE_XUHN6jcmdvANvQArx9U8u5UnodBZ_asKdXJCy8QbgLmgdxyQNlZy2o3WAANFHwgJBYleS5U_AdRd7XNtAkQCxQO-rkO8-TEgStGVxrQBCd21URRMUpubnbM6nD3MzGoeh32fuSmThyOXzRSbEeYsUbVV7gXOAWYWI2V8hci7_6VagVET0pGiLgp80iUJ4UJUXB4SWGPp3tj_IjoCJpY5iEhnoyDwWBHqO-l-tw0KYsUj7IiGfEO6HXuA01pTmUz8o8NDpSFnVgY0-mz3jUSQjBykqOytxQJgxxDYdtbjwSTyPeEzpWZqxPmEZUPiqxK_ADzyaVVa2GvJOnWN3BFb5sLj-OknAa0aVW_uYUxb1xyzuU1Jjj3kNo9iVsw6iJNijsOsbzT__3olJ_DaNWlb9s3kJJp=w1901-h964-no?authuser=0',
-        image2: '/inked/14.PNG'
+        image2: '/inked/14.png'
       },
       12: {
         desc: 'Admin can choose which images to display.',
         image: 'https://lh3.googleusercontent.com/m_mXLFdrB8tuJ4z-hwLKaUUPhLEBFjY0B9kk0eIXPy_dsA_PgWW7KNz6lKrHGQeFKP5H0VrYPGpn7_mTKx1lQFriZC0vG2A64oSqLgceNdUAgBiMR1e1OXDw98xnYHQcPJrSyI2RVTMvyXN_UW2eo3RO5TSQVtWAk2uapG4hT2gFdlpRBHJ187z-2z9bl3YE78LD-Str7iOY5u-JKz01EloROH9vcCmSLTm0cn2-VRHS9wi4V4HItd_k06vkUI1-tSm1n8XzY_3ow6dPtr7bH141MYGnQ-NC_MuqTR37YYx-3UlqwtXu4CvgTwJXWW7Yr0D39aLOv1AT1b_SkDqpUadREBDOodzncEXmEVZ6GQ3fYhuddd49ONMStcZnDHrRiNfXJIsj33XLGdgyqlSuDyXWUxS-P7iga5271sE5wRjd_mDZPHOqGQIpahJk3TKOXNiYCosZE8klX4m3eWMTbUxAFQ9E1eozUhShdfkyhCSnTlLNtIGCd2DlFATZmI5GEo0JVYIytLgKEXH__ee2BZ2TumrWuFD41CrC4lKZxHIlMX44qoZhjrjFPy5BW2Q6ejem-8b2lGWREUmFtoVcvGYUtskI62HNKaJWN4aIhfwvKJz1ZbVSQV-Cnr7KeNdBXN-qprKLC7mekfhnUReoBrDxKXp1o234GUMezUI8aPCYLQaDC2BCMpj5YrFl=w1891-h958-no?authuser=0',
-        image2: '/inked/17.PNG'
+        image2: '/inked/17.png'
       }
     }
   },
