@@ -178,7 +178,7 @@ const projects = [
     name: 'Moshi Ramen',
     description: 'The best ramen store in town.',
     categories: ['mongodb', 'express', 'graphql'],
-    image: '../../moshi-ramen/home.png',
+    image: '../../moshi-ramen/home.PNG',
     demo: ['https://www.youtube.com/embed/382wNiBYfEU?controls=0&amp;start=4'],
     code: 'https://gitlab.com/lilibethfabregas/moshi-ramen',
     live: 'https://mighty-shelf-25146.herokuapp.com/',
