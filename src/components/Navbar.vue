@@ -1,5 +1,5 @@
 <template>
-  <nav class="row d-flex justify-content-between p-1 p-md-4 sticky-top custom-nav m-0 py-3">
+  <nav class="row d-flex justify-content-between p-1 p-md-4 sticky-top custom-nav py-3">
     <h1><a class="navbar-brand mx-1 mx-md-4 d-block header logo" href="/">Beth</a></h1>
     <div class="form-inline">
       <a href="/#about" class="btn custom-btn px-4 py-2 mx-1"><small class="font-weight-bolder">ABOUT</small></a>
