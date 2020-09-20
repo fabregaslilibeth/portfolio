@@ -220,7 +220,7 @@ const projects = [
     slug: 'get-inked',
     name: "Get Inked",
     description: 'Booking system of tattoo and piercing shop.',
-    categories: ['mongodb', 'express', 'react', 'graphql'],
+    categories: ['mongodb', 'express', 'react'],
     image: '/inked/home.png',
     demo: ['https://www.youtube.com/embed/i_V-VlU-iKA?start=3'],
     code: 'https://github.com/fabregaslilibeth/get-inked',
