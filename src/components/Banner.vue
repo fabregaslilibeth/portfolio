@@ -10,7 +10,8 @@
           <h1 id="name" class="display-4">Lilibeth Fabregas</h1>
 
           <h5 class="">CPA . Web Developer.</h5>
-          <p class="w-50 mx-auto my-4"><a href="#" target="_blank" class="btn custom-btn px-4 btn-block"><small class="font-weight-bolder">VIEW CV</small></a></p>
+
+          <p class="w-50 mx-auto my-4"><a href="/resume.pdf" target="_blank" class="btn custom-btn px-4 btn-block"><small class="font-weight-bolder">VIEW CV</small></a></p>
           <div class="d-flex justify-content-center col-6 mx-auto py-4">
             <!--					<a title="gitlab" href="https://gitlab.com/lilibethfabregas" class="px-4"><i class="fab fa-gitlab text-secondary"></i></a>-->
             <!--					<a title="codepen" href="" class="px-4"><i class="fab fa-codepen text-secondary"></i></a>-->
@@ -26,7 +27,7 @@
 
 <script>
 export default {
-  name: 'SectionOne',
+  name: 'Banner',
 }
 </script>
 
