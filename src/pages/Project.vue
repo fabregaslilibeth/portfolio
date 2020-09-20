@@ -200,6 +200,7 @@ ol span:nth-child(2n) hr::after {
   .image {
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
     width: 100%;
+    height: auto;
   }
 }
 
