@@ -29,8 +29,11 @@ export default {
   mounted() {
     this.skills = skills
   },
-  methods: {
-
+  computed: {
+    getImgUrl(pet) {
+      let images = require.context('../assets/', false, /\.png$/)
+      return images('./' + pet + ".png")
+    }
   }
 }
 </script>
