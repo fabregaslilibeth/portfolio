@@ -4,7 +4,7 @@ const projects = [
     name: 'Organic',
     description: 'An online store selling fresh and organic produce.',
     categories: ['laravel', 'vue', 'mysql'],
-    image: 'organic/login.png',
+    image: '/organic/login.png',
     demo: ['https://www.youtube.com/embed/kXsWR_TNK0g?start=5'],
     code: 'https://gitlab.com/BethLili/organic',
     live: 'https://organic-web.herokuapp.com/',
@@ -178,7 +178,7 @@ const projects = [
     name: 'Moshi Ramen',
     description: 'The best ramen store in town.',
     categories: ['mongodb', 'express', 'graphql'],
-    image: '/moshiramen/home.png',
+    image: '/moshi-ramen/home.png',
     demo: ['https://www.youtube.com/embed/382wNiBYfEU?controls=0&amp;start=4'],
     code: 'https://gitlab.com/lilibethfabregas/moshi-ramen',
     live: 'https://mighty-shelf-25146.herokuapp.com/',
@@ -187,32 +187,32 @@ const projects = [
       0: {
         desc: 'Part of landing page. These testimonials are hard coded.',
         image: 'https://lh3.googleusercontent.com/Xgoj10q2DFBLthJQXRBwTILZV961qTiCuaCh_ya66ZWBow6bFblHr-zpK6xNAEVbFX3q_XRtexJqdoN4H6VQ9x5VEfbqL_iOK9Giukztm-E-Z0if5Wo2cKHHtaPnWb5WQ88Ubd-BygG11B0j_3IvQX4CaFCWy6KbCtSLfxb84wWC3u_Q7YfwOlFuMZOiFYXZwkgE6bWS9UeCsUmVLFjnQtW8z6FlbcgFjkFnGJhJNJgHaLjwFOlQC3JwMpL3H3Tz3xbliuyBBvxLVQ1bAHsMWHMfx5GZMnmMBTPATh_fHK0WWP0BxjvZMJCCSspjP72dMy12AwrJxpeWLncRlWc9GkCqgLm8wSuMpzT_Su-7jpdlITRkhqxIPen054-YgCcXhOsOhxODNEYc-IqSK9AsbGSOnBbg7Zp5i9hxSfufVtnG19W7zb4EuNCUT3mYqK_F888wu3W8WN5m3eUfTpbtedCLAhMrue-yYZ_nlcQEPlxowiokjRBiWPaZKA4m9jE70N9EsImRJQD-2kH679DzkLgbRnMFFaDeNNO90iW3P8DrFqompm2TKdTCFiLrfk5yLlwliMVPnjPBAyykvM9MVrFlQpYAjnxrlNShVPmIVaBaDlR2jhHwR3zEeb3SlWfsxbsXLjrKbhWcdMlokoXcRpOj8IxZDIHELw8xVvj3AK1uWaU0SNi1e88iuu4D=w717-h367-no?authuser=0',
-        image2: '/moshiramen/testi.png'
+        image2: '/moshi-ramen/testi.png'
       },
       1: {
         desc: 'Menu.',
         image: 'https://lh3.googleusercontent.com/9iarxchzl1o1254pwNR3jRME7rMUNUEGW6CY7d5WKqntvh1UGtwBO0U_MKycZ8882y6NY_3ck3tlKwN5Xx4AisFpMAys76X2JzDXoHOM_OttDaVPmWIbIyOmt1O3DGQ-rbcDHOrWH6MMXABhxJPpLFR79VyLvb1UGwU9TwAsSVwdB7kxW6JMphtCq3Q2ed_p2Ab8kD5S6O6SnTZJqHchbEL7O_K0-1qXJQ3Sujvo6TpJJyNbXPlK8hHy0CWAoU8HD2aujKdkXVedHtBkvUSY2NOMsPBzNKO7grp4lUFlSdUjblnsWJUHVvW0XE4nWIzscw1zYWwTSB1pPw0mkqhR1f5ceAdNU05rVjfIEquAZu7LWMKJ3UymKFdaozk06CIjTN411s2VZ77AP9Ma3ZfcGP3qbmBFArrSV2syFFUo6A2MH-B9RbrH-lGIXluX3WSIRSfFVmi9-RfkXqoF5tYoVVfqwIKPhyprcqm2KKgoSofX5it9r4WdSviQe7T0jN4yW86GS7gzyFZvf4qsiRN8yPSC9ZFPpqADV5km3Jf2UU8Pab1FrB4Pd-VFpGyKdmI5IEtlS9pHZwQ1bUcQRy7SDHq8x8exEodTbjtg83fTOqQcRtvlzPFfS_1kVxmvLzBnH0gs7vDFR_E2es22s-lCFmgTq2UDCavJ3hdFu13qHHX4MOiVev524i90tlXh=w1894-h964-no?authuser=0',
-        image2: '/moshiramen/menu.png'
+        image2: '/moshi-ramen/menu.png'
       },
       2: {
         desc: 'Cart. All users can add to cart: both logged in and non logged in users.',
         image: 'https://lh3.googleusercontent.com/jUK_hItgqrm7BdDVJt1ygQ8nttg6pTPE6O9Qic3IjHSMMr1WlAyAhdZ2I90RjFMYtqttouWNJsAZN-6pc_kbPgzPRowjxvIyl8kzXahLQOGb9GZbARI4CixUlcMbGCZxWt2b5pzv7xRgUBiakkdWf60bXGuSO2bFvqMKV0XsMpve3hKUSaOqsmVjSc_F90wLeJVL7DWn1zzqhOsnUmmpKcVhMFMQBfVI4P-qs-J75n4A3Y46Df-HDxGvOJtisBm4cPgcYubUx4GPE2Dcf3jCbKeLLwdxvhKUywpjRUISEPJBa5ZMuotfmJyEc6x8-wzitZjbmqysRh4q5QtiZn4cd0QA-MhLytY4A3--FdnsCM_mvFEMXpfnfzxzWmQUp8UyMv8u7VaVgUU6EwX9TDLlI-dXh_fZpfa7O5hiCsT6fYGjGgNSMlN9xLS8J0FGqOkW6KLgoG7lkfQ3LvEViyYHxpQpkMmSr1hAY7yrmA9WM7kvjBwe4tQDFOR7iUkIOjWUf6q8LhmxGBCnHyiivJOi94jThEdDCmYIqeWAvumkr-pvP9rG_gwIcmQbZCbvGXNN0LZg11cOOiEl5UhTgvVTX-h0TzpBeVl50KjXvIHPsljdnad9EeNIOxxNF1LUIwVhGkGp3LTobwQSYEx-H5USfjsVP74ph2Mbnx9ezdjSOLnYKlVBHa_CqSPjqKc9=w1896-h959-no?authuser=0',
-        image2: '/moshiramen/cart.png'
+        image2: '/moshi-ramen/cart.png'
       },
       3: {
         desc: 'In order to checkout, user must be logged in.',
         image: 'https://lh3.googleusercontent.com/CNVPCjbH_JcwEflg-yZ2TUurGbcBDmzJ374UM7hLbmlSkJ3SlR0IeG6axI4Yi_7DBw8BwODoHda3eRxVjWowa380nWk4ES9xK13f826sheTgaHKnnyPlm4r_xa5V5VTiIYUDAx3eUU9AMcJawc-TQC-czU9zm0Dx5MK4-3ABQJj2PyE8fKMAZLuXNnijRHnuZpKsjjQlWBNOCI52PTwEGaNy5c6zreOC_Z6T_I5gjPwJGj17hwtqe3rR7-nHC3LBGkn4uqhmOU_KJSmUnqWp5bY4CR7aqxD6znC-yESeFMjVdtrBKFh6jtqR9ghBIb3sjEy9RWvjOHXClRxATbUSes4ZWt_TczHaJgkwaC-UvhlTx2eybVhbWXRo7LCAQWNDfKQENogJz2nt0JBb1agN19Fmj4oia1pVC-KWhkAS4Sr6Sd0_X08xwKh3imUtZTXyFohA83SR0HCkcLNcps1lcnwPfyEn2A1wws4Mbq5dhfC6_32jw_xGJB7ey_SSHnd1hfYGyHeOb4yBFSmUbbdoyPtNULD8hGNDcd4V2rx73MQml39LT7aQDRJj6Z3U3PkCD6yteUSLwW-P8a5Cwi-_zKUvaWAVz4lHd6JDt06hOLwiNNrMFuHWox0ao1e0N2P5o6gkUmlDD8dZSisbFYVEnO1HW8BNIbeHmLdQbW7hO0yJl8HWr9mBHbXlqiHG=w1895-h946-no?authuser=0',
-        image2: '/moshiramen/login.png'
+        image2: '/moshi-ramen/login.png'
       },
       4: {
         desc: 'Checkout page, made with stripe.',
         image: 'https://lh3.googleusercontent.com/SesYYVIr8YfBi-6pTqPYcvKS38Kiglms5hrIBYvDqnPCFRv6O7d-FmoJy4H0JAbaX7m4DCr1vkDABitFXX3ZZNlgoVVBwf3Bq0s6_LAmzwubokTjj8GcIwSXZYjcDBZtlxtAMPOqZpLTaJylNBY-NuZTB5a8wsLwMBrP_-C_srSG3GIO2e2qk_iDFGm2q0s31WC55Ve42NK3A_nivV50jbD7DpyCua1OrgNefCWwlkRtRNFuwmaDCsYApjIrI9UDhCSfYMZ05SJDwQqSu6KmNP3wPl5-U_y3H2yEaHQOgT2rbn4LfLLA7iStc4UN0tkyuYiOjQZ0eEwQLwtKQd51av4sYiaycSNZdhdtWOkDxY-jthbH6zf9OZgArm063NGvDhslhT1EYFguPacuwLPfME6eECa8hPDUkfm_GOdWrfgTIX-oNLGLvmu4EmTHOEXIZmjO0mSTOXJQ-ScdUdAMxcYY0u_dfaLivvKw7uk-LQfpmQq1YgwlOvp4BH744dpc9_MBoTAKaVQd1XCPYGMQ0kRlRA4sEGz0c_fvmvGkmq4lIiA2LJTvsUhYJZ_qzLd8_S4DRM7cO_Dl71-CdI902GkNIeGtK5Dm2pTFZkLt2nSy22N9gErFTC7BxkX0LbfxBgQC4o4zfJFC6-48ZHsTZjF3PEorYuaSqRzyic--coN3yzP-Xjab5NleThGV=w1892-h958-no?authuser=0',
-        image2: '/moshiramen/stripe.png'
+        image2: '/moshi-ramen/stripe.png'
       },
       5: {
         desc: 'List of orders of logged in users.',
         image: 'https://lh3.googleusercontent.com/sJvHBtQqFwmwU3gXCG9kfQxa2QwRZzsh1uHU4uzOXdfvZ4xADR_E8udCMtkCCdItaILFVnKiOwsYMMJ0RU_BO7jZPwS4zLqRJcasRjhyQtZsKZYjZ_Ktm-XSGPpUTv4vf8h_93YxTTVZ_GL8uxHcbtNriSVbf0qb69EHlt7J37d4uoGb8_fQyQZwUITXMnAw1v6WBkV-XQzma31L_pQRnq71Vcf-UuK1tMWmSgSOePdmRaPigxv3HOpRYs1bEfMGzobEjivuc-6bhFfRI9zkO9nMTTkzMpgCX94FApMd9LRSR-_JtWEwsKAQpQR4JoyOda15gB_6XKzcN4nftdeDzmYafIIHe1u_hVnCDcEkOqjxc9nP9E55qmQqsBxBqI7rqJWHxeqJtLoOLk10h_kIywcIC7Q4r6_pe44Jr2IFZJJjLOc-KgJCaAYlizOqeHzo1efu4fvytDjDTOqEMYr4nASPfBUP7kC_3CctqSuo9sB2wsLo3uh1z7UaAF6X4HLVj2zOuW6iYTmTsIQZcyjGVZhurhUpVd0tuD5-yJWNHjcno3JtAxdOuGZdm0H3_cwViNMDM2s-mXltmQstVMlhshkBK0vrnVm7qidbZqnYC3PqNvA6bDXqAKyU9zm9UT1DrnghxX9KbvRTzaXcpl-mnn4d8RdcM6b04Uw-L225PKqL9lRnTR7BBj8I6eK2=w1896-h961-no?authuser=0',
-        image2: '/moshiramen/orders.png'
+        image2: '/moshi-ramen/orders.png'
       },
     }
   },
@@ -299,7 +299,7 @@ const projects = [
     name: "Vue Apps",
     description: 'Simple apps: calculator, todo-list, math quiz.',
     categories: ['vue'],
-    image: '/vueapps/7.png',
+    image: '/vue-apps/7.png',
     demo: ['https://www.youtube.com/embed/t-GiamgD3VQ?start=2', 'https://www.youtube.com/embed/kdWb5fjVF58?start=2'],
     code: 'https://gitlab.com/BethLili/vue-apps',
     live: 'https://vue-apps-by-beth.herokuapp.com/to-do',
@@ -308,57 +308,57 @@ const projects = [
       0: {
         desc: 'To do list. A simple input to start.',
         image: 'https://lh3.googleusercontent.com/qOQK0atjwIjxJtfdLH0lOrG1HoSAGP8yr-t2cVJzsXyno6WiSU77xYBp43Xv8WYXu7WtovlnTriO1rgdkBFLCPIGLgXGel_-gBluz1nrKQfpnnjeRceR-dxVe_VTtomFSKcvzNRHx7fof3Vy7i9bTb2T1m0U3EShq1nGISF_oOqA0kW8sni_h015SudEb7t_x--00larXygyQwyXrDUJLLfSE5chsumTHnJuJqN4sC74rurDD-vCL0HZ0uXpC-WI6E7UKHndC2nJ-NRyuZo6CXuc5a7k16_PqHy1QTnIgCTtdkJZmLK0dbPluupMCTX2Ox8MTKlCwpE2sBoXDrzMho7n_mB0MUkgY_sE7gapackv9Mknj8FB0vq43ZqkKxZpP_b_Rhqhxrh5rDiatWWUiZWx42VrI8GjT6Jgbt3R3UEsZF0nRZsRB3K98UwEB5ur3ffWjTTB_pfZ86-Y5F2L5W6356bsaJaooeCaze6bxp8Qk9c0r5BN24WiV7c97VHLR4BQAJxdFy7Xwdxr0j7HKD9iw8TWippG3cui0Rf42JVvM8SvCiCXVcvaIWpbbMcNj3Fctb2sBNVGFsG-wbtq_0CoBSvFNWKVKGAHNpKo9mc2EzHCMr4WjQ3Iap-sLcXuCJob_LGhtL4NxytqVRJVeT2KPUpzq_PlTW7MYCMWtZKwRoK6NRK8S-iFR8zh=w1895-h945-no?authuser=0',
-        image2: '/vueapps/7.png'
+        image2: '/vue-apps/7.png'
       },
       1: {
         desc: 'Search button will appear when task is already added.',
         image: 'https://lh3.googleusercontent.com/j41Vmt_XoaztUmQPnoeAYYHAzqtkLUo3nWynqd-pTdCJEIh-6Lw7PKbKCDbXtNIwOaszbR_lU1QTPLfgW7I4QDz8BO1_Smdc9oJh8bLBUGdEkFrR0Sslmh-RQYb8iOf7A_9KVMg_gG02ER3np0SLTZHGpsT5AWcn0fFrKOLtZJrJKndlSIg4i-jgsYrleOlukfrGaiNYxdNgqOLaySHs-eSsdab60mIrxD5sfijlOO89ooaTScT2CjkuweHNAIzsM8DkwnY2kC7i19hpx6AEonMNT0ZiGkbb4MqimKTjt6IWSFrO328s52PCiz0gCMJM6VO0SrL9PEFaCERGarQzSwoWKYAFcQMqcD5Z2hBW1ggguV6Y6uay5h-zKIs31vitFyKlx0hGJ1Hx4P7y8PescU2xmXnNz-6GzOZGQzLHRNjWWl3Vg22dAngwkD7cynnlxebwDnn6xJ2ievJaLiLLKTPjx0r7_ph7tLqMjoBzeqCPC9h_FN3EqyK8_kpfCa6RU7kIZ_ZAkTwpBZdFwg4GXlHPKswH4omsJtvYmg7sJ2ez9-OXeBjxzGy7gyG4IOiNXhYGlw8tDYRPFqPwHlJY9WlErgBaDJYMrfNa6lPGr8vnpVLrt1GzCagTXNmWx0tsIR2QW8ERR3EMcGm93PM2BrhkO0P2nBTePoD8XaMPvOkbjpb_n5DbG0TrekR2=w1896-h944-no?authuser=0',
-        image2: '/vueapps/8.png'
+        image2: '/vue-apps/8.png'
       },
       2: {
         desc: 'Out of the three task, search for first task.',
         image: 'https://lh3.googleusercontent.com/Q9H2Nl7AT0xdQI45vGaOGsoEfjXFE1YPlRM6JEossrnC47MhMz5Vx16yHDaExrWSefBxqmaimkDoWteccAU8Y5iZ2C39H39XjeSQGd3ZSJmS9ZY-pDWSW6DXSUE5vnXlzYJEoBM2gynwiVRTGaNQ50YRswBq4Oj2BhMjA6rz4dM2jeU-FPR2jbl7eYDfQ1Rxz8hy0jnfOAgL7eoHEYPv7dGWBKT52YaM1S-k2o8ik1l3-m2bsyC1BHB_S_9dGIY9O2_iClSSjD9INwPQW8ib9trxBb8E3kHmWT3t9cpu3WtgtHzzf6pmDCh1sI9ILce38-TqajJSes-Cl9oDrwgCk427JEeJ7WLIeFQG9ayhsOCDRwC_ryWN96wQ3ryAajvdAcEyss2qINvL2PYYuF1GoTIeoFj9b2umyCyEdMYAvV-xdvo_rltl1rx-6YHQeOhLFilYMjst8xpWwSZb2AEe6Jakml6idTfVkbDa4j3ZSIlf2d5WcKeB8TzLLEOIpXKHIzULAadW1ui6dPTW5H6mWN4U_OW1EaqMp62VSPDOZmOokLb6cJd1t6YdsCL1AeEMT_9HT4LGJqK06UBNnnzzHPUUtGfJThTkx2oggQx1vAAWNOMOfaC6wZFP5__wreDRJlwPD2SPjCC6IEgy7YU0U14nNBK1Bh3MqVfoInoSxptIhkafX3GoepWrOxnV=w1901-h945-no?authuser=0',
-        image2: '/vueapps/9.png'
+        image2: '/vue-apps/9.png'
       },
       3: {
         desc: 'Remove-all button will appear when a task is completed. When there are many completed tasks, all of them will be deleted when this button is clicked.',
         image: 'https://lh3.googleusercontent.com/PE0bsbGuBLJp2KZ-Ev4_Nx-h3oeCWvxvTzOk9eq4FR-DzuJIsTuAnIRm7lEqmgFTjMYm-kQTxdy45iQ7ahz34ZNouh8ZzvnXn-Gsfpuc_L2-DF9Y4q0XMTzTh2WMrj-LGN--3jmzGCr1LLzCmdN2A4BBKI0_L8Dgvpla9chbvPoTKc1RlTbyDJIf4Id3Zi9tYwftXvAg62FjLt6csxVRpwTiiWq3opo3lZAmSPAwdcWyIp8kbsDmqOolGm_64bycXHW8VoOCBqh0S6CJgCPAw9a16H-j_VVN1XcNOq9RknrgbXTb1z4ihQVBLk4e3VA9TguAEZHBTLEqRoMd_2AloT8PonNeqfBAscH4wocbqGeBqiHG3rMJijGeu4u65eSDM1HCwzUso_jkZac2eQFGmwm-2pxTHSCwA5Ezo74uZopQazzKzheD8RP83abgT6eHQgQ3F0wkDOE8S-lErhcjb-_rI6Y1pDyrIR-OYW7exj6BcktjZMWcT0Q4Sxp3V1-cAsw0QaikVokItUBO3Aa6iK8Uy8-JexRaCkI9BP1Zi-1nD8u2ezMJWFmY7AlaVM0fuO20rp9C-EvmjkxdBLwFKVNEDrfc6P3Bfg0jd1uPnJJNEMD6wufLB7SUiYjUFawIQxm5oRq_gmYqEMM9oMNGPBIVlLtS17lUi_w9zsmkq12vRYqvp-yKzewvjSTN=w1894-h947-no?authuser=0',
-        image2: '/vueapps/10.png'
+        image2: '/vue-apps/10.png'
       },
       4: {
         desc: 'Delete button will appear when a task is hovered upon. Any task can be deleted: completed or not.',
         image: 'https://lh3.googleusercontent.com/PPu9y8NnOHhPcNwSgCE5gCZELanF6bc_21kuJoEcGYdCKveYgdk2nSdk-Yn8rSgfr2AbIQhl7tu8bB5MRmzNmZM9SwaYOH1xThjLZskUosCP2I2cMZa4Dww4o6BWdVodZYdlGFg7H-S2mtpshuWvrvZt-JM8Uz7qSZkz6qUbV690cDhF5K_IsaeKifTTpNy-4Au71-Nff6mGEugFARLUbS0aW8m-Gc7cif0SERIYL6VOatOzNwf3O64Otx1_GpJrH9f2dw2FG2yCeLizpJ7BT-0G2l72IAh2O_7ikNrROgOuSnBGIXhQR1sVUrKz_LNeBwI_D_zB2TKISclb3aDeSeBUDhlmMpdOhoCWaXYHnJOACRYEYUrmz_kQBGQFaT_Kvgj8g_NdeEXI9LzY_pKqR8MnepoFQvaW_Thoc3s4uSXB2Z685XZY2P0NgL1ODVSjYtpl-vMbG176a2DhxmJhQwo5roxvu-HWXDHnwhr7SwEw8F_GIlgIphkfJMLhXDe-MJaxkeabLD6jWKvMGp1fq2qNJZtnxL27x7zRqVKQtMMuM-5Hu0Q-vvEmj2pcFHqaOuZoHz4xxzR2nnED5g77nvUkinrGa-hx5Bh6mQei2nsE5QKKwA09r-uWhswZJgFmuPvejSK2gXOVu_4XJSYPoLGNHEPshWm99YQLnGaO1K1ZUO3Zsu79ohbGKHlJ=w1886-h934-no?authuser=0',
-        image2: '/vueapps/11.png'
+        image2: '/vue-apps/11.png'
       },
       5: {
         desc: 'A simple calculator. Well we already know what calculator does.',
         image: 'https://lh3.googleusercontent.com/PdRbExhqxBhR7R6qi2To-q4gmC1PTWjopo4Y9bgfZ5MU7dRJrQdl9NulQ0GCY0KYNBOair2BaUPKFcJFbvIB4qhzW-do1SEzZ1M2ifTpB8KCwZSSCHmRbjhp_3mQv3btS6sjCTqcwgzaLxfb5zGr9CSPe4mJkrznqMBKV8Q8VndXrDErpP2mWLTL-dWC6lNxh1AQLNBYZmep82SNAOavWYD8bnW0FEL9NV3dKd7fRWi_Vi-zldkKFOzuIsKBC8ze2zQY2T9ttl0TavCWbhJt6-4MbVudlyvQYv5U54o6VG5MJj3CMU2g3sUEOfyFfVYKIOgsT1d2vEdqa-0-mv3j793v8MQqaajaBPasopbYhnlg2fLGAm3aJ0_0Hy8kk6q-V1tMq96ItmkPCiqQ8cF4gaNykSZnm4_cF2twcgPnNrGEBbDawN8J08vnX2a7HYv3cEdMYMe0MiPzvLIG9H09vQQ5G5YUublanWTKZMyYkGkoYiJQv_u2dVGmkCZprsFVYUYNo_ucRbbdZiHwlV066-GewFPmCARc_TUjfNMDimw4eVMQtMDvqJ-sVMBjgoRRhPbG4VtLz7sMmZ0Vcy2djdER7cAUtAh_SLO6qMv1Wo2QDV9mkLynCcHb7fHzBK_dhW3KOPVCikvZmqMDFo6JFOL27Y6x9nyUqren9UWGmc5o52Ku8SWmdQgLQzul=w1906-h964-no?authuser=0',
-        image2: '/vueapps/1.png'
+        image2: '/vue-apps/1.png'
       },
       6: {
         desc: 'Math quiz. Step one, pick an operator.',
         image: 'https://lh3.googleusercontent.com/C7pAQHxFXk6Iu-T0WDjuxsX8Z_5sKoBckii7jDKOWLPjiPRwz3bbvaN2BUMdrdOb91Uzx7w1-wQxVcmonkXtx5UmfQ-B9A1FAnMcjx2GBAgfMjacqNhaxSCgqeGhC_fQkR0p0IZ8AR_JIlsDpfxHSmWgXnMCMnPaPnkl1BkG5AB_pUf7xCQQjzPk3HDPGfL-L_uqGXCgWhI8k8V7U9xE2p_YcLOBHgMJMBoJTWNRSISwbZSFgKXFQmMqSiBB4HnGmcytNtMNI8QnHhTAZlVWYtx60VRugtoxVYGWZE6GPDg9neMUxhp_yJkee5Fp1-1ck7__cdtv-V_9V2t7iMtbOomA7E0gASN43ugtpqQMlYSILoqGJuW1ph1XOrocXfSYiUy7yGMc2mYlfI38l_ZUFf9KT63P99tE5IJUK1aZrMb4cMqBGXsuAjgovt8kFsdmwdT8mMR7RmG7-Yk18MjITcDfzfs4K5E-yfjFX15aHy5iLTn2kO-RO50LstYzHJXGVO_LJXuIgWvieziU4kSXEmNZcBgY8lDjllaf2tMyKJ_atYhvfiMZWnmklfo9VEkGTgyS2OS1IiHbh8SZzDD9fbcdX8QcyTig06IOcvfwxJGxmjyXtyNNezLXQYdWK7GyXXwuyGAcbB-c08iLyc7bqc656uVJa55Jl7X_IXVzHAjoMPTXq6Natb0b-6Lt=w1917-h960-no?authuser=0',
-        image2: '/vueapps/2.png'
+        image2: '/vue-apps/2.png'
       },
       7: {
         desc: 'Then, pick the level of difficulty.',
         image: 'https://lh3.googleusercontent.com/uRhBLzJar4-95P8Cl-_VUPKdOb_FQ1VTjYFfHmHWLQArRjTcHvwcHdT1mxplh4q9xBaFpID04bugxkKj8HCs27hIREwBiluNCu82qRxcL9BMR6udM0p3IP3wtSAhzYIqd3yyueT2ef0yUqloM2AF8njqztjdCfAJdBpEP7g4UlXhn8UIgBY7C9o1FWN5tri9hoDD6Xerj-F3AyLXoHg4Yjf1w6izY7tVTpYwNhlcQorYZQPx1APmAtdu01Izpe8GuKtxxHJBgBV3vsB-oN2fxm9QQLLTb3ghyb3NNLRhnsbSv1cB3ejyyqWejKTKKFmZmUhRxJCAvtklnfM26Jlk0oVdvnoDX8xfIeToMpH7XSn2BjWjrF_ER0mRZJxQf7oQ_nrL6IoUCekjJemnyJQY76r2dGyrMfRg24ZN2_3tmN82LmTnDUFmhFxG5eY-cBsBcMyD59zNajLeMK7JJ3FU9cxp6zFWM0H5myIf_DtHrBIQa-818O9x5YtZsYBQIntzT4v1IbPHf_Cl9ar9U7TMvHl-FoZPUY_1QI3bL7Z2n4uoMvsBNKILv8HnbQJouX3_JZaf7gYGSG3tyU-ZxKr4lADoPNCQKePh-jGuKnGNkaOe42Is2kOdJingQm1aDvb8GBGd4H72IVuFzzUCnROoov_tKYUCQToUPCu-Yy7XnyEXbZ1B7KIwoHJ29BHa=w718-h363-no?authuser=0',
-        image2: '/vueapps/3.png'
+        image2: '/vue-apps/3.png'
       },
       8: {
         desc: 'First question.',
         image: 'https://lh3.googleusercontent.com/in0aOWNcleYiYUD1Zs684POxdssa-pmm6dMH6332FkOPU1Uro09z51dxAjQw0sj7kqqcUAU8NZCLD6RqzXnojDFvmb6dIJhKthTs7rbRWbKrSa3DyGW-ve5qO_jnBwcSvf6B7pKaaBNrp7rAUinx7Udlm50MxyVROPpOIfu_rrkUAuL-8lz2nsK9nFobsz4JVpc1EhkgRJwEJbm6w591L39daZAPluWolELuwTF1y5cpmR2RkIJ01CXlc05jK_GWPWTy92uPZyjQu_flKOUk3ZbClIJW0QKpVzOM2dRx1HbrWT0doaslM6Y33moG27vgXyXpUk6r5f9LX4svh43a9-FeDlURdbQBxUpvxvfTICwVVQLudYy1gkCEWd-Xv_dGTUbGAZcR1Yq50qOMvjzf_gNkHEVtzA1zQMfXd5klv7o2RPcl-YMiXmlYlzM5aJcRYhTVprJQTRzL8-6rdk-m_aSMVsDiMOJX98_7J5G9b60K5m9-i0Q24pn_YzzD4veqtEqGOpKyd97K1Xe82fA-4zN_8R2MrbSHf63WBMptVV_QAMpzRm4vDgh8X4uHG6nmDFgnofqlolMmdzvFICGaaIP-w8JMBrW7b4-ioUwLunE_tln8RJGQLRw2jy6H8X-jdDYZMmRRmB1PLnQxj7aj-sQ4pr2ZVPcvPv5YwQ9zO9ymyyLF00Z1gPkLLl0q=w1910-h965-no?authuser=0',
-        image2: '/vueapps/4.png'
+        image2: '/vue-apps/4.png'
       },
       9: {
         desc: 'When user started answering, a counter will be shown.',
         image: 'https://lh3.googleusercontent.com/GP_UfC5IfMCqKhPQYwmw2fvTOEKlyDqZQgX-cQEw-Ubwcig0HlGWTFs_KP4XM9ePmm3eYbMmi4mz1jMrBx9Xv8-4TYzem0yjzSEwcBXfcvYavcZgE5-qSPgDY_KTYJ9mj6Ba0wMn5VRGdqlsWP41C61Zp4DdfhHbe4TWyYO60iedWHRqiYX9CdkhdJNx7pERb_jCUwpNI2RSde0sMPkIwgxqJY2UTX_IrNI8uf5bqkBOAvsvUrQZ6qu1-GpNFBRHI4_cqvfgfMYH4aRUOFvB9EeMaqviCPopB9wGiEExGLoNV9GVZ6ljB1CZN8jmHqdiD5fhcIWsmgLfxCQbhY8Yn2IQwNExLpWpMBi5R1xgLhMGwexc5OHmjGk2bnlWpyZ7JWc7NV0XIAYWPUAOU5NEiHq8xEoGEQdmtIVzwpyOfcD_BsjmrZ19RmmCVGCneofLxsMsMvhyyAmWzQoR7xdOIeIGLxqzjmmRPKu-SpQhBugfaxV6qpvMS5Mrr14I77MSxBsEq45abLeY87nEDrHsQWYgqKhw7mPKCuf-vylR2s9mrqd_X37_iPTGHmobRS2_pEyOR9x17bENHuatDR4aYe3SWtmn4ggIqsCvylhfBNnqZdDk2SRKWG4Ae0-nLaT1RtJ6kKM_a-AR11YiwbfS-c5R6va-5AQknDCs-BnHt2QVm1DOAG-R1qKlBxpe=w1911-h966-no?authuser=0',
-        image2: '/vueapps/5.png'
+        image2: '/vue-apps/5.png'
       },
       10: {
         desc: 'When count of answered question reaches ten, user will have the option to save the changes, and come back to it later.',
         image: 'https://lh3.googleusercontent.com/6SVYX6ptwiRGrSnqCUg33Vwe2McpCPKhIaJLBFyBZnocGajl8e1s3aMX4hTmpCOwM-dW8k4u43R_LfWr70FLr1ppMtUNq6OS7tnB9IkGKR9V3ZeqV0zBJHAcxxZHh3xLv5CFNUpI6YdYurCTsBKDPQ-pvp9kPNt1VZoGDQxtJwySZaVpTISArhEFaDGXGM9UGcBENbevVyQkEOrFKzEy5-kN6xCpj0oz3LH9gp1am92JeyBOZU0YHASXEsqCEp9s0TbTDpZd90f4Z1v953RGPsCnwEeVvAA0pGfB4HuaCyNz3ezTBhjNgKEPLOqxC0lsImEJ7at0PLnK8ABUL7DpCxA78TLFDcyGk5LvJ9kD_xBAmf0JcwDLPYMWhXMqBAFnH1bleVY6akRogfZ9602TZCcZaFqSvJRXX5iRsTT_s2bdJrimwmh5PsGKNG-AKYiPKCcokJEuHblDNQeK-Hdjhf9gUMVj_U-MtZye7WQ0Xkh0nmoRHqzuRkeMNX7QrPlygqnwxUFtM1LOLlLg8ypO1gcW44dL2Ozvkpmks7Rn0lPAJyVhOMm4EVHe2FVq_w-RDbscXFUhPeP3hk6vKScVRX11M00NAQk2YaL9jKFhnzWjU_OxfsvwYv2ZA143YPZ0FY7CLrjMu6ZjWlHgDAHngXTjmucLfXOxXiWli-rRd0w7VSmVIeab-Q8KS6fK=w1910-h966-no?authuser=0',
-        image2: '/vueapps/6.png'
+        image2: '/vue-apps/6.png'
       }
     }
   }
