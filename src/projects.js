@@ -2,7 +2,7 @@ const projects = [
   {
     slug: 'organic',
     name: 'Organic',
-    description: 'An online store selling fresh and organic produce.',
+    description: 'Online store selling organic produce.',
     categories: ['laravel', 'vue', 'mysql'],
     image: '../../organic/login.PNG',
     demo: ['https://www.youtube.com/embed/kXsWR_TNK0g?start=5'],
@@ -219,7 +219,7 @@ const projects = [
   {
     slug: 'get-inked',
     name: "Get Inked",
-    description: 'Booking system of tattoo and piercing shop.',
+    description: 'Tattoo and piercing shop.',
     categories: ['mongodb', 'express', 'react'],
     image: '/inked/home.png',
     demo: ['https://www.youtube.com/embed/i_V-VlU-iKA?start=3'],
@@ -297,7 +297,7 @@ const projects = [
   {
     slug: 'vue-apps',
     name: "Vue Apps",
-    description: 'Simple apps: calculator, todo-list, math quiz.',
+    description: 'Calculator, todo-list, math quiz.',
     categories: ['vue'],
     image: '../../vue-apps/7.PNG',
     demo: ['https://www.youtube.com/embed/t-GiamgD3VQ?start=2', 'https://www.youtube.com/embed/kdWb5fjVF58?start=2'],
