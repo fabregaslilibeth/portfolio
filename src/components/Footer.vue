@@ -7,10 +7,10 @@
           <a class="nav-link text-white" href="#">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="#">About</a>
+          <a class="nav-link text-white" href="#about">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="#">Projects</a>
+          <a class="nav-link text-white" href="#projects">Projects</a>
         </li>
       </ul>
     </nav>

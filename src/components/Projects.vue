@@ -8,14 +8,14 @@
           <li class="nav-item col-3 border-right px-0">
             <a class="nav-link active text-center" id="all-tab" data-toggle="pill" href="#all"
                role="tab" aria-controls="all" aria-selected="true">
-              <p class="mb-0 p-4 text-white" @click.prevent="getAllProjects">all</p>
+              <p class="mb-0 p-4 text-white text-uppercase" @click.prevent="getAllProjects">all</p>
             </a>
           </li>
           <li class="nav-item col-3 px-0" :class="index !== (categories.length - 1) ? 'border-right' : '' " v-for="(category, index) in categories" :key="category.name">
             <a class="nav-link text-center" data-toggle="pill" href="#"
                role="tab" :aria-controls="category.name" aria-selected="true"
               @click.prevent="filter(category.name)">
-              <p class="mb-0 py-4 px-1 px-md-4 text-white">{{  category.name }}</p>
+              <p class="mb-0 py-4 px-1 px-md-4 text-white text-uppercase">{{  category.name }}</p>
             </a>
           </li>
         </ul>

@@ -4,10 +4,13 @@
     <div class="project-details position-relative col-12 mx-auto p-4 bg-white">
       <h3 class="project-name font-weight-bolder text-uppercase">{{ project.name }}</h3>
       <h5><small>{{ project.description }}</small></h5>
-      <div>
-        <small v-for="icon in icons" :key="icon">
-          <img :src="icon.icon" alt="" class="icon">
-          {{ icon.name }}
+      <h5><small>{{ project.description2 }}</small></h5>
+      <div class="d-flex justify-content-center">
+        <small v-for="(icon, index) in icons" :key="index">
+         <div>
+           <img :src="icon.icon" alt="" class="icon">
+           {{ icon.name }}
+         </div>
         </small>
       </div>
 

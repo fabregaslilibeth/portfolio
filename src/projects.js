@@ -177,7 +177,7 @@ const projects = [
     slug: 'moshi-ramen',
     name: 'Moshi Ramen',
     description: 'The best ramen store in town.',
-    categories: ['mongodb', 'express', 'graphql'],
+    categories: ['mongodb', 'graphql'],
     image: '../../moshi-ramen/home.PNG',
     demo: ['https://www.youtube.com/embed/382wNiBYfEU?controls=0&amp;start=4'],
     code: 'https://gitlab.com/lilibethfabregas/moshi-ramen',
@@ -361,7 +361,45 @@ const projects = [
         image2: '../../vue-apps/6.PNG'
       }
     }
-  }
+  },
+  {
+    slug: 'good-rock-recipes',
+    name: "Good Rock Recipes",
+    description: 'Website for recipes',
+    description2: 'A responsive website for recipes made with react and pure css (grid), recipes are from Edamam thru an api call.',
+    categories: ['react'],
+    image: '../../good-rock-recipes/home.PNG',
+    demo: ['https://www.youtube.com/embed/7WnGLA0-saY?start=1'],
+    code: 'https://gitlab.com/BethLili/recipe-app-react',
+    live: 'https://good-rock-recipes.herokuapp.com/',
+    color: '#9b6ea7',
+    features: {
+      0: {
+        desc: 'Landing page. Each click on the category button calls an api and returns recipes for that category. Search bar is also working.',
+        image2: '../../good-rock-recipes/home.PNG'
+      },
+      1: {
+        desc: 'This is the result of the api call. Recipes for the selected category are displayed here.',
+        image2: '../../good-rock-recipes/recipes.PNG'
+      },
+      2: {
+        desc: 'When a certain recipe is selected, this page will appear.',
+        image2: '../../good-rock-recipes/recipe-1.PNG'
+      },
+      3: {
+        desc: 'And here are the recipe details.',
+        image2: '../../good-rock-recipes/recipe-2.PNG'
+      },
+      4: {
+        desc: 'Showing the responsiveness of the site, all using pure CSS, no bootstrap or any other framework.',
+        image2: '../../good-rock-recipes/home-responsive.PNG'
+      },
+      5: {
+        desc: 'Showing the responsiveness of the site, all using pure CSS, no bootstrap or any other framework.',
+        image2: '../../good-rock-recipes/home-responsive2.PNG'
+      },
+    }
+  },
 ]
 
 export default projects;

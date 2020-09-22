@@ -4,8 +4,8 @@
     <div class="container-fluid p-0">
       <div class="row">
 
-        <div class="about col-12 col-md-8 mx-auto p-4">
-          <h3 class="p-4 header">Hi, please call me Beth..</h3>
+        <div class="about col-12 col-md-8 mx-auto p-4 m-4">
+          <h3 class="p-4 header m-4">Hi, please call me Beth..</h3>
           <p class="p-2">Yes, I am a licensed accountant, or a CPA for a more familiar term. And yes, I am now working
             as a programmer.
             I don't hate accounting. If I could turn back time, I'd still choose accountancy as my course in college,
