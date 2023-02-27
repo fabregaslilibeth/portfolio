@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="text-primary"
-    :style="`background: url('./../../../port/src/assets/backgrounds/hero-mobile-background.png') bottom center no-repeat; background-size: 100%;`"
-  >
+  <div class="text-primary hero">
     <div class="h-screen flex items-start justify-center">
       <div class="pt-48">
         <h2 class="text-5xl text-center font-sans font-extrabold">
@@ -22,3 +19,11 @@
 <script setup lang="ts">
 import DownloadCv from "./Download.vue";
 </script>
+
+<style scoped>
+.hero {
+  background: url("./../../../portfolio/src/assets/backgrounds/hero-mobile-background.png")
+    bottom center no-repeat;
+  background-size: 100%;
+}
+</style>

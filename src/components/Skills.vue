@@ -25,7 +25,7 @@
                 <p class="text-xxs sm:text-xs">{{ skill.name }}</p>
               </div>
               <img
-                :src="`./../../../port/src/assets/skills/${skill.name}.png`"
+                :src="`./../assets/skills/${skill.name}.png`"
                 :alt="`${skill.name} LOGO`"
                 class="skill-logo absolute top-1/2 -translate-y-1/2 transform w-10/12 mb-8"
               />

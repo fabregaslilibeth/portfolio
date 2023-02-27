@@ -20,9 +20,7 @@
 
     <section id="projects"><Projects /></section>
 
-    <div
-      :style="`background: url('./../../../port/src/assets/backgrounds/contact-container-purple.png') top left no-repeat; background-size: 110%`"
-    >
+    <div class="contact-section">
       <section id="skills"><Skills /></section>
       <section id="contact"><Contact /></section>
     </div>
@@ -88,14 +86,19 @@ const onElementObserved = (entries: Array<IntersectionObserverEntry>) => {
 
 <style>
 .about-section {
-  background: url("./../../../port/src/assets/backgrounds/about-container-purple.png")
+  background: url("./../../../portfolio/src/assets/backgrounds/about-container-purple.png")
     bottom center no-repeat;
   background-size: 100%;
 }
 
+.contact-section {
+  background: url("./../../../portfolio/src/assets/backgrounds/contact-container-purple.png")
+    top left no-repeat;
+  background-size: 110%;
+}
 @media only screen and (min-width: 1024px) {
   .about-section {
-    background: url("./../../../port/src/assets/backgrounds/about-container-purple-with-beth.png")
+    background: url("./../../../portfolio/src/assets/backgrounds/about-container-purple-with-beth.png")
       bottom center no-repeat;
     background-size: 100%;
   }

@@ -4,7 +4,7 @@
   >
     <div
       class="w-full h-full"
-      :style="`background: url('../../src/assets/project-thumbnails/${project.thumbnail}') center center no-repeat; background-size: cover;`"
+      :style="`background: url('./../assets/project-thumbnails/${project.thumbnail}.png') center center no-repeat; background-size: cover;`"
     ></div>
     <div class="project-overlay absolute bg-white">
       <div class="text-gray-700 p-4 project-description">
