@@ -1,13 +1,10 @@
 <template>
-  <div class="pt-20" id="projects">
-    <div class="relative w-48 mx-auto">
-      <div class="font-cursive text-4xl text-center">Projects</div>
-      <div class="w-24 ml-auto -mt-2 custom-project-underline">
-        <icons-underline />
-      </div>
-    </div>
+  <div class="pt-20 py-12">
+    <div class="text-5xl text-primary text-center uppercase">Projects</div>
 
-    <div class="flex my-8 w-full md:w-6/12 lg:w-3/12 mx-auto">
+    <div
+      class="flex my-8 w-full md:w-6/12 lg:w-3/12 mx-auto text-primary font-extrabold"
+    >
       <div
         class="relative mx-auto group cursor-pointer"
         v-for="(item, index) in navItems"
@@ -39,60 +36,13 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, watch } from "vue";
-import { gsap } from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
+import { ref } from "vue";
 
-import IconsUnderline from "../components/icons/underline.vue";
 import IconsNavHighlight from "../components/icons/navhighlight.vue";
 import Project from "../components/Project.vue";
 
-import { useScroll } from "../composables/scroll.js";
-import { useNav } from "../composables/nav.js";
 // @ts-ignore
 import projects from "../../src/assets/js/projects.js";
-
-gsap.registerPlugin(ScrollTrigger);
-
-const { navStore } = useNav(); // text reveal && nav
-const { activeSection } = useScroll(); // text reveal && nav
-
-onMounted(() => {
-  setInterval(() => {
-    fade();
-  }, 200);
-});
-
-watch(
-  () => activeSection,
-  () => {
-    if (activeSection.value === "projects") {
-      textReveal();
-      navStore.setNav("Works");
-    }
-  },
-  {
-    immediate: true,
-    deep: true,
-  }
-);
-
-const textReveal = () => {
-  tl.to(".about-text-reveal", {
-    clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", //square
-    ease: "ease-in",
-    stagger: 0.3,
-    delay: 0.4,
-  });
-};
-
-let tl = gsap.timeline();
-const fade = () => {
-  tl.to(".custom-project-underline", {
-    scrollTrigger: ".custom-project-underline",
-    clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-  });
-};
 
 const navItems = ref([
   {

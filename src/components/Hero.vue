@@ -1,61 +1,19 @@
 <template>
-  <div id="home" class="relative">
+  <div class="text-primary">
     <div class="flex justify-between w-full">
-      <div class="hidden lg:inline-block w-4/12">
-        <div>
-          <icons-rectangle />
-        </div>
-      </div>
       <div
-        class="w-11/12 h-screen lg:h-auto lg:w-8/12 flex items-center justify-center lg:justify-start mx-auto lg:mr-auto"
-      >
-        <div>
-          <h1
-            class="text-4xl md:text-5xl lg:text-7xl uppercase font-extrabold text-accent lg:reveal text-center lg:text-left"
-          >
-            Lilibeth Fabregas
-          </h1>
-          <div class="relative my-4">
-            <div
-              class="font-cursive text-3xl text-center hidden lg:inline-block"
-            >
-              <span class="text-reveal">Certified Public Accountant.</span>
-              <span class="text-reveal"> Web Developer.</span>
+        class="w-5/12 h-192"
+        :style="`background: url('./../../../port/src/assets/backgrounds/hero-desktop-background.png') center right no-repeat; background-size: cover;`"
+      ></div>
+      <div class="w-7/12">
+        <div class="flex items-center justify-center h-192 pr-32">
+          <div>
+            <h2 class="text-7xl font-sans font-extrabold">LILIBETH FABREGAS</h2>
+            <div class="my-8 text-5xl tracking-wider uppercase">
+              <p class="mb-2">CPA. Web Developer.</p>
             </div>
-            <div class="font-cursive md:text-3xl text-center lg:hidden">
-              <span>CPA.</span>
-              <span> Web Developer.</span>
-            </div>
-            <div class="w-24 ml-auto -mt-2 hidden lg:inline-block">
-              <icons-underline />
-            </div>
-          </div>
-
-          <div
-            class="relative w-60 lg:w-80 my-8 cursor-pointer btn-group lg:custom-btn ml-auto mr-auto lg:ml-0"
-          >
-            <div
-              class="border border-accent rounded-full pl-12 md:pl-8 lg:px-20 h-12 md:h-16 lg:text-xl uppercase tracking-wider flex items-center font-extrabold"
-            >
-              Download CV
-            </div>
-            <div
-              class="absolute w-12 md:w-16 h-12 md:h-16 bg-accent rounded-full top-0 right-0 flex items-center justify-center icon"
-            >
-              <svg
-                width="25"
-                height="26"
-                viewBox="0 0 25 26"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M7.37042 0.256737C6.97187 0.273098 6.69057 0.6495 6.67885 1.53319C6.66713 2.58055 6.94848 4.44612 7.71039 8.4392C8.19097 10.9756 7.85104 11.483 5.6591 11.483C3.83053 11.483 5.03783 13.6595 8.26126 16.196C10.0195 17.5707 12.2817 19.0108 12.7155 19.0272C13.2664 19.0435 16.8298 15.6887 18.2598 13.8232C18.6114 13.3649 18.9983 12.9395 19.1272 12.8741C20.2994 12.2358 18.9631 10.7466 17.3924 10.9429C16.2202 11.074 16.1968 11.0738 16.1968 10.5993C16.1968 9.1755 17.2517 2.67873 17.4744 1.54955C17.5565 1.14044 17.3338 0.305834 16.525 0.142182C15.1184 -0.136011 12.481 0.0439873 7.37042 0.256737ZM15.5053 2.48234C15.2474 6.39353 15.0481 8.78285 15.0012 10.2229C14.9543 12.3175 15.2474 12.4813 16.2672 12.4976L17.4862 12.5467L16.5836 13.4141C11.9887 17.5216 12.6803 17.358 9.50381 15.1323C6.66714 13.1521 6.62028 13.0867 7.94481 12.8741C9.07006 12.694 9.3162 12.3177 9.14037 11.0248C8.96453 9.71563 8.81224 6.88449 8.4488 4.31521C8.22612 2.6951 8.00341 2.35142 9.1638 2.22051C9.62099 2.17141 14.38 1.89322 14.9308 1.94231C15.5052 1.99141 15.5287 2.15505 15.5053 2.48234ZM0.98214 18.8635C-0.0962476 19.0762 -0.107956 19.1089 0.114753 19.96C0.442963 21.22 0.161672 21.5309 0.548485 22.8728C0.970454 24.3457 1.89647 25.5895 3.24445 25.7858C4.94408 26.0313 8.62464 25.9986 22.4093 25.9986C23.6986 24.7548 24.402 24.1167 24.6481 21.8583C24.7301 21.0564 24.859 20.2382 24.9411 20.0417C25.3631 18.9453 23.4876 18.9453 20.2407 18.798C19.936 18.7817 19.6664 19.0272 19.5491 19.4199C18.7522 22.1038 19.1506 21.891 6.76093 22.2347C6.50305 22.2347 6.2686 21.9892 6.22172 21.6455C5.85835 19.3709 5.77632 19.1581 5.24885 18.8962C4.65105 18.618 2.29497 18.6017 0.98214 18.8635ZM22.7844 20.4018C22.9484 20.4183 23.0539 20.6473 22.9836 20.8601C22.8195 21.3509 22.5733 21.9892 22.3858 22.6273C22.1045 23.6584 21.1433 24.1821 20.4986 24.1657C20.4986 24.1657 4.1939 24.133 3.18583 24.0348C2.85764 24.0021 2.58804 23.7074 2.48254 23.2656C2.30672 22.5129 2.09569 21.171 2.09569 21.1873C2.03709 20.8272 2.22468 20.5 2.49427 20.5C2.51772 20.5 4.55728 20.5 4.48694 20.5C4.63933 20.5 4.77994 20.6309 4.85027 20.8274C5.38946 22.4147 5.41295 22.9547 7.59317 23.1675C8.54266 23.2656 16.2203 23.3475 18.0605 22.9711C19.3851 22.7092 19.8071 22.1855 20.2994 21.171L20.6392 20.4673C20.6979 20.3527 20.78 20.2872 20.8737 20.2872C21.2839 20.3037 22.2685 20.3691 22.7844 20.4018Z"
-                  fill="white"
-                />
-              </svg>
+            <div class="cursor-pointer">
+              <download-cv />
             </div>
           </div>
         </div>
@@ -65,85 +23,5 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, watch } from "vue";
-import { gsap } from "gsap";
-import SplitType from "split-type";
-
-import { useScroll } from "../composables/scroll.js";
-import { useNav } from "../composables/nav.js";
-
-import IconsRectangle from "../components/icons/rectangle.vue";
-import IconsUnderline from "../components/icons/underline.vue";
-
-const { navStore } = useNav(); // text reveal && nav
-const { activeSection } = useScroll(); // text reveal && nav
-
-onMounted(() => {
-  navStore.setNav("Home");
-  if (screen.width > 1023) {
-    new SplitType(".reveal");
-    setInterval(() => {
-      fade();
-    }, 200);
-  }
-});
-let tl = gsap.timeline();
-const fade = () => {
-  tl.to(".char", {
-    scale: 1,
-    ease: "elastic",
-    transformOrigin: "50% 50%",
-    stagger: 0.1,
-    duration: 2,
-  });
-  tl.to(
-    ".text-reveal",
-    {
-      clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-      stagger: 0.3,
-    },
-    "-=2.2"
-  );
-  tl.to(".custom-underline", {
-    clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-  });
-  tl.to(".custom-btn", {
-    clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-  });
-};
-
-watch(
-  () => activeSection,
-  () => {
-    if (activeSection.value === "home") {
-      navStore.setNav("Home");
-    } else {
-      navStore.setNav("");
-    }
-  },
-  {
-    immediate: true,
-    deep: true,
-  }
-);
+import DownloadCv from "./Download.vue";
 </script>
-
-<style>
-.char {
-  scale: 1.1;
-}
-
-.text-reveal {
-  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-  transition: all 1.5s;
-  transform: translateY(-3em);
-}
-
-.custom-underline {
-  clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
-}
-
-.custom-btn {
-  clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
-}
-</style>

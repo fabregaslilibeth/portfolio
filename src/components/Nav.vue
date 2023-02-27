@@ -1,70 +1,57 @@
 <template>
-  <div class="">
+  <div class="flex space-x-5 justify-center w-full lg:block lg:space-x-0">
     <div
-      class="relative w-auto my-4 cursor-pointer mx-auto btn-group"
-      @click="slideTo('Home')"
+      v-for="(navItem, index) in navList"
+      :key="index"
+      @click="slideTo(navItem)"
     >
       <div
-        class="rounded-full text-right pr-12 h-12 flex items-center justify-end font-semibold text-xs nav-item tracking-widest opacity-0 duration-500"
+        class="btn-group w-12 h-12 bg-white rounded-full relative my-4 cursor-pointer"
       >
-        HOME
-      </div>
-      <div
-        class="absolute w-12 h-12 rounded-full top-0 right-0 flex items-center justify-center nav-icon"
-        :class="nav === 'Home' ? 'bg-accent' : 'bg-navitem'"
-      >
-        <icons-home />
-      </div>
-    </div>
-
-    <div
-      class="relative my-4 cursor-pointer mx-auto btn-group"
-      @click="slideTo('About')"
-    >
-      <div
-        class="rounded-full text-right pl-2 pr-12 h-12 flex items-center justify-end font-semibold text-xs nav-item opacity-0 duration-500"
-      >
-        ABOUT
-      </div>
-      <div
-        class="absolute w-12 h-12 rounded-full top-0 right-0 flex items-center justify-center nav-icon duration-200"
-        :class="nav === 'About' ? 'bg-accent' : 'bg-navitem'"
-      >
-        <icons-about />
-      </div>
-    </div>
-
-    <div
-      class="relative my-4 cursor-pointer mx-auto btn-group"
-      @click="slideTo('Projects')"
-    >
-      <div
-        class="rounded-full text-right pl-2 pr-12 h-12 flex items-center justify-end font-semibold text-xs nav-item opacity-0 duration-500"
-      >
-        WORKS
-      </div>
-      <div
-        class="absolute w-12 h-12 rounded-full top-0 right-0 flex items-center justify-center nav-icon duration-200"
-        :class="nav === 'Works' ? 'bg-accent' : 'bg-navitem'"
-      >
-        <icons-projects />
-      </div>
-    </div>
-
-    <div
-      class="relative my-4 cursor-pointer mx-auto btn-group"
-      @click="slideTo('Contact')"
-    >
-      <div
-        class="rounded-full pl-3 pr-12 h-12 flex items-center justify-end font-semibold text-xs nav-item opacity-0 duration-500"
-      >
-        CONTACT
-      </div>
-      <div
-        class="absolute w-12 h-12 rounded-full top-0 right-0 flex items-center justify-center nav-icon duration-200"
-        :class="nav === 'Contact' ? 'bg-accent' : 'bg-navitem'"
-      >
-        <icons-contact />
+        <div
+          class="nav-label absolute right-0 top-0 bg-primary text-white flex items-center h-full rounded-l-full"
+        >
+          <p class="px-4 font-extrabold uppercase">{{ navItem }}</p>
+        </div>
+        <div
+          class="bg-white rounded-full w-12 h-12 flex items-center justify-center absolute right-0 top-0"
+          :class="
+            nav === navItem
+              ? 'shadow-buttonHover'
+              : 'shadow-buttonNormal hover:shadow-buttonHover'
+          "
+        >
+          <div
+            :class="nav === navItem ? 'text-accent' : 'text-primary'"
+            v-if="navItem === 'home'"
+          >
+            <icons-home />
+          </div>
+          <div
+            :class="nav === navItem ? 'text-accent' : 'text-primary'"
+            v-if="navItem === 'about'"
+          >
+            <icons-about />
+          </div>
+          <div
+            :class="nav === navItem ? 'text-accent' : 'text-primary'"
+            v-if="navItem === 'projects'"
+          >
+            <icons-projects />
+          </div>
+          <div
+            :class="nav === navItem ? 'text-accent' : 'text-primary'"
+            v-if="navItem === 'skills'"
+          >
+            <icons-skills />
+          </div>
+          <div
+            :class="nav === navItem ? 'text-accent' : 'text-primary'"
+            v-if="navItem === 'contact'"
+          >
+            <icons-contact />
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -75,36 +62,32 @@ import { storeToRefs } from "pinia";
 import IconsHome from "../components/icons/home.vue";
 import IconsAbout from "../components/icons/about.vue";
 import IconsProjects from "../components/icons/projects.vue";
+import IconsSkills from "../components/icons/skills.vue";
 import IconsContact from "../components/icons/contact.vue";
 import { useNavStore } from "@/stores/nav";
 
 const navStore = useNavStore();
 const { nav } = storeToRefs(navStore);
 
+const navList = ["home", "about", "projects", "skills", "contact"];
 const slideTo = (section: string) => {
-  navStore.slideToSection(section);
+  const element = document.getElementById(section);
+  const top = element?.offsetTop;
+  navStore.slideToSection(top);
 };
 </script>
 
 <style scoped>
-.nav-item {
-  background: linear-gradient(to right, #111 50%, #ffb400 50%);
-  background-size: 200% 100%;
-  background-position: left bottom;
-  transition: all 300ms cubic-bezier(1, 0.02, 0.35, 1);
+.nav-label {
+  opacity: 0;
 }
 
-.btn-group:hover .nav-item {
-  background-position: right bottom;
-  opacity: 1;
-}
-
-.nav-icon {
-  background-size: 200% 100%;
-  background-position: left bottom;
-  transition: background-color 300ms cubic-bezier(1, 0.02, 0.35, 1);
-}
-.btn-group:hover .nav-icon {
-  background: #ffae00;
+@media screen and (min-width: 1024px) {
+  .btn-group:hover .nav-label {
+    right: 20px;
+    padding-right: 20px;
+    opacity: 100%;
+    transition-duration: 300ms;
+  }
 }
 </style>
