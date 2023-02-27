@@ -54,7 +54,7 @@
           <div class="w-9/12 mx-auto my-8 text-primary">
             <button
               type="submit"
-              :disabled="!name || !email || message ? 'disabled' : ''"
+              :disabled="canSend()"
               class="px-4 py-2 duration-300 flex items-center font-semibold uppercase tracking-wider"
               :class="
                 name && email && message
@@ -162,6 +162,10 @@ const name = ref("");
 const email = ref("");
 const message = ref("");
 const status = ref(0);
+
+const canSend = () => {
+  return !name.value || !email.value || !message.value;
+};
 
 const submit = () => {
   const templateParams = {

@@ -1,5 +1,5 @@
 <template>
-  <main class="relative" id="aaa">
+  <main class="relative" id="homeview">
     <section id="home">
       <!-- up to 639 -->
       <div class="sm:hidden"><HeroMobile /></div>
@@ -56,10 +56,12 @@ import Footer from "../components/Footer.vue";
 const { navStore } = useNav(); // text reveal && nav
 
 const observer = ref();
-const element = ref(null);
+const element = ref(HTMLElement);
 onBeforeMount(() => {
-  element.value = document.getElementById("aaa");
+  // @ts-ignore
+  element.value = document.getElementById("homeview")!;
   observer.value = new IntersectionObserver(onElementObserved, {
+    // @ts-ignore
     root: element.value,
     threshold: 0.22,
   });
@@ -73,15 +75,12 @@ onMounted(() => {
   });
 });
 
-const onElementObserved = (entries) => {
+const onElementObserved = (entries: Array<IntersectionObserverEntry>) => {
+  console.log(entries);
   entries.forEach(({ target, isIntersecting }) => {
-    const id = target.getAttribute("id");
+    const id = target.getAttribute("id") as string;
     if (isIntersecting) {
       navStore.setNav(id);
-    } else {
-      // element.value
-      //   .querySelector(`nav li a[href="#${id}"]`)
-      //   .parentElement.classList.remove("active");
     }
   });
 };

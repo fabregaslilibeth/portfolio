@@ -136,7 +136,7 @@ const skills = [
   },
 ];
 
-const getSkills = (cat) => {
+const getSkills = (cat: string) => {
   return skills.filter((sk) => sk.category === cat.toLowerCase());
 };
 </script>

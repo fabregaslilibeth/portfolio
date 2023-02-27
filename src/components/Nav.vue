@@ -72,7 +72,8 @@ const { nav } = storeToRefs(navStore);
 const navList = ["home", "about", "projects", "skills", "contact"];
 const slideTo = (section: string) => {
   const element = document.getElementById(section);
-  const top = element?.offsetTop;
+  // @ts-ignore
+  const top = element.offsetTop;
   navStore.slideToSection(top);
 };
 </script>

@@ -16,7 +16,6 @@
 </template>
 
 <script setup lang="ts">
-import IconsBullet from "../components/icons/bullet.vue";
 defineProps({
   // project: Object,
   classes: String,
