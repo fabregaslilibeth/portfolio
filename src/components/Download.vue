@@ -13,7 +13,6 @@
 import IconsDownload from "./icons/download.vue";
 
 const openCv = () => {
-  window.open("https://fabregaslilibeth.github.io/portfolio/src/assets/resume/Lilibeth%20Fabregas.pdf");
+  window.open("./assets/LilibethFabregas.pdf");
 };
 </script>
-

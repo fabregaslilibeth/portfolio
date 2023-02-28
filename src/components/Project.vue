@@ -85,37 +85,37 @@ defineProps({
 }
 
 .moshi {
-  background: url("@/assets/project-thumbnails/thumbnail-moshi.png") center
+  background: url("@/assets/project-thumbnails/thumbnail-moshi.webp") center
     no-repeat;
   background-size: cover;
 }
 
 .inked {
-  background: url("@/assets/project-thumbnails/thumbnail-getinked.png") top
+  background: url("@/assets/project-thumbnails/thumbnail-getinked.webp") top
     right no-repeat;
   background-size: cover;
 }
 
 .organic {
-  background: url("@/assets/project-thumbnails/thumbnail-organic.png") top right
-    no-repeat;
+  background: url("@/assets/project-thumbnails/thumbnail-organic.webp") top
+    right no-repeat;
   background-size: cover;
 }
 
 .spendee {
-  background: url("@/assets/project-thumbnails/thumbnail-spendee.png") top right
-    no-repeat;
+  background: url("@/assets/project-thumbnails/thumbnail-spendee.webp") top
+    right no-repeat;
   background-size: cover;
 }
 
 .minigram {
-  background: url("@/assets/project-thumbnails/thumbnail-mini.png") top right
+  background: url("@/assets/project-thumbnails/thumbnail-mini.webp") top right
     no-repeat;
   background-size: cover;
 }
 
 .recipe {
-  background: url("@/assets/project-thumbnails/thumbnail-recipe.png") top right
+  background: url("@/assets/project-thumbnails/thumbnail-recipe.webp") top right
     no-repeat;
   background-size: cover;
 }

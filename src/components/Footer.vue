@@ -24,7 +24,7 @@
 
 @media screen and (min-width: 641px) {
   .footer-section {
-    background: url("@/assets/backgrounds/footer.png") bottom center no-repeat;
+    background: url("@/assets/backgrounds/footer.webp") bottom center no-repeat;
     background-size: cover;
   }
 }

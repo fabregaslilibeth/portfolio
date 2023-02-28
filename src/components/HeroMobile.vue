@@ -22,7 +22,7 @@ import DownloadCv from "./Download.vue";
 
 <style scoped>
 .hero {
-  background: url("@/assets/backgrounds/hero-mobile-background.png") bottom
+  background: url("@/assets/backgrounds/hero-mobile-background.webp") bottom
     center no-repeat;
   background-size: 100%;
 }

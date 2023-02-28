@@ -50,118 +50,94 @@ const skills = [
   {
     name: "laravel",
     category: "development",
-    image: "./../../../port/src/assets/skills/laravel.png",
   },
   {
     name: "php",
     category: "development",
-    image: "@/assets/skills/php.png",
   },
   {
     name: "mongodb",
     category: "development",
-    image: "./../assets/skills/mongodb.png",
   },
   {
     name: "mysql",
     category: "development",
-    image: "./../assets/skills/mysql.png",
   },
   {
     name: "react",
     category: "development",
-    image: "./../assets/skills/react.png",
   },
   {
     name: "javascript",
     category: "development",
-    image: "./../assets/skills/javascript.png",
   },
   {
     name: "node",
     category: "development",
-    image: "./../assets/skills/node.png",
   },
   {
     name: "tailwindcss",
     category: "development",
-    image: "./../assets/skills/tailwindcss.png",
   },
   {
     name: "vue",
     category: "development",
-    image: "./../assets/skills/vue.png",
   },
   {
     name: "bootstrap",
     category: "development",
-    image: "./../assets/skills/bootstrap.png",
   },
   {
     name: "sass",
     category: "development",
-    image: "./../assets/skills/sass.png",
   },
   {
     name: "typescript",
     category: "development",
-    image: "./../assets/skills/typescript.png",
   },
-
   {
     name: "github",
     category: "tools",
-    image: "./../assets/skills/github.png",
   },
   {
     name: "gitlab",
     category: "tools",
-    image: "./../assets/skills/gitlab.png",
   },
   {
     name: "jira",
     category: "tools",
-    image: "./../assets/skills/jira.png",
   },
   {
     name: "figma",
     category: "tools",
-    image: "./../assets/skills/figma.png",
   },
   {
     name: "phpstorm",
     category: "tools",
-    image: "./../assets/skills/phpstorm.png",
   },
   {
     name: "vscode",
     category: "tools",
-    image: "./../assets/skills/vscode.png",
   },
   {
     name: "shopify",
     category: "cms",
-    image: "./../assets/skills/shopify.png",
   },
   {
     name: "wordpress",
     category: "cms",
-    image: "./../assets/skills/wordpress.png",
   },
   {
     name: "nova",
     category: "cms",
-    image: "./../assets/skills/nova.png",
   },
   {
     name: "directus",
     category: "cms",
-    image: "./../assets/skills/directus.png",
   },
   {
     name: "statamic",
     category: "cms",
-    image: "./../assets/skills/statamic.png",
   },
 ];
 

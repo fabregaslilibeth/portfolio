@@ -25,7 +25,7 @@ import DownloadCv from "./Download.vue";
 
 <style scoped>
 .hero {
-  background: url("@/assets/backgrounds/hero-desktop-background.png") center
+  background: url("@/assets/backgrounds/hero-desktop-background.webp") center
     right no-repeat;
   background-size: cover;
 }

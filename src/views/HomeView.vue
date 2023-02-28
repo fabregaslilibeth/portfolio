@@ -85,19 +85,19 @@ const onElementObserved = (entries: Array<IntersectionObserverEntry>) => {
 
 <style>
 .about-section {
-  background: url("@/assets/backgrounds/about-container-purple.png") bottom
-    center no-repeat;
+  background: url("@/assets/backgrounds/about-container.webp") bottom center
+    no-repeat;
   background-size: 100%;
 }
 
 .contact-section {
-  background: url("@/assets/backgrounds/contact-container-purple.png") top left
+  background: url("@/assets/backgrounds/contact-container-purple.webp") top left
     no-repeat;
   background-size: 110%;
 }
 @media only screen and (min-width: 1024px) {
   .about-section {
-    background: url("@/assets/backgrounds/about-container-purple-with-beth.png")
+    background: url("@/assets/backgrounds/about-container-purple-with-beth.webp")
       bottom center no-repeat;
     background-size: 100%;
   }

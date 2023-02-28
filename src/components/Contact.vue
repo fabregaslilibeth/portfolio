@@ -37,7 +37,7 @@
                 Thank you for reaching out. I'll get back to you immediately.
               </p>
             </div>
-            <div v-if="status === 200" class="text-red-500 py-8">
+            <div v-if="status === 500" class="text-red-500 py-8">
               <p>Something went wrong. I did not receive your message.</p>
               <p>
                 Please email me instead at fabregaslilibeth@gmail.com or click
