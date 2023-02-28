@@ -81,9 +81,13 @@ const slideTo = (section: string) => {
 <style scoped>
 .nav-label {
   opacity: 0;
+  display: none;
 }
 
 @media screen and (min-width: 1024px) {
+  .nav-label {
+    display: flex;
+  }
   .btn-group:hover .nav-label {
     right: 20px;
     padding-right: 20px;

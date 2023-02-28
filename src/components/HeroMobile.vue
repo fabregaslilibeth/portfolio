@@ -5,10 +5,10 @@
         <h2 class="text-5xl text-center font-sans font-extrabold">
           LILIBETH FABREGAS
         </h2>
-        <div class="text-2xl uppercase text-center">
+        <div class="text-2xl uppercase text-center my-2">
           <p class="mb-2">CPA. Web Developer.</p>
         </div>
-        <div class="cursor-pointer w-48 mx-auto">
+        <div class="cursor-pointer w-48 mx-auto my-4">
           <download-cv />
         </div>
       </div>
@@ -22,8 +22,8 @@ import DownloadCv from "./Download.vue";
 
 <style scoped>
 .hero {
-  background: url("./../../../portfolio/src/assets/backgrounds/hero-mobile-background.png")
-    bottom center no-repeat;
+  background: url("@/assets/backgrounds/hero-mobile-background.png") bottom
+    center no-repeat;
   background-size: 100%;
 }
 </style>

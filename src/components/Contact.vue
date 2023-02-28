@@ -4,7 +4,7 @@
 
     <div class="md:flex w-full">
       <div
-        class="w-full md:w-6/12 lg:w-5/12 my-8 mx-auto py-8 order-last text-center"
+        class="w-full md:w-6/12 lg:w-7/12 mx-auto pt-8 pb-4 order-last text-center"
       >
         <form @submit.prevent="submit">
           <div>
@@ -51,7 +51,7 @@
               <p>Sorry for the inconvenience.</p>
             </div>
           </div>
-          <div class="w-9/12 mx-auto my-8 text-primary">
+          <div class="w-9/12 mx-auto my-8 text-prima  ry">
             <button
               type="submit"
               :disabled="canSend()"
@@ -68,8 +68,8 @@
         </form>
       </div>
 
-      <div class="w-10/12 md:w-5/12 sm:pt-8 lg:pt-12 mx-auto">
-        <div class="w-full md:w-9/12 lg:w-7/12 mx-auto">
+      <div class="w-10/12 md:w-5/12 mx-auto">
+        <div class="w-full md:w-9/12 lg:w-7/12 md:ml-auto">
           <div class="my-6 mx-auto">
             <p class="italic pb-2 text-xs">Email me at:</p>
             <div class="flex items-center hover-icon">

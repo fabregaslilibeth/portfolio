@@ -3,9 +3,18 @@
     class="h-full relative project-group cursor-pointer shadow-simple rounded-sm"
   >
     <div
-      class="w-full h-full"
-      :style="`background: url('./../assets/project-thumbnails/${project.thumbnail}.png') center center no-repeat; background-size: cover;`"
+      v-if="project.name === 'Moshi Ramen'"
+      class="w-full h-full moshi"
     ></div>
+    <div v-if="project.name === 'Get Inked'" class="w-full h-full inked"></div>
+    <div v-if="project.name === 'Organic'" class="w-full h-full organic"></div>
+    <div
+      v-if="project.name === 'Minigram'"
+      class="w-full h-full minigram"
+    ></div>
+    <div v-if="project.name === 'Spendee'" class="w-full h-full spendee"></div>
+    <div v-if="project.name === 'Good Rock'" class="w-full h-full recipe"></div>
+
     <div class="project-overlay absolute bg-white">
       <div class="text-gray-700 p-4 project-description">
         <div class="flex justify-between items-center">
@@ -53,7 +62,7 @@ defineProps({
 
 <style scoped>
 .project-overlay {
-  top: -10px;
+  top: 0px;
   height: 0;
   width: 100%;
   transition-property: height;
@@ -66,12 +75,48 @@ defineProps({
   transition-delay: 200ms;
 }
 .project-group:hover .project-overlay {
-  top: 0;
+  top: 0px;
   height: 100%;
   opacity: 100%;
 }
 
 .project-group:hover .project-description {
   opacity: 100%;
+}
+
+.moshi {
+  background: url("@/assets/project-thumbnails/thumbnail-moshi.png") center
+    no-repeat;
+  background-size: cover;
+}
+
+.inked {
+  background: url("@/assets/project-thumbnails/thumbnail-getinked.png") top
+    right no-repeat;
+  background-size: cover;
+}
+
+.organic {
+  background: url("@/assets/project-thumbnails/thumbnail-organic.png") top right
+    no-repeat;
+  background-size: cover;
+}
+
+.spendee {
+  background: url("@/assets/project-thumbnails/thumbnail-spendee.png") top right
+    no-repeat;
+  background-size: cover;
+}
+
+.minigram {
+  background: url("@/assets/project-thumbnails/thumbnail-mini.png") top right
+    no-repeat;
+  background-size: cover;
+}
+
+.recipe {
+  background: url("@/assets/project-thumbnails/thumbnail-recipe.png") top right
+    no-repeat;
+  background-size: cover;
 }
 </style>

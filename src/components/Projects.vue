@@ -23,7 +23,9 @@
       </div>
     </div>
 
-    <div class="max-w-screen-lg mx-auto relative my-8 grid grid-cols-3 gap-4">
+    <div
+      class="max-w-screen-lg mx-auto relative my-8 flex justify-center flex-wrap md:grid md:grid-cols-3 md:gap-4"
+    >
       <div
         v-for="(project, index) in filteredProjects"
         :key="project.slug"
@@ -67,13 +69,13 @@ const filteredProjects = ref([...projects]);
 
 const getClass = (index: number) => {
   if (activeNav.value !== "All") {
-    return "col-span-3 md:col-span-1 row-span-1 bg-white text-gray-900 h-52";
+    return "md:col-span-1 row-span-1 bg-white text-gray-900 h-72 md:h-52 project";
   } else if ([1].includes(index)) {
-    return "col-span-3 md:col-span-2 row-span-1 bg-white text-gray-900 h-52";
+    return "md:col-span-2 row-span-1 bg-white text-gray-900 h-72 md:h-52 project";
   } else if ([2, 4].includes(index)) {
-    return "col-span-3 md:col-span-1 row-span-2 bg-white text-gray-900 h-108";
+    return "md:col-span-1 row-span-2 bg-white text-gray-900 h-72 md:h-108 project";
   } else {
-    return "col-span-3 md:col-span-1 row-span-1 bg-white text-gray-900 h-52";
+    return "md:col-span-1 row-span-1 bg-white text-gray-900 h-72 md:h-52 project";
   }
 };
 
@@ -99,7 +101,11 @@ const filter = () => {
 </script>
 
 <style>
-.custom-project-underline {
-  clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+@media screen and (max-width: 767.9px) {
+  .project {
+    width: 320px;
+    margin-bottom: 12px;
+    margin-right: 12px;
+  }
 }
 </style>

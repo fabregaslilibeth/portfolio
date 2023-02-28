@@ -5,7 +5,7 @@
       <div class="w-full h-192 absolute bottom-0 left-0"></div>
       <div class="col-span-4"></div>
       <div
-        class="col-span-12 lg:col-span-8 py-12 lg:py-20 text-center lg:text-left mx-4 sm:mx-8 lg:mx-20"
+        class="col-span-12 lg:col-span-8 py-12 lg:py-20 text-center lg:text-left mx-4 sm:mx-8 lg:ml-20 lg:mr-32"
       >
         <div class="mb-12">
           <p class="font-extrabold text-xl uppercase">
@@ -68,8 +68,9 @@
   </div>
 </template>
 
+<!--
 <script setup lang="ts">
-// import IconsArrowRight from "./icons/arrowright.vue";
+import IconsArrowRight from "./icons/arrowright.vue";
 </script>
 
 <style scoped>
@@ -84,4 +85,4 @@
   filter: grayscale(60%);
   opacity: 80%;
 }
-</style>
+</style> --->

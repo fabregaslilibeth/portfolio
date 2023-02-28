@@ -74,7 +74,6 @@ onMounted(() => {
 });
 
 const onElementObserved = (entries: Array<IntersectionObserverEntry>) => {
-  console.log(entries);
   entries.forEach(({ target, isIntersecting }) => {
     const id = target.getAttribute("id") as string;
     if (isIntersecting) {
@@ -86,19 +85,19 @@ const onElementObserved = (entries: Array<IntersectionObserverEntry>) => {
 
 <style>
 .about-section {
-  background: url("./../../../portfolio/src/assets/backgrounds/about-container-purple.png")
-    bottom center no-repeat;
+  background: url("@/assets/backgrounds/about-container-purple.png") bottom
+    center no-repeat;
   background-size: 100%;
 }
 
 .contact-section {
-  background: url("./../../../portfolio/src/assets/backgrounds/contact-container-purple.png")
-    top left no-repeat;
+  background: url("@/assets/backgrounds/contact-container-purple.png") top left
+    no-repeat;
   background-size: 110%;
 }
 @media only screen and (min-width: 1024px) {
   .about-section {
-    background: url("./../../../portfolio/src/assets/backgrounds/about-container-purple-with-beth.png")
+    background: url("@/assets/backgrounds/about-container-purple-with-beth.png")
       bottom center no-repeat;
     background-size: 100%;
   }

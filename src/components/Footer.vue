@@ -1,7 +1,7 @@
 <template>
   <div class="w-full footer-section mb-20 lg:mb-0">
     <section class="text-white p-4 flex items-end">
-      <div class="w-1/2 text-xs">
+      <div class="w-full md:w-1/2 text-xs">
         <p>Lilibeth Fabregas || CPA. Web Developer.</p>
         <p>
           fabregaslilibeth@gmail.com || +63 930 130 6506 || Pasig, Metro Manila
@@ -24,8 +24,7 @@
 
 @media screen and (min-width: 641px) {
   .footer-section {
-    background: url("./../../../port/src/assets/backgrounds/footer.png") bottom
-      center no-repeat;
+    background: url("@/assets/backgrounds/footer.png") bottom center no-repeat;
     background-size: cover;
   }
 }

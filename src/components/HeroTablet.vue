@@ -22,8 +22,8 @@ import DownloadCv from "./Download.vue";
 
 <style scoped>
 .hero {
-  background: url("./../../../portfolio/src/assets/backgrounds/hero-tablet-background.png")
-    bottom center no-repeat;
+  background: url("@/assets/backgrounds/hero-tablet-background.png") bottom
+    center no-repeat;
   background-size: 100%;
 }
 </style>
