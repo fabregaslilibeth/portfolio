@@ -51,7 +51,7 @@
               <p>Sorry for the inconvenience.</p>
             </div>
           </div>
-          <div class="w-9/12 mx-auto my-8 text-prima  ry">
+          <div class="w-9/12 mx-auto my-8 text-prima ry">
             <button
               type="submit"
               :disabled="canSend()"
@@ -163,6 +163,10 @@ const email = ref("");
 const message = ref("");
 const status = ref(0);
 
+const serviceId = import.meta.env.VITE_EMAIL_JS_SERVICE_ID;
+const templateId = import.meta.env.VITE_EMAIL_JS_TEMPLATE_ID;
+const userId = import.meta.env.VITE_EMAIL_JS_USER_ID;
+
 const canSend = () => {
   return !name.value || !email.value || !message.value;
 };
@@ -175,26 +179,20 @@ const submit = () => {
   };
 
   try {
-    emailjs
-      .send(
-        "service_5l0ma11",
-        "template_rke8zts",
-        templateParams,
-        "QgI_Fu6QKI6Jeoq4G"
-      )
-      .then(
-        function (response) {
-          if (response.status === 200) {
-            status.value = 200;
-          } else {
-            status.value = 500;
-          }
-          console.log("SUCCESS!", response.status, response.text);
-        },
-        function (error) {
-          console.log("FAILED...", error);
+    console.log(serviceId);
+    emailjs.send(serviceId, templateId, templateParams, userId).then(
+      function (response) {
+        if (response.status === 200) {
+          status.value = 200;
+        } else {
+          status.value = 500;
         }
-      );
+        console.log("SUCCESS!", response.status, response.text);
+      },
+      function (error) {
+        console.log("FAILED...", error);
+      }
+    );
   } catch (error) {
     console.log({ error });
   }

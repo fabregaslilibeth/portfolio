@@ -6,6 +6,7 @@ import vue from "@vitejs/plugin-vue";
 // https://vitejs.dev/config/
 export default defineConfig({
   base: "/portfolio/",
+  service_id: "SSDSD",
   plugins: [vue()],
   resolve: {
     alias: {
