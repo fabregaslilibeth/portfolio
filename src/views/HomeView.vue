@@ -24,8 +24,10 @@
       <section id="skills"><Skills /></section>
       <section id="contact"><Contact /></section>
     </div>
-    <div class="fixed z-50 right-8 top-72 hidden lg:inline-block">
+    <div class="absolute right-20">
+      <div class="fixed z-50 top-72 hidden lg:inline-block">
       <Nav />
+    </div>
     </div>
     <div class="fixed z-50 bottom-0 left-0 right-0 h-20 lg:hidden bg-white">
       <Nav />

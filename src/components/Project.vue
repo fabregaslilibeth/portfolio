@@ -92,7 +92,7 @@ defineProps({
 
 .inked {
   background: url("@/assets/project-thumbnails/thumbnail-getinked.webp") top
-    right no-repeat;
+    left no-repeat;
   background-size: cover;
 }
 
@@ -104,12 +104,12 @@ defineProps({
 
 .spendee {
   background: url("@/assets/project-thumbnails/thumbnail-spendee.webp") top
-    right no-repeat;
+    center no-repeat;
   background-size: cover;
 }
 
 .minigram {
-  background: url("@/assets/project-thumbnails/thumbnail-mini.webp") top right
+  background: url("@/assets/project-thumbnails/thumbnail-mini.webp") top center
     no-repeat;
   background-size: cover;
 }
