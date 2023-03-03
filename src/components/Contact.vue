@@ -190,6 +190,7 @@ const submit = () => {
         console.log("SUCCESS!", response.status, response.text);
       },
       function (error) {
+        status.value = 500;
         console.log("FAILED...", error);
       }
     );
