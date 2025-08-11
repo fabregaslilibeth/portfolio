@@ -7,19 +7,19 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 const projects = [
     {
         title: "Salar de Atacama",
-        src: "/placeholder.svg"
+        src: "https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832_1280.jpg"
     },
     {
         title: "Valle de la luna",
-        src: "/placeholder.svg"
+        src: "https://cdn.pixabay.com/photo/2023/01/28/19/01/bird-7751561_1280.jpg"
     },
     {
         title: "Miscanti Lake",
-        src: "/placeholder.svg"
+        src: "https://cdn.pixabay.com/photo/2023/04/24/15/06/great-tit-7948318_1280.jpg"
     },
     {
         title: "Miniques Lagoons",
-        src: "/placeholder.svg"
+        src: "https://cdn.pixabay.com/photo/2024/03/12/15/43/great-tit-8629045_1280.jpg"
     },
 ]
 
@@ -32,15 +32,18 @@ export default function Index() {
     useLayoutEffect( () => {
         gsap.registerPlugin(ScrollTrigger);
         ScrollTrigger.create({
-            trigger: imageContainer.current,
-            pin: true,
-            start: "top-=100px",
-            end: document.body.offsetHeight - window.innerHeight - 50,
+            trigger: container.current,
+            scroller: "[data-scroll-container]",
+            pin: imageContainer.current,
+            start: "top top",
+            end: "bottom bottom",
+            scrub: 1,
+            markers: false
         })
     }, [])
 
     return (
-        <div ref={container} className={styles.projects}>
+        <div ref={container} className={styles.projects} data-scroll-section>
             <div className={styles.projectDescription}>
                 <div ref={imageContainer} className={styles.imageContainer}>
                     <Image 
