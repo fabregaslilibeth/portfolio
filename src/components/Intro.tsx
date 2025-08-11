@@ -10,44 +10,80 @@ export default function Index() {
     const background = useRef(null);
     const introImage = useRef(null);
     const homeHeader = useRef(null);
+    const title = useRef(null);
 
     useLayoutEffect( () => {
         gsap.registerPlugin(ScrollTrigger);
 
         const timeline = gsap.timeline({
             scrollTrigger: {
-                trigger: document.documentElement,
-                scrub: true,
-                start: "top",
-                end: "+=500px",
+                trigger: homeHeader.current,
+                scrub: 1,
+                start: "top top",
+                end: "bottom top",
+                markers: false
             },
         })
 
         timeline
-            .from(background.current, {clipPath: `inset(15%)`})
-            .to(introImage.current, {height: "200px"}, 0)
+            .fromTo(background.current, 
+                {clipPath: "inset(15%)"}, 
+                {clipPath: "inset(0%)", duration: 1}
+            )
+            .fromTo(introImage.current, 
+                {height: "475px"}, 
+                {height: "200px", duration: 1}, 
+                0
+            )
+            .fromTo(title.current,
+                {y: 0, scale: 1},
+                {y: -100, scale: 0.8, duration: 1},
+                0
+            )
+
+        // Additional scroll effect for the title
+        gsap.fromTo(title.current,
+            {
+                opacity: 0,
+                y: 500
+            },
+            {
+                scrollTrigger: {
+                    trigger: homeHeader.current,
+                    scrub: 1,
+                    start: "top center",
+                    end: "center center",
+                    markers: false
+                },
+                opacity: 1,
+                y: 0,
+                ease: "power2.out"
+            }
+        )
     }, [])
 
     return (
         <div ref={homeHeader} className={styles.homeHeader}>
             <div className={styles.backgroundImage} ref={background}>
                 <Image 
-                    src={'/images/background.jpeg'}
+                    src={'https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832_1280.jpg'}
                     fill={true}
                     alt="background image"
                     priority={true}
+                    style={{ objectFit: 'cover' }}
                 />
             </div>
             <div className={styles.intro}>
-                    <div ref={introImage} data-scroll data-scroll-speed="0.3" className={styles.introImage}>
-                        <Image
-                            src={'/images/intro.png'}
-                            alt="intro image"
-                            fill={true} 
-                            priority={true}
-                        />
-                    </div>
-                    <h1 data-scroll data-scroll-speed="0.7">SMOOTH SCROLL</h1>
+                <div data-scroll data-scroll-speed="3" ref={introImage} className={styles.introImage}>
+                    <Image
+                        src={'https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832_1280.jpg'}
+                        alt="intro image"
+                        fill={true}
+                        priority={true}
+                        style={{ objectFit: 'cover', objectPosition: 'top' }}
+                    />
+                </div>
+                <h1 data-scroll data-scroll-speed="5" ref={title}>SMOOTH SCROLL</h1>
              </div>
         </div>
     )
