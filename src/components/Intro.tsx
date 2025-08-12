@@ -66,24 +66,24 @@ export default function Index() {
         <div ref={homeHeader} className={styles.homeHeader}>
             <div className={styles.backgroundImage} ref={background}>
                 <Image 
-                    src={'https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832_1280.jpg'}
+                    src={'/images/color.png'}
                     fill={true}
                     alt="background image"
                     priority={true}
-                    style={{ objectFit: 'cover' }}
+                    style={{ objectFit: 'cover', objectPosition: 'top' }}
                 />
             </div>
             <div className={styles.intro}>
-                <div data-scroll data-scroll-speed="3" ref={introImage} className={styles.introImage}>
+                <div data-scroll data-scroll-speed="30" ref={introImage} className={styles.introImage}>
                     <Image
-                        src={'https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832_1280.jpg'}
+                        src={'/'}
                         alt="intro image"
                         fill={true}
                         priority={true}
-                        style={{ objectFit: 'cover', objectPosition: 'top' }}
+                        style={{ objectFit: 'contain', objectPosition: 'top' }}
                     />
                 </div>
-                <h1 data-scroll data-scroll-speed="5" ref={title}>SMOOTH SCROLL</h1>
+                <h1 data-scroll data-scroll-speed="5" ref={title}>BETH FABREGAS</h1>
              </div>
         </div>
     )

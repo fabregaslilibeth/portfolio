@@ -33,7 +33,6 @@ export default function Index() {
         gsap.registerPlugin(ScrollTrigger);
         ScrollTrigger.create({
             trigger: container.current,
-            scroller: "[data-scroll-container]",
             pin: imageContainer.current,
             start: "top top",
             end: "bottom bottom",
@@ -43,7 +42,7 @@ export default function Index() {
     }, [])
 
     return (
-        <div ref={container} className={styles.projects} data-scroll-section>
+        <div ref={container} className={styles.projects}>
             <div className={styles.projectDescription}>
                 <div ref={imageContainer} className={styles.imageContainer}>
                     <Image 
