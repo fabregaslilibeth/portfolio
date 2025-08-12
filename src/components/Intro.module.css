@@ -8,20 +8,21 @@
 
 .backgroundImage{
     width: 100%;
-    height: 140vh;
+    height: 200vh;
     position: absolute;
-    filter: brightness(60%);
+    filter: grayscale(100%);
+    opacity: 0.2;
 }
 
 .backgroundImage img{
     object-fit: cover;
 }
 
-.intro{
+.intro {
     display: flex;
     justify-content: center;
     position: relative;
-    margin-top: 35vh;
+    margin-top: 100vh;
 }
 
 .intro h1{
@@ -34,8 +35,8 @@
 
 .introImage{
     filter: brightness(70%);
-    width: 350px;
-    height: 475px;
+    width: 400px;
+    height: 550px;
     position: absolute;
 }
 

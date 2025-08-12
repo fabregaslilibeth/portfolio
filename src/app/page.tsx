@@ -8,7 +8,15 @@ export default function Home() {
       <main>
         <Intro />
         <Description />
-        <Projects />
+          <div style={{height: "100vh"}}>
+            <h1>Projects</h1>
+            https://blog.olivierlarose.com/tutorials/text-mask-animation
+          </div>
+          <div style={{height: "100vh"}}>
+            <h1>Skills</h1>
+            https://blog.olivierlarose.com/tutorials/project-gallery-colored-card
+          </div>
+          <Projects />
       </main>
   )
 }
