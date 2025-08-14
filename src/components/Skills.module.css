@@ -3,6 +3,9 @@
     height: 120vh;
     align-items: center;
     padding-top: 50vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
   
   .projectContainer{
@@ -11,7 +14,7 @@
   }
   
   .projectContainer div{
-    border-top: 1px solid black;
+    border-top: 1px solid rgb(211, 207, 207);
     cursor: pointer;
     position: relative;
     margin-bottom: -2vw;

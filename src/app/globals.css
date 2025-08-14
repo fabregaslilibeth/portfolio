@@ -69,3 +69,8 @@ html, body {
 [data-scroll-container] {
   min-height: 100vh;
 }
+
+/* Main element background */
+main {
+  background: rgba(255, 255, 255, 0) url('/texture.png') repeat;
+}

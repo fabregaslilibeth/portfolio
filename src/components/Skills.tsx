@@ -4,69 +4,67 @@ import gsap from 'gsap';
 const skills = [
     {
       title: "React",
-      backgroundColor: "#0A0A0A",
+      background: "#0A0A0A url('/texture.png') repeat",
       color: "#61DAFB"
     },
     {
       title: "Next.js",
-      backgroundColor: "#8F8F8F",
+      background: "#8F8F8F url('/texture.png') repeat",
       color: "#000000"
     },
     {
       title: "Vue.js",
-      backgroundColor: "#1A1A1A",
+      background: "#1A1A1A url('/texture.png') repeat",
       color: "#42B883"
     },
     {
         title: "Nuxt.js",
-        backgroundColor: "#1A1A1A",
+        background: "#1A1A1A url('/texture.png') repeat",
         color: "#00C58E"
       },
     {
       title: "TypeScript",
-      backgroundColor: "#B8B8B8",
+      background: "#B8B8B8 url('/texture.png') repeat",
       color: "#3178C6"
     },
     {
       title: "Node.js",
-      backgroundColor: "#2D2D2D",
+      background: "#2D2D2D url('/texture.png') repeat",
       color: "#339933"
     },
     {
       title: "Laravel",
-      backgroundColor: "#D4D4D4",
+      background: "#D4D4D4 url('/texture.png') repeat",
       color: "#FF2D20"
     },
     {
       title: "MongoDB",
-      backgroundColor: "#404040",
+      background: "#404040 url('/texture.png') repeat",
       color: "#47A248"
     },
     {
         title: "MySQL",
-        backgroundColor: "#404040",
+        background: "#404040 url('/texture.png') repeat",
         color: "#00758F"
       },
     {
       title: "AWS",
-      backgroundColor: "#E8E8E8",
+      background: "#E8E8E8 url('/texture.png') repeat",
       color: "#FF9900"
     },
     {
       title: "Docker",
-      backgroundColor: "#525252",
+      background: "#525252 url('/texture.png') repeat",
       color: "#2496ED"
     }
 ]
-
-//https://anacuna.com/
 
 export default function Home() {
 
   const manageMouseEnter = (e: React.MouseEvent<HTMLDivElement>, index: number) => {
     gsap.to(e.target, {
       top: "-2vw", 
-      backgroundColor: skills[index].backgroundColor, 
+      background: skills[index].background, 
       color: skills[index].color,
       duration: 0.3
     })
