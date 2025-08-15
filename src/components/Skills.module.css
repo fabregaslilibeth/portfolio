@@ -10,7 +10,7 @@
   
   .projectContainer{
     position: relative;
-    width: 100%;
+    width: 60%;
   }
   
   .projectContainer div{
@@ -18,8 +18,11 @@
     cursor: pointer;
     position: relative;
     margin-bottom: -2vw;
-    background-color: white;
+    background-color: #672145e6;
     transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: right;
   }
   
   .projectContainer div p{

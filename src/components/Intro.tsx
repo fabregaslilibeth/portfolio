@@ -65,18 +65,18 @@ export default function Index() {
     return (
         <div ref={homeHeader} className={styles.homeHeader}>
             <div className={styles.backgroundImage} ref={background}>
-                <Image 
+                {/* <Image 
                     src={'/images/color.png'}
                     fill={true}
                     alt="background image"
                     priority={true}
                     style={{ objectFit: 'cover', objectPosition: 'top' }}
-                />
+                /> */}
             </div>
             <div className={styles.intro}>
                 <div data-scroll data-scroll-speed="30" ref={introImage} className={styles.introImage}>
                     <Image
-                        src={'/'}
+                        src={'/images/color.png'}
                         alt="intro image"
                         fill={true}
                         priority={true}
