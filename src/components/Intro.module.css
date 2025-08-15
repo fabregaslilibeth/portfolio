@@ -10,8 +10,9 @@
     width: 100%;
     height: 200vh;
     position: absolute;
-    filter: grayscale(100%);
-    opacity: 0.2;
+    /* filter: grayscale(100%); */
+    background-color: #672145;
+    opacity: .5;
 }
 
 .backgroundImage img{
@@ -26,7 +27,7 @@
 }
 
 .intro h1{
-    color: white;
+    color: #fff;;
     font-size: 7vw;
     z-index: 3;
     text-align: center;

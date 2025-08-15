@@ -64,17 +64,18 @@ export default function Home() {
   const manageMouseEnter = (e: React.MouseEvent<HTMLDivElement>, index: number) => {
     gsap.to(e.target, {
       top: "-2vw", 
-      background: skills[index].background, 
-      color: skills[index].color,
-      duration: 0.3
+      background: "linear-gradient(to left, #672145, transparent)", 
+      color: "white",
+      duration: 0.3,
     })
   }
 
   const manageMouseLeave = (e: React.MouseEvent<HTMLDivElement>, index: number) => {
     gsap.to(e.target, {
       top: "0", 
-      backgroundColor: "white", 
-      color: "black",
+      background: skills[index].background, 
+      color: skills[index].color,
+      
       duration: 0.3, 
       delay: 0.1
     })
@@ -82,6 +83,9 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
+      <div className={styles.projectContainer}>
+        <h1>SKILLS</h1>
+      </div>
         <div className={styles.projectContainer}>
             {
               skills.map( (project, index) => {
