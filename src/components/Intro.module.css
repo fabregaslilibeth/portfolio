@@ -10,8 +10,7 @@
     width: 100%;
     height: 200vh;
     position: absolute;
-    /* filter: grayscale(100%); */
-    background-color: #672145;
+    filter: grayscale(100%);
     opacity: .5;
 }
 
