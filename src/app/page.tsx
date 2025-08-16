@@ -1,24 +1,36 @@
 'use client';
-import Intro from '../components/Intro';
-import Description from '../components/Description';
-import Projects from '../components/Projects';
-import Skills from '../components/Skills';
+import Header from '../components/Header';
+import Hero from '../components/Hero';
+import Services from '../components/Services';
+import Testimonials from '../components/Testimonials';
+import FAQ from '../components/FAQ';
+import Footer from '../components/Footer';
 
 export default function Home() {
   return (
-      <main>
-        <Intro />
-        <Description />
-        <Skills />
-        {/* <div style={{height: "100vh"}}>
-            <h1>Projects</h1>
-            https://blog.olivierlarose.com/tutorials/text-mask-animation
-          </div>
-          <div style={{height: "100vh"}}>
-            <h1>Skills</h1>
-            https://blog.olivierlarose.com/tutorials/project-gallery-colored-card
-          </div> */}
-          <Projects />
+    <>
+      <Header />
+      <main className="min-h-screen bg-white pt-16">
+        <Hero />
+        <svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <path d="
+    M 50 50          
+    H 450            
+    C 470 50, 470 90, 450 90   
+    C 470 90, 470 130, 450 130 
+    C 470 130, 470 170, 450 170
+    C 470 170, 470 210, 450 210
+    V 350            
+    H 50             
+    Z" 
+    fill="none" stroke="black" stroke-width="4" />
+</svg>
+
+        <Services />
+        <Testimonials />
+        <FAQ />
+        <Footer />
       </main>
+    </>
   )
 }
