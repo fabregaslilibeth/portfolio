@@ -7,31 +7,31 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    name: "E-Commerce Platform",
+    name: "Moshi Ramen",
     skills: ["react", "nextjs", "typescript", "mongodb"],
     website: "https://ecommerce-demo.com",
     youtube: "https://youtube.com/watch?v=demo1"
   },
   {
-    name: "Task Management App",
+    name: "Get Inked",
     skills: ["vuejs", "nuxtjs", "nodejs", "mysql"],
     website: "https://taskmanager-app.com",
     youtube: "https://youtube.com/watch?v=demo2"
   },
   {
-    name: "Social Media Dashboard",
+    name: "Bella Pizza",
     skills: ["react", "typescript", "aws", "docker"],
     website: "https://social-dashboard.com",
     youtube: "https://youtube.com/watch?v=demo3"
   },
   {
-    name: "Real-time Chat Application",
+    name: "Lalaguna Villas",
     skills: ["vuejs", "nodejs", "mongodb", "docker"],
     website: "https://chat-app-demo.com",
     youtube: "https://youtube.com/watch?v=demo4"
   },
   {
-    name: "Portfolio Website",
+    name: "Jewelmer",
     skills: ["nextjs", "typescript", "aws"],
     website: "https://portfolio-demo.com",
     youtube: "https://youtube.com/watch?v=demo5"
