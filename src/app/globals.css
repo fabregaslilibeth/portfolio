@@ -32,6 +32,19 @@ body {
   padding: 0;
 }
 
+/* Hide cursor only when custom cursor is active */
+.custom-cursor-active html,
+.custom-cursor-active body {
+  cursor: none;
+}
+
+/* Show default cursor on mobile/touch devices */
+@media (hover: none) and (pointer: coarse) {
+  html, body {
+    cursor: auto;
+  }
+}
+
 /* Ensure proper scrolling */
 html, body {
   height: 100%;
@@ -73,4 +86,44 @@ html, body {
 /* Main element background */
 main {
   background: rgba(255, 255, 255, 0) url('/texture.png') repeat;
+}
+
+/* Enhanced animation utilities */
+.text-gradient {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Enhanced focus states */
+button:focus,
+a:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Custom selection color */
+::selection {
+  background: #3b82f6;
+  color: white;
+}
+
+::-moz-selection {
+  background: #3b82f6;
+  color: white;
 }
