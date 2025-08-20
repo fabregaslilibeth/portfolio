@@ -15,7 +15,6 @@ export default function Home() {
     <>
       <ScrollProgress />
       <CustomCursor />
-      <FloatingActionButton />
       <SmoothScroll>
         <Header />
         <main className="min-h-screen bg-white pt-16">
