@@ -22,16 +22,23 @@ export default function Hero() {
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
 
-  // Text reveal animation variants
+  // Text reveal animation variants with spring effect (inspired by Droomedaeris)
   const textRevealVariants = {
-    hidden: { opacity: 0, y: 100 },
+    hidden: { 
+      opacity: 0, 
+      y: 100,
+    },
     visible: (i: number) => ({
       opacity: 1,
       y: 0,
+      scale: 1,
       transition: {
-        delay: i * 0.1,
-        duration: 0.8,
-        ease: [0.25, 0.46, 0.45, 0.94]
+        delay: i * 0.08,
+        type: "spring",
+        stiffness: 120,
+        damping: 18,
+        mass: 0.7,
+        duration: 1.2
       }
     })
   };
@@ -66,7 +73,7 @@ export default function Hero() {
           transition={{ duration: 1 }}
           className="mb-16"
         >
-          <h1 className="text-8xl md:text-9xl lg:text-[12rem] font-black text-black leading-[0.85] tracking-tight">
+          <h1 className="text-8xl md:text-9xl lg:text-[20rem] font-black text-black leading-[0.85] tracking-tight">
             {Array.from("Lilibeth").map((letter, i) => (
               <motion.span
                 key={i}
@@ -75,9 +82,15 @@ export default function Hero() {
                 initial="hidden"
                 animate="visible"
                 whileHover={{ 
-                  scale: 1.1,
+                  scale: 1.15,
                   color: "#3b82f6",
-                  transition: { duration: 0.2 }
+                  y: -5,
+                  transition: { 
+                    type: "spring",
+                    stiffness: 300,
+                    damping: 20,
+                    duration: 0.3
+                  }
                 }}
                 className="inline-block cursor-pointer"
               >
@@ -88,7 +101,7 @@ export default function Hero() {
         </motion.div>
 
         {/* Subtitle with magnetic hover effect */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
@@ -99,10 +112,10 @@ export default function Hero() {
           <p className="text-2xl md:text-3xl lg:text-4xl font-medium text-gray-700 leading-relaxed max-w-4xl">
             Certified Public Accountant. Full Stack Developer.
           </p>
-        </motion.div>
+        </motion.div> */}
 
         {/* Call to action section with enhanced hover effects */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
@@ -145,7 +158,7 @@ export default function Hero() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
             </motion.svg>
           </motion.button>
-        </motion.div>
+        </motion.div> */}
 
         {/* Bottom section with staggered animation */}
         <motion.div
@@ -180,7 +193,7 @@ export default function Hero() {
       </div>
 
       {/* Floating elements for visual interest */}
-      <motion.div
+      {/* <motion.div
         className="absolute top-20 right-20 w-32 h-32 bg-blue-100 rounded-full opacity-20"
         animate={{
           y: [0, -20, 0],
@@ -203,7 +216,7 @@ export default function Hero() {
           repeat: Infinity,
           ease: "easeInOut"
         }}
-      />
+      /> */}
     </section>
   );
 }
