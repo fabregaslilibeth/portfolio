@@ -7,7 +7,7 @@ import ParallaxSection from './ParallaxSection';
 const services = [
   {
     number: "01",
-    title: "Strategy",
+    title: "Web Development",
     description: "Behind every surprising campaign, compelling site launch, or must-watch piece of content, there's a well-considered strategy that engineered the outcome. During this crucial phase, we address the foundational and psychological factors that drive the desired interaction between brand and customer. We match logic-based journeys with pinpoint executions that create memorable and lasting engagements.",
     features: [
       "Brand Architecture & Roadmaps",
