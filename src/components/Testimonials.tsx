@@ -15,7 +15,7 @@ const testimonials = [
     company: "Royal Caribbean"
   },
   {
-    quote: "We've partnered with Better Off for years, and are always impressed by their innovative brand development and precise execution. Their work during our recent rebrand matched our vision perfectly.",
+    quote: "We've partnered with Beth for years, and are always impressed by their innovative brand development and precise execution. Their work during our recent rebrand matched our vision perfectly.",
     author: "Andrew Watson",
     position: "Owner",
     company: "Built Things"

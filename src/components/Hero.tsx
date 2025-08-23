@@ -1,10 +1,57 @@
 'use client';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef, useEffect, useState } from 'react';
+import Lenis from 'lenis';
+
+// Cursor follower component with pictures
+const CursorFollower = ({ mousePosition }: { mousePosition: { x: number; y: number } }) => {
+  const pictures = [
+    '/images/bnw.png',
+    '/images/color.png',
+    '/images/texture.png',
+    '/images/texture-for-black.png',
+    '/images/placeholder.svg',
+    '/images/next.svg'
+  ];
+
+  return (
+    <>
+      {pictures.map((src, index) => (
+        <motion.div
+          key={index}
+          className="fixed pointer-events-none z-50"
+          animate={{
+            x: mousePosition.x - 25 + (index * 10),
+            y: mousePosition.y - 25 + (index * 10),
+            rotate: index * 15,
+            scale: 1 - (index * 0.1),
+          }}
+          transition={{
+            type: "spring",
+            stiffness: 150,
+            damping: 15,
+            delay: index * 0.05,
+          }}
+        >
+          <img
+            src={src}
+            alt={`Cursor follower ${index + 1}`}
+            className="w-12 h-12 object-cover rounded-lg shadow-lg opacity-80"
+            style={{
+              filter: `hue-rotate(${index * 60}deg)`,
+            }}
+          />
+        </motion.div>
+      ))}
+    </>
+  );
+};
 
 export default function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [mousePosition, setMousePosition] = useState({ x: 100, y: 100 });
+  const [gradientColor1, setGradientColor1] = useState('rgba(59, 130, 246, .15');
+  const [gradientColor2, setGradientColor2] = useState('rgba(168, 85, 247, 0.15)');
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end start"]
@@ -13,9 +60,49 @@ export default function Hero() {
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
+  // Initialize Lenis smooth scrolling
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
+      direction: 'vertical', // vertical, horizontal
+      gestureDirection: 'vertical', // vertical, horizontal, both
+      smooth: true,
+      mouseMultiplier: 1,
+      smoothTouch: false,
+      touchMultiplier: 2,
+      infinite: false,
+    });
+
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
+
+  // Generate random color
+  const generateRandomColor = () => {
+    const r = Math.floor(Math.random() * 256); // 0-255
+    const g = Math.floor(Math.random() * 256); // 0-255
+    const b = Math.floor(Math.random() * 256); // 0-255
+    return `rgba(${r}, ${g}, ${b}, 0.15)`;
+  };
+
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
+      
+      // Change colors randomly on mouse movement (with some probability)
+      if (Math.random() < 0.02) { // 2% chance to change colors on each mouse move
+        setGradientColor1(generateRandomColor());
+        setGradientColor2(generateRandomColor());
+      }
     };
 
     window.addEventListener('mousemove', handleMouseMove);
@@ -26,7 +113,7 @@ export default function Hero() {
   const textRevealVariants = {
     hidden: { 
       opacity: 0, 
-      y: 100,
+      y: 5,
     },
     visible: (i: number) => ({
       opacity: 1,
@@ -35,10 +122,10 @@ export default function Hero() {
       transition: {
         delay: i * 0.08,
         type: "spring",
-        stiffness: 120,
-        damping: 18,
-        mass: 0.7,
-        duration: 1.2
+        // stiffness: 120,
+        // damping: 18,
+        // mass: 0.7,
+        duration: .2
       }
     })
   };
@@ -54,27 +141,35 @@ export default function Hero() {
 
   return (
     <section ref={containerRef} className="min-h-screen flex flex-col justify-center px-6 md:px-12 lg:px-24 relative overflow-hidden">
-      {/* Background texture overlay */}
+      {/* Cursor follower pictures */}
+      <CursorFollower mousePosition={mousePosition} />
+      
+      {/* Dynamic gradient background that follows mouse */}
       <motion.div 
-        className="absolute inset-0 opacity-5"
+        className="absolute inset-0 pointer-events-none"
         style={{ y }}
         initial={{ opacity: 0 }}
-        animate={{ opacity: 0.05 }}
-        transition={{ duration: 2 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: .5 }}
       >
-        <div className="w-full h-full bg-gradient-to-br from-gray-900 to-gray-600"></div>
+                 <div 
+           className="w-full h-full transition-all duration-300 ease-out cursor-pointer"
+           style={{
+             background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, ${gradientColor1}, transparent 40%)`,
+           }}
+         />
       </motion.div>
-
+      
       <div className="max-w-7xl mx-auto w-full relative z-10">
         {/* Main heading with letter-by-letter reveal */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
+          transition={{ duration: .3 }}
           className="mb-16"
         >
-          <h1 className="text-8xl md:text-9xl lg:text-[20rem] font-black text-black leading-[0.85] tracking-tight">
-            {Array.from("Lilibeth").map((letter, i) => (
+          <h1 className="text-8xl md:text-3xl lg:text-7xl font-black text-black leading-[0.85] tracking-tight">
+            {Array.from("Lilibeth Fabregas.").map((letter, i) => (
               <motion.span
                 key={i}
                 custom={i}
@@ -84,12 +179,12 @@ export default function Hero() {
                 whileHover={{ 
                   scale: 1.15,
                   color: "#3b82f6",
-                  y: -5,
+                  y: 0,
                   transition: { 
                     type: "spring",
                     stiffness: 300,
                     damping: 20,
-                    duration: 0.3
+                    duration: 1
                   }
                 }}
                 className="inline-block cursor-pointer"
@@ -186,7 +281,7 @@ export default function Hero() {
                 transition: { duration: 0.3 }
               }}
             >
-              Get max value and velocity in a turnkey platform that promises your brand will be Better Off®.
+              adasd.
             </motion.p>
           </div>
         </motion.div>
