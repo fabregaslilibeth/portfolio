@@ -61,7 +61,7 @@ export default function FAQ() {
   };
 
   return (
-    <section className="py-32 px-6 md:px-12 lg:px-24 bg-gray-50">
+    <section className="py-32 px-6 md:px-12 lg:px-24 bg-white">
       <div className="max-w-5xl mx-auto">
         {/* Section Header */}
         <motion.div
@@ -88,11 +88,11 @@ export default function FAQ() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.05 }}
               viewport={{ once: true }}
-              className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden"
+              className="bg-gray-50 rounded-2xl shadow-sm border border-gray-200 overflow-hidden"
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full px-8 py-8 text-left flex justify-between items-start hover:bg-gray-50 transition-colors"
+                className="w-full px-8 py-8 text-left flex justify-between items-start hover:bg-gray-100 transition-colors"
               >
                 <h3 className="text-xl md:text-2xl font-bold text-black pr-8 leading-relaxed">
                   {faq.question}

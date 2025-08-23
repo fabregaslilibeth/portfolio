@@ -1,5 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
+import { useEffect } from 'react';
+import Lenis from 'lenis';
 import TextReveal from './TextReveal';
 import MagneticHover from './MagneticHover';
 import ParallaxSection from './ParallaxSection';
@@ -22,40 +24,35 @@ const services = [
       "New Revenue Streams"
     ]
   },
-  {
-    number: "02",
-    title: "Design",
-    description: "Our design services focus on pitch-perfect brand identities, flawless UX and UI design, and unforgettable product builds that ensure your vision is brought to life with intention and precision. Our rapid prototyping and ironclad design systems streamline the development process, while our expertise in information architecture and motion design enhances usability and engagement.",
-    features: [
-      "Brand Identity",
-      "Brand Guidelines",
-      "UX and UI Design",
-      "Website & App Design",
-      "Art Direction",
-      "Product Concepting",
-      "Rapid Prototyping",
-      "Motion Design",
-      "Product Interfaces"
-    ]
-  },
-  {
-    number: "03",
-    title: "Technology",
-    description: "We build full-stack digital brand extensions that serve as the online anchors of our clients' multichannel narratives. Our no-code Framer and Webflow solutions enable rapid and efficient development timelines for both sites and products. As Shopify Plus e-commerce partners and WordPress master developers, we offer the most advanced functionality options paired with the simplest and most robust content management systems.",
-    features: [
-      "No-code Framer Solutions",
-      "Webflow Solutions",
-      "Shopify Plus (Partners)",
-      "Advanced E-commerce",
-      "WordPress Specialists",
-      "Full Stack Development",
-      "Journey Mapping & Testing",
-      "Accessibility (WCAG) 2.1"
-    ]
-  }
 ];
 
 export default function Services() {
+  // Initialize Lenis smooth scrolling
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      direction: 'vertical',
+      gestureDirection: 'vertical',
+      smooth: true,
+      mouseMultiplier: 1,
+      smoothTouch: false,
+      touchMultiplier: 2,
+      infinite: false,
+    });
+
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
+
   return (
     <section className="py-32 px-6 md:px-12 lg:px-24 relative overflow-hidden">
       {/* Background decorative elements */}

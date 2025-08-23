@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid lg:grid-cols-4 gap-16 mb-16">
           {/* Main content */}
           <div className="lg:col-span-2">
-            <h3 className="text-4xl md:text-5xl font-black text-white mb-8">Better Off</h3>
+            <h3 className="text-4xl md:text-5xl font-black text-white mb-8">Beth Fabregas</h3>
             <p className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed max-w-2xl">
               Premium quality creative at lean rates for growing businesses. 
               Strategy, Design, and Development.
@@ -53,7 +53,7 @@ export default function Footer() {
         {/* Bottom section */}
         <div className="border-t border-gray-800 pt-12 flex flex-col lg:flex-row justify-between items-center">
           <p className="text-lg text-gray-400 mb-6 lg:mb-0">
-            Copyright © Better Off 2025
+            Copyright © Beth Fabregas 2025
           </p>
           <div className="flex items-center space-x-8">
             <span className="text-lg text-gray-400">This website uses Cookies</span>

@@ -24,7 +24,7 @@ export default function Header() {
             transition={{ duration: 0.6 }}
             className="text-xl font-bold text-gray-900"
           >
-            Better Off
+            Lilibeth
           </motion.div>
 
           {/* Desktop Navigation */}
