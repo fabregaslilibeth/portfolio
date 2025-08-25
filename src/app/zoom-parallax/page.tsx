@@ -63,10 +63,6 @@ export default function ZoomParallax() {
         {
             src: Picture6,
             scale: scale4
-        },
-        {
-            src: Picture7,
-            scale: scale5
         }
     ]
 
