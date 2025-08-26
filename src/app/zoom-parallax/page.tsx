@@ -60,10 +60,6 @@ export default function ZoomParallax() {
             src: Picture5,
             scale: scale9
         },
-        {
-            src: Picture6,
-            scale: scale4
-        }
     ]
 
     return (
