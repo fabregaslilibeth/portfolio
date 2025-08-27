@@ -1,0 +1,204 @@
+/* Veronica Zubakova style Works component */
+
+.s-section {
+  position: relative;
+  width: 100%;
+}
+
+.is-home-catalog {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.b-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.g-mg-global-conteiner {
+  margin: 0 auto;
+}
+
+.g-h_100 {
+  height: 100%;
+}
+
+.b-home-catalog {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  height: 100vh;
+  align-items: center;
+}
+
+.b-home-catalog_card-wrap {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.b-home-catalog_card-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.b-home-catalog_card {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tb_h_40em {
+  height: 40em;
+  max-height: 80vh;
+  width: 100%;
+  position: relative;
+}
+
+.b-home-catalog_link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.b-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.g-h_100 {
+  height: 100%;
+}
+
+.b-home-catalog_text-wrap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 40px;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  color: white;
+  z-index: 3;
+}
+
+.top {
+  top: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+}
+
+.bot {
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+}
+
+.b-title_h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.is-home-catalog {
+  color: white;
+}
+
+.g-text-bg-color {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(45deg, #fff, #f0f0f0);
+}
+
+.g-text-right {
+  text-align: right;
+}
+
+.b-project-card_text-line {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.black {
+  color: white;
+}
+
+._3 {
+  font-size: 0.9rem;
+}
+
+._4 {
+  font-size: 1.1rem;
+}
+
+.g-text-size-20 {
+  font-size: 1.25rem;
+}
+
+.g-text-style-allcaps {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.year {
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .b-home-catalog {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    height: auto;
+    min-height: 100vh;
+  }
+  
+  .tb_h_40em {
+    height: 30em;
+  }
+  
+  .b-title_h2 {
+    font-size: 2rem;
+  }
+  
+  .b-home-catalog_text-wrap {
+    padding: 20px;
+  }
+}
+
+/* Animation classes */
+.w-inline-block {
+  display: inline-block;
+}
+
+/* Container classes */
+.w-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.w-layout-blockcontainer {
+  display: block;
+}

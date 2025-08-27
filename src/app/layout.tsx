@@ -5,14 +5,14 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "LILIBETH - Portfolio",
-  description: "I am Lilibeth, a visual designer. I am good at balancing logical and intuitive thinking, function and emotion, stillness and movement, and seeking and expressing the best visual expression that fulfills user needs and objectives.",
-  keywords: ["visual designer", "web design", "graphic design", "art direction", "portfolio"],
-  authors: [{ name: "Lilibeth" }],
-  creator: "Lilibeth",
+  title: "Veronica Zubakova - Digital & UX/UI Designer",
+  description: "Digital and UX/UI designer with 6 years of experience creating user experience tailored to business needs since 2018",
+  keywords: ["digital designer", "ux/ui designer", "web design", "mobile app design", "portfolio"],
+  authors: [{ name: "Veronica Zubakova" }],
+  creator: "Veronica Zubakova",
   openGraph: {
-    title: "TAIKI SATO - Visual Designer Portfolio",
-    description: "Visual designer specializing in web design, graphic design, and art direction.",
+    title: "Veronica Zubakova - Digital & UX/UI Designer",
+    description: "Digital and UX/UI designer with 6 years of experience creating user experience tailored to business needs since 2018",
     type: "website",
   },
 };
@@ -27,8 +27,9 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
       </head>
-      <body className={inter.className} >{children}</body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }
