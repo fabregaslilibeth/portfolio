@@ -9,7 +9,7 @@ if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
 }
 
-export default function Works() {
+export default function Projects() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -38,63 +38,6 @@ export default function Works() {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const projects = [
-    {
-      id: 1,
-      title: 'ticket to go',
-      category: 'mobile app design',
-      year: '2023',
-      image: '/images/1.jpeg',
-      color: '#3a54b1',
-      position: 'top'
-    },
-    {
-      id: 2,
-      title: 'jam.art',
-      category: 'ux/ui design / no-code dev',
-      year: '2024',
-      image: '/images/2.jpeg',
-      color: '#de6495',
-      position: 'bottom'
-    },
-    {
-      id: 3,
-      title: 'pro-creative',
-      category: 'web design / no-code dev',
-      year: '2024',
-      image: '/images/3.jpeg',
-      color: '#CB2B2B',
-      position: 'top'
-    },
-    {
-      id: 4,
-      title: 'uoem.pro',
-      category: 'Web design / no-code dev',
-      year: '2023',
-      image: '/images/4.jpeg',
-      color: '#0a6e93',
-      position: 'bottom'
-    },
-    {
-      id: 5,
-      title: 'second life',
-      category: 'ux/ui design',
-      year: '2023',
-      image: '/images/5.jpeg',
-      color: '#014c47',
-      position: 'top'
-    },
-    {
-      id: 6,
-      title: 'No toxic conf',
-      category: 'web design / no-code dev',
-      year: '2022',
-      image: '/images/6.jpeg',
-      color: '#CB952B',
-      position: 'bottom'
-    }
-  ];
-
   return (
     <div className="page-wrap g-bg-color-blue g-text-color-white">
       {/* Menu */}
@@ -119,7 +62,7 @@ export default function Works() {
             </div>
             <div className="b-nav_wrap hmob-hide">
               <a href="/" className="b-link is-difference">veronica zubakova</a>
-              <a href="/works" className="b-link is-difference w--current">all works</a>
+              <a href="/works" className="b-link is-difference">all works</a>
               <a href="/about" className="b-link is-difference">about me</a>
             </div>
           </nav>
@@ -141,51 +84,25 @@ export default function Works() {
         <div className="b-home-cover_fixed-block">
           <div className="g-text-desc tb-hide">Veronica Zubakova</div>
           <h1 className="b-title_h1 g-text-centr">
-            <div className="title-view-inter _1">All</div>
-            <div className="title-italic _2"> W</div>
-            <div className="title-view-inter _2">orks</div>
+            <div className="title-view-inter _1">Pro</div>
+            <div className="title-italic _2">j</div>
+            <div className="title-view-inter _2">ects</div>
           </h1>
           <div className="g-text-desc g-text-right tb-hide">Portfolio</div>
         </div>
 
-        {/* Works Section */}
+        {/* Projects Section */}
         <section className="s-section is-home-catalog">
           <div className="w-layout-blockcontainer b-container g-mg-global-conteiner g-h_100">
             <div className="b-home-catalog">
-              {projects.map((project) => (
-                <div key={project.id} className="b-home-catalog_card-wrap">
-                  <div 
-                    className={`b-home-catalog_card-bg ${project.position === 'bottom' ? '_2' : ''}`}
-                    style={{ backgroundColor: project.color }}
-                  ></div>
-                  <div className="b-home-catalog_card">
-                    <div className="tb_h_40em">
-                      <a href={`/projects/${project.id}`} className="b-home-catalog_link">
-                        <img className="b-img g-h_100 tb_h_40em" src={project.image} alt={project.title} />
-                      </a>
-                      <div className={`b-home-catalog_text-wrap ${project.position} bot`}>
-                        <h2 className={`b-title_h2 is-home-catalog ${project.position === 'bottom' ? '_2' : ''}`}>
-                          <div className="g-text-bg-color" style={{ backgroundColor: project.color }}>
-                            {project.title}
-                          </div>
-                        </h2>
-                        <div>
-                          <div className={`g-text-right is-home-catalog ${project.position === 'bottom' ? '_2' : ''}`}>
-                            <div className="g-text-size-20 g-text-bg-color g-text-style-allcaps year" style={{ backgroundColor: project.color }}>
-                              {project.year}
-                            </div>
-                          </div>
-                          <div className="g-text-right is-home-catalog">
-                            <div className="b-project-card_text-line black _4" style={{ backgroundColor: project.color }}>
-                              {project.category}
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
+              {/* Project cards will be populated here */}
+              <div className="g-text-desc g-text-centr" style={{ gridColumn: '1 / -1', padding: '100px 0' }}>
+                <h2 className="b-title_h2" style={{ marginBottom: '20px' }}>Coming Soon</h2>
+                <p>Individual project pages are under development.</p>
+                <a href="/" className="b-button" style={{ marginTop: '30px', display: 'inline-block' }}>
+                  Back to Home
+                </a>
+              </div>
             </div>
           </div>
         </section>
