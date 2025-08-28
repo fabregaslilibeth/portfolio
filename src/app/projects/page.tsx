@@ -61,7 +61,7 @@ export default function Projects() {
               </div>
             </div>
             <div className="b-nav_wrap hmob-hide">
-              <a href="/" className="b-link is-difference">veronica zubakova</a>
+              <a href="/" className="b-link is-difference">Lilibeth Fabregas</a>
               <a href="/works" className="b-link is-difference">all works</a>
               <a href="/about" className="b-link is-difference">about me</a>
             </div>
@@ -82,7 +82,7 @@ export default function Projects() {
       <main className="main">
         {/* Fixed Title Block */}
         <div className="b-home-cover_fixed-block">
-          <div className="g-text-desc tb-hide">Veronica Zubakova</div>
+          <div className="g-text-desc tb-hide">Lilibeth Fabregas</div>
           <h1 className="b-title_h1 g-text-centr">
             <div className="title-view-inter _1">Pro</div>
             <div className="title-italic _2">j</div>
@@ -118,7 +118,7 @@ export default function Projects() {
               <img src="https://veronicazubakova.com/wp-content/themes/veronicas-wondrous-site-a74698_1726064536/images/66a3e79c83f9fdbf4b1d26e6_D0BCD0B0D0BBD0B5D0BDD18CD188D0BAD0B0D18F20D0B7D0B0D0B3D0BED0B3D183D0BBD0B8D0BDD0B0.png" alt="" className="b-img is-home-cover_2" />
             </div>
             <div className="div-block-3">
-              <div className="g-text-desc is-footer">Veronica Zubakova</div>
+              <div className="g-text-desc is-footer">Lilibeth Fabregas</div>
               <div className="g-flex-v_center_center">
                 <div>
                   <h2 className="b-title_h1_is-footer">
@@ -144,7 +144,7 @@ export default function Projects() {
           <div className="b-nav_wrap is-difference">
             <a href="https://instagram.com/veronique.nebloger" target="_blank" className="b-link">Instagram</a>
             <div className="b-link is-footer">
-              design: veronica zubakova
+              design: Lilibeth Fabregas
             </div>
             <a href="https://www.behance.net/veronicazubakova" target="_blank" className="b-link">Behance</a>
             <a href="https://t.me/lucius_wd" target="_blank" className="b-link is-footer _2">development: kirill andreev</a>
