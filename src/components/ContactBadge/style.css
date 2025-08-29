@@ -1,0 +1,57 @@
+/* Fixed Contact Badge */
+.fixed-contact-badge {
+  position: fixed;
+  z-index: 999;
+  transform: translateY(-50%);
+  top: 50%;
+  right: 30px;
+}
+
+.contact-link {
+  display: block;
+  text-decoration: none;
+  color: black;
+  transition: all 0.3s ease;
+}
+
+.contact-bg {
+  background: white;
+  padding: 20px 15px;
+  border-radius: 2px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-icon {
+  font-size: 20px;
+  color: black;
+  margin-bottom: 4px;
+}
+
+.contact-spacer {
+  width: 1px;
+  height: 20px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.contact-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: black;
+  display: block;
+  line-height: 1.2;
+  transform: rotate(180deg);
+}
+
+.contact-link:hover .contact-bg {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
