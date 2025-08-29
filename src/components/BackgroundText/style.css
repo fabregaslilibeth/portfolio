@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@100&display=swap');
+
+/* Background Text */
+.background-text {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  z-index: 1;
+  pointer-events: none;
+  transition: filter 0.8s ease, opacity 0.8s ease;
+  will-change: top, transform;
+}
+
+.main-title {
+  font-family: 'Roboto Flex', sans-serif;
+  font-size: 180px;
+  font-weight: 100;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.title-view-inter {
+  display: inline-block;
+  filter: blur(0em);
+  transition: filter 0.3s ease;
+  font-family: 'Roboto Flex', sans-serif;
+  font-weight: 100;
+}
+
+.title-italic {
+  font-style: italic;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.title_h1-block {
+  display: inline-block;
+}
+
+.title-italic_a {
+  font-style: italic;
+}
+
+.div-block-8 {
+  display: inline-block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 60px;
+  }
+}

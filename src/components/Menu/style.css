@@ -1,0 +1,50 @@
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+.menu-item {
+  pointer-events: auto;
+}
+
+.menu-item a {
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Roboto Flex', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  transition: color 0.3s ease;
+}
+
+.menu-item a:hover {
+  color: #666;
+}
+
+.works {
+  /* Positioned on top left */
+}
+
+.about {
+  /* Positioned on top right */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu {
+    padding: 1.5rem;
+  }
+  
+  .menu-item a {
+    font-size: 1rem;
+  }
+}
