@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { Hind_Siliguri } from "next/font/google";
+import { Rubik } from "next/font/google";
 import "./globals.css";
 
-const hindSiliguri = Hind_Siliguri({ 
+const rubik = Rubik({ 
   subsets: ["latin"],
-  weight: ["300"],
-  variable: "--font-hind-siliguri"
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  style: ["normal", "italic"],
+  variable: "--font-rubik"
 });
 
 export const metadata: Metadata = {
@@ -28,7 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="">
-      <body className={hindSiliguri.className}>{children}</body>
+      <body className={rubik.className}>{children}</body>
     </html>
   );
 }
