@@ -1,0 +1,190 @@
+/* Custom styles for vertical text writing mode */
+.writing-mode-vertical {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+/* Timeline styles */
+.border-emperor {
+  border-color: rgb(79 79 79);
+}
+
+/* Timeline container styles */
+.ts-drag-scroll-container {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Timeline item styles */
+.timeline-item {
+  position: relative;
+  min-width: 320px;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: rgb(79 79 79);
+}
+
+/* Timeline Section Styles */
+.timeline-section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.timeline-container {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.timeline-title {
+  margin-bottom: 4rem;
+}
+
+.timeline-title-text {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: white;
+  letter-spacing: 0.05em;
+}
+
+.timeline-wrapper {
+  position: relative;
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 2rem;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: rgb(75 85 99);
+}
+
+.timeline-items {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.timeline-item {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+}
+
+.timeline-circle {
+  position: absolute;
+  left: 2rem;
+  width: 12px;
+  height: 12px;
+  background-color: rgb(156 163 175);
+  border-radius: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.timeline-content {
+  margin-left: 5rem;
+  flex: 1;
+}
+
+.timeline-date {
+  margin-bottom: 1.5rem;
+}
+
+.timeline-date-text {
+  color: rgb(156 163 175);
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  font-size: 1rem;
+}
+
+.timeline-description {
+  margin-bottom: 1.5rem;
+}
+
+.timeline-description-text {
+  color: rgb(209 213 219);
+  font-weight: 300;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.timeline-projects {
+  margin-top: 1.5rem;
+}
+
+.timeline-projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-left: 1rem;
+}
+
+.timeline-project-item {
+  color: rgb(156 163 175);
+  font-weight: 300;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+/* Hide scrollbar for timeline - cross-browser support */
+.scrollbar-hide {
+  /* Firefox */
+  scrollbar-width: none;
+  /* IE and Edge */
+  -ms-overflow-style: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.scrollbar-hide::-webkit-scrollbar-track {
+  display: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar-thumb {
+  display: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar-corner {
+  display: none;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+  .writing-mode-vertical {
+    writing-mode: horizontal-tb;
+  }
+  
+  .timeline-section {
+    padding: 0 1rem;
+  }
+  
+  .timeline-content {
+    margin-left: 3rem;
+  }
+  
+  .timeline-line {
+    left: 1.5rem;
+  }
+  
+  .timeline-circle {
+    left: 1.5rem;
+  }
+}

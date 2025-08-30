@@ -2,7 +2,6 @@
 
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import './style.css';
 
 interface MaskTextProps {
   phrases: string[];
@@ -33,16 +32,17 @@ const MaskText: React.FC<MaskTextProps> = ({
   };
 
   return (
-    <div ref={body} className={`mask-text-body ${className}`}>
+    <div ref={body} className={`${className}`}>
       {phrases.map((phrase, index) => {
         return (
-          <div key={index} className="mask-text-line">
+          <div key={index} className="overflow-hidden w-full">
             <motion.p
               custom={index}
               variants={animation}
               initial="initial"
               animate={isInView ? "enter" : ""}
               style={{ fontSize }}
+              className="font-light"
             >
               {phrase}
             </motion.p>
