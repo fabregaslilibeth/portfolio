@@ -5,54 +5,23 @@ import Lenis from 'lenis';
 import TextReveal from './TextReveal';
 import MagneticHover from './MagneticHover';
 import ParallaxSection from './ParallaxSection';
-
-const works = [
-  {
-    id: 1,
-    title: "Digital Experience",
-    subtitle: "Web Design & Development",
-    year: "2024",
-    image: "/images/1.jpeg",
-    description: "A comprehensive digital platform that redefines user interaction through innovative design and seamless functionality."
-  },
-  {
-    id: 2,
-    title: "Brand Identity",
-    subtitle: "Visual Design & Strategy",
-    year: "2024",
-    image: "/images/2.jpeg",
-    description: "Complete brand transformation that captures the essence of modern business while maintaining timeless appeal."
-  },
-  {
-    id: 3,
-    title: "Mobile Application",
-    subtitle: "UX/UI Design",
-    year: "2023",
-    image: "/images/3.jpeg",
-    description: "Intuitive mobile experience designed to enhance user engagement and streamline complex workflows."
-  },
-  {
-    id: 4,
-    title: "Creative Campaign",
-    subtitle: "Marketing & Design",
-    year: "2023",
-    image: "/images/4.jpeg",
-    description: "Multi-channel campaign that connects brands with their audience through compelling visual storytelling."
-  }
-];
+import { projects } from '../data/projects';
 
 export default function Works() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [scrollProgress, setScrollProgress] = useState(0);
 
-  // Background colors for morphing effect
+  // Background colors for morphing effect - using project colors
   const backgroundColors = [
     "rgba(255, 255, 255, 0)", // Transparent
-    "rgba(239, 68, 68, 0.2)", // Light red
-    "rgba(59, 130, 246, 0.2)", // Light blue
-    "rgba(16, 185, 129, 0.2)", // Light green
-    "rgba(245, 158, 11, 0.2)", // Light orange
-    "rgba(168, 85, 247, 0.2)", // Light purple
+    ...projects.map(project => {
+      // Convert hex color to rgba with opacity
+      const hex = project.color.replace('#', '');
+      const r = parseInt(hex.substr(0, 2), 16);
+      const g = parseInt(hex.substr(2, 2), 16);
+      const b = parseInt(hex.substr(4, 2), 16);
+      return `rgba(${r}, ${g}, ${b}, 0.2)`;
+    })
   ];
 
   // Calculate current color based on scroll progress
@@ -148,9 +117,9 @@ export default function Works() {
 
         {/* Works Grid */}
         <div className="space-y-48">
-          {works.map((work, index) => (
+          {projects.map((project, index) => (
             <motion.div
-              key={work.id}
+              key={project.slug}
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2, delay: index * 0.3, ease: "easeOut" }}
@@ -168,8 +137,8 @@ export default function Works() {
                     }}
                   >
                     <motion.img
-                      src={work.image}
-                      alt={work.title}
+                      src={project.image || "/images/placeholder.svg"}
+                      alt={project.name}
                       className="w-full h-[600px] object-cover"
                       initial={{ scale: 1.1 }}
                       whileInView={{ scale: 1 }}
@@ -195,12 +164,12 @@ export default function Works() {
                       whileInView={{ opacity: 1 }}
                       transition={{ delay: 0.7 }}
                     >
-                      {work.year}
+                      {project.category}
                     </motion.span>
                   </div>
                   
                   <TextReveal
-                    text={work.title}
+                    text={project.name}
                     className="text-4xl md:text-5xl lg:text-6xl font-bold text-black leading-tight mb-4"
                     animationType="letter"
                     delay={0.8}
@@ -208,31 +177,63 @@ export default function Works() {
                   />
                   
                   <TextReveal
-                    text={work.subtitle}
+                    text="Web Design & Development"
                     className="text-xl md:text-2xl font-medium text-gray-600 mb-8"
                     animationType="word"
                     delay={1.0}
                     staggerDelay={0.05}
                   />
                   
-                  <TextReveal
-                    text={work.description}
-                    className="text-lg md:text-xl text-gray-700 leading-relaxed mb-8"
-                    animationType="word"
-                    delay={1.2}
-                    staggerDelay={0.03}
-                  />
+                  <div className="mb-8">
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {project.skills.map((skill, skillIndex) => (
+                        <span
+                          key={skillIndex}
+                          className="px-3 py-1 text-sm font-medium rounded-full"
+                          style={{
+                            backgroundColor: `${project.color}20`,
+                            color: project.color,
+                            border: `1px solid ${project.color}30`
+                          }}
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
                   
-                  <motion.button
-                    className="inline-flex items-center text-lg font-medium text-black hover:text-gray-600 transition-colors duration-300"
-                    whileHover={{ x: 10 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    View Project
-                    <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                  </motion.button>
+                  <div className="flex gap-4">
+                    {project.website && (
+                      <motion.a
+                        href={project.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center text-lg font-medium text-black hover:text-gray-600 transition-colors duration-300"
+                        whileHover={{ x: 10 }}
+                        transition={{ duration: 0.3 }}
+                      >
+                        Visit Site
+                        <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                      </motion.a>
+                    )}
+                    {project.youtube && (
+                      <motion.a
+                        href={project.youtube}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center text-lg font-medium text-black hover:text-gray-600 transition-colors duration-300"
+                        whileHover={{ x: 10 }}
+                        transition={{ duration: 0.3 }}
+                      >
+                        Watch Demo
+                        <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                      </motion.a>
+                    )}
+                  </div>
                 </motion.div>
               </div>
             </motion.div>
