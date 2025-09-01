@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import styles from "./style.module.css";
+import { Project } from "../../data/projects";
 
 const scaleAnimation = {
   initial: { scale: 0, x: "-50%", y: "-50%" },
@@ -27,7 +28,7 @@ export default function Modal({
   projects,
 }: {
   modal: { active: boolean; index: number };
-  projects: { title: string; src: string; color: string }[];
+  projects: Project[];
 }) {
   const { active, index } = modal;
   const modalContainer = useRef(null);
@@ -91,7 +92,7 @@ export default function Modal({
       >
         <div style={{ top: index * -100 + "%" }} className={styles.modalSlider}>
           {projects.map((project, index) => {
-            const { src, color } = project;
+            const { image, color } = project;
 
             return (
               <div
@@ -100,10 +101,10 @@ export default function Modal({
                 key={`modal_${index}`}
               >
                 <Image
-                  src={`/images/${src}`}
+                  src={image || "/images/placeholder.svg"}
                   width={300}
                   height={0}
-                  alt="image"
+                  alt={project.name}
                 />
               </div>
             );
