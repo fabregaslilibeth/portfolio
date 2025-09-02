@@ -102,7 +102,7 @@ export default function Modal({
               >
                 <Image
                   src={image || "/images/placeholder.svg"}
-                  width={300}
+                  width={400}
                   height={0}
                   alt={project.name}
                 />
