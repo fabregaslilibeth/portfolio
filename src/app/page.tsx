@@ -11,6 +11,7 @@ import Menu from '../components/Menu';
 import ProjectsSection from '../components/ProjectsSection';
 import Footer from '../components/Footer';
 import ContactBadge from '../components/ContactBadge';
+import Loader from '../components/Loader';
 
 // Import CSS files
 import '../components/CustomCursor/style.css';
@@ -34,7 +35,6 @@ export default function Home() {
 
   return (
     <div className="relative">
-       
       {/* <CustomCursor /> */}
       <Menu />
       <BackgroundText />

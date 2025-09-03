@@ -15,6 +15,17 @@ export default function BackgroundText({ className = '' }: BackgroundTextProps) 
       gsap.registerPlugin(ScrollTrigger);
     }
 
+    // Hide all text elements initially
+    const titleElements = document.querySelectorAll('.title-view-inter');
+    const italicElements = document.querySelectorAll('.title-italic');
+    
+    // Set initial hidden state for all text elements
+    gsap.set([...titleElements, ...italicElements], {
+      opacity: 0,
+      filter: 'blur(50px)',
+      scale: 5
+    });
+
     // Handle initial scroll position to prevent text overlap
     const handleInitialScroll = () => {
       const scrollY = window.scrollY;
@@ -57,34 +68,47 @@ export default function BackgroundText({ className = '' }: BackgroundTextProps) 
       opacity: 0.3,
     });
 
-    // Text reveal animations
-    const titleElements = document.querySelectorAll('.title-view-inter');
-    titleElements.forEach((element, index) => {
-      gsap.fromTo(element,
-        { filter: 'blur(50px)', opacity: 0, scale: 5 },
-        {
-          filter: 'blur(0em)',
-          opacity: 1, 
-          scale: 1,
-          duration: 0.8,
-          delay: 0.5 + (index * 0.1),
-          ease: 'power2.out'
-        }
-      );
-    });
+    // Wait for page to fully load before running text reveal animations
+    const runTextAnimations = () => {
+      // Text reveal animations
+      titleElements.forEach((element, index) => {
+        gsap.fromTo(element,
+          { filter: 'blur(50px)', opacity: 0, scale: 5 },
+          {
+            filter: 'blur(0em)',
+            opacity: 1, 
+            scale: 1,
+            duration: 0.8,
+            delay: 0.5 + (index * 0.1),
+            ease: 'power2.out'
+          }
+        );
+      });
 
-    const italicElements = document.querySelectorAll('.title-italic');
-    italicElements.forEach((element, index) => {
-      gsap.fromTo(element,
-        { opacity: 0 },
-        {
-          opacity: 1,
-          duration: 1.5,
-          delay: 0.8 + (index * 0.1),
-          ease: 'power2.out'
-        }
-      );
-    });
+      italicElements.forEach((element, index) => {
+        gsap.fromTo(element,
+          { opacity: 0 },
+          {
+            opacity: 1,
+            duration: 1.5,
+            delay: 0.8 + (index * 0.1),
+            ease: 'power2.out'
+          }
+        );
+      });
+    };
+
+    // Check if page is already loaded, otherwise wait for load event
+    if (document.readyState === 'complete') {
+      runTextAnimations();
+    } else {
+      window.addEventListener('load', runTextAnimations);
+    }
+
+    // Cleanup function
+    return () => {
+      window.removeEventListener('load', runTextAnimations);
+    };
   }, []);
 
   return (
