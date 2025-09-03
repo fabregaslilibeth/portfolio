@@ -1,0 +1,129 @@
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.loader-content {
+  text-align: center;
+  color: white;
+}
+
+.loader-logo {
+  margin-bottom: 2rem;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.loader-logo-text {
+  font-size: 4rem;
+  font-weight: 700;
+  background: linear-gradient(45deg, #64ffda, #00bcd4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 30px rgba(100, 255, 218, 0.3);
+}
+
+.loader-progress {
+  margin-bottom: 1.5rem;
+}
+
+.loader-progress-bar {
+  width: 300px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+  margin: 0 auto 1rem;
+  position: relative;
+}
+
+.loader-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #64ffda, #00bcd4);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+  position: relative;
+}
+
+.loader-progress-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: shimmer 2s infinite;
+}
+
+.loader-progress-text {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #64ffda;
+  letter-spacing: 2px;
+}
+
+.loader-subtitle {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  animation: fadeInOut 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .loader-logo-text {
+    font-size: 3rem;
+  }
+  
+  .loader-progress-bar {
+    width: 250px;
+  }
+  
+  .loader-progress-text {
+    font-size: 1.25rem;
+  }
+  
+  .loader-subtitle {
+    font-size: 0.875rem;
+  }
+}
