@@ -1,23 +1,42 @@
 'use client';
-import styles from './page.module.css'
-import { useState } from 'react';
-import Project from '@/components/Project';
-import Modal from '@/components/Modal';
-import { projects } from '../../data/projects';
 
-export default function Works() {
-  const [modal, setModal] = useState({active: false, index: 0})
+import React, { useState, useEffect, useRef } from 'react';
+
+
+const Works = () => {
 
   return (
-  <main className={styles.main}>
-    <div className={styles.body}>
-      {
-        projects.map( (project, index) => {
-          return <Project index={index} project={project} setModal={setModal} key={index}/>
-        })
-      }
+    <div className="relative">
+
+      {/* Main Content */}
+      <main className="relative z-2">
+        <div className='min-h-screen flex items-center justify-center'>
+          <h1 className='text-[300px] font-bold'>Projects</h1>  
+        </div>        
+
+        {/* first section */}
+        <div className='min-h-screen grid grid-cols-3 gap-4'>
+          <div className='bg-amber-400 col-span-1 h-[800px]' style={{ marginTop: '300px' }}/>
+          <div className='bg-amber-400 col-span-1 h-[800px]' />
+          <div className='bg-amber-400 col-span-1 h-[800px]' style={{ marginTop: '1300px' }}/>
+        </div>
+
+         {/* second section */}
+         <div className='min-h-screen grid grid-cols-3 gap-4' style={{ marginTop: '100px' }}>
+          <div className='col-span-1'/>
+          <div className='bg-amber-400 col-span-2' />
+        </div>
+
+         {/* second section */}
+         <div className='min-h-screen grid grid-cols-2 gap-4' style={{ marginTop: '100px' }}>
+          <div className='col-span-1 h-[800px]'>
+            <div className='h-full w-2/3 bg-amber-400'></div>
+          </div>
+          <div className='bg-amber-400 col-span-1 h-[800px]' />
+        </div>
+      </main>
     </div>
-    <Modal modal={modal} projects={projects}/>
-  </main>
-  )
-}
+  );
+};
+
+export default Works;

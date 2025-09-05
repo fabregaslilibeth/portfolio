@@ -147,12 +147,15 @@ const AboutPage = () => {
         <div className="flex min-h-screen">
           {/* Left Side - Vertical Title */}
           <div className="flex-1 flex flex-col justify-center items-center p-8">
-            <div className={`${styles['writing-mode-vertical']} text-4xl font-light text-amber-400 mb-4 tracking-widest font-serif`}>
+            {/* <div className={`${styles['writing-mode-vertical']} text-4xl font-light text-amber-400 mb-4 tracking-widest font-serif`}>
               私について
+            </div> */}
+            <div className={`text-4xl font-light text-amber-400 mb-4 tracking-widest`}>
+              ABOUT ME
             </div>
-            <div className={`${styles['writing-mode-vertical']} text-lg text-white font-light tracking-wide`}>
+            {/* <div className={`${styles['writing-mode-vertical']} text-lg text-white font-light tracking-wide`}>
               (ABOUT)
-            </div>
+            </div> */}
           </div>
 
           {/* Right Side - Content */}
@@ -162,17 +165,17 @@ const AboutPage = () => {
                 I am Lilibeth, a full-stack developer with a passion for creating beautiful and functional web applications.
               </p>
               <p className="text-gray-300 text-base leading-relaxed mb-6 font-light tracking-wide">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                With over 5 years of experience in full-stack development, I have successfully delivered high-quality web applications for diverse clients ranging from sports organizations to financial institutions. My journey began with a background in accounting, which provided me with strong analytical skills and attention to detail that I now apply to software development.
               </p>
               <div className="mt-8">
                 <p className="text-gray-300 text-base leading-relaxed mb-2 font-light tracking-wide">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  I specialize in modern web technologies including React, Next.js, Laravel, and Vue.js.
                 </p>
                 <p className="text-gray-300 text-base leading-relaxed mb-2 font-light tracking-wide">
-                  Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  My expertise spans from frontend user experience design to backend API development and database architecture.
                 </p>
                 <p className="text-gray-300 text-base leading-relaxed mb-2 font-light tracking-wide">
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                  I am passionate about creating scalable, maintainable solutions that deliver exceptional user experiences.
                 </p>
               </div>
             </div>

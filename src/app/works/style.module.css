@@ -1,0 +1,93 @@
+/* Project Card Styles */
+.projectCard {
+  position: relative;
+  padding: 0 0 2rem 0;
+  transition: all 0.3s ease;
+}
+
+.projectCard:hover {
+  transform: translateY(-8px);
+}
+
+.imageContainer {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+}
+
+.projectImage {
+  transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  filter: grayscale(20%) contrast(1.1);
+}
+
+.projectCard:hover .projectImage {
+  transform: scale(1.05);
+  filter: grayscale(0%) contrast(1.2);
+}
+
+.overlay {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+  transition: all 0.3s ease;
+}
+
+.projectCard:hover .overlay {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
+}
+
+.hoverLine {
+  background: linear-gradient(90deg, transparent 0%, currentColor 50%, transparent 100%);
+  transition: width 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.projectCard {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.projectCard:nth-child(1) { animation-delay: 0.1s; }
+.projectCard:nth-child(2) { animation-delay: 0.2s; }
+.projectCard:nth-child(3) { animation-delay: 0.3s; }
+.projectCard:nth-child(4) { animation-delay: 0.4s; }
+.projectCard:nth-child(5) { animation-delay: 0.5s; }
+.projectCard:nth-child(6) { animation-delay: 0.6s; }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .projectCard {
+    padding: 0 0 1.5rem 0;
+  }
+  
+  .projectCard:hover {
+    transform: translateY(-4px);
+  }
+  
+  .projectImage {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .projectImage {
+    height: 180px;
+  }
+}
