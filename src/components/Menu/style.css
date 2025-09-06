@@ -30,14 +30,6 @@
   color: #666;
 }
 
-.works {
-  /* Positioned on top left */
-}
-
-.about {
-  /* Positioned on top right */
-}
-
 /* Responsive */
 @media (max-width: 768px) {
   .menu {

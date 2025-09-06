@@ -9,53 +9,72 @@ export default function Menu() {
   useEffect(() => {
     // Set initial hidden state
     gsap.set('.menu', {
-      y: '-200px',
+      y: '-100%',
       opacity: 0
     });
 
     let menuShown = false;
 
-    // Menu animation based on scrollY
+    // Menu animation based on about-section position
     const handleScroll = () => {
-      const scrollY = window.scrollY;
-      const triggerPosition = 400; // Adjust this value to control when menu appears
+      const aboutSection = document.querySelector('.about-section');
       
-      if (scrollY >= triggerPosition && !menuShown) {
-        menuShown = true;
-        gsap.to('.menu', {
-          y: '0%',
-          opacity: 1,
-          duration: 0.8,
-          ease: 'power2.out'
-        });
-      } else if (scrollY < triggerPosition && menuShown) {
-        menuShown = false;
-        gsap.to('.menu', {
-          y: '-200px',
-          opacity: 0,
-          duration: 0.8,
-          ease: 'power2.out'
-        });
+      if (aboutSection) {
+        const rect = aboutSection.getBoundingClientRect();
+        // Show menu when about-section reaches the top of viewport
+        const shouldShow = rect.top <= -600;
+        console.log(rect);
+        if (shouldShow && !menuShown) {
+          menuShown = true;
+          gsap.to('.menu', {
+            y: '0%',
+            opacity: 1,
+            duration: 0.8,
+            ease: 'power2.out'
+          });
+        } else if (!shouldShow && menuShown) {
+          menuShown = false;
+          gsap.to('.menu', {
+            y: '-100%',
+            opacity: 0,
+            duration: 0.8,
+            ease: 'power2.out'
+          });
+        }
       }
     };
 
-    // Add scroll listener
-    window.addEventListener('scroll', handleScroll);
+    // Add scroll listener with throttling for better performance
+    let ticking = false;
+    const throttledHandleScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          handleScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    // Check initial scroll position
+    handleScroll();
+
+    window.addEventListener('scroll', throttledHandleScroll, { passive: true });
 
     // Cleanup
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('scroll', throttledHandleScroll);
     };
   }, []);
 
   return (
     <nav className="menu">
-      <div className="menu-item works">
+      <div className="works">
         <a href="/works">
           <HoverTextReveal text="WORKS" />
         </a>
       </div>
-      <div className="menu-item about">
+      <div className="about">
         <a href="/about">
           <HoverTextReveal text="ABOUT" />
         </a>
