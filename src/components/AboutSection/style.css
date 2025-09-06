@@ -5,7 +5,20 @@
     justify-content: center;
     position: relative;
     z-index: 10;
-    margin-top: 400px;
+    margin-top: 700px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .about-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .about-section.hidden {
+    opacity: 0;
+    transform: translateY(50px);
   }
   
   .about-content {
@@ -27,6 +40,33 @@
   margin-bottom: 3rem;
 }
 
+.about-section.visible .menu-item {
+  animation: slideInUp 0.6s ease-out forwards;
+}
+
+.about-section.visible .menu-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.about-section.visible .menu-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.about-section.visible .menu-item:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .menu-item {
   color: white;
   text-decoration: none;
@@ -38,11 +78,13 @@
   transition: all 0.3s ease;
   position: relative;
   display: inline-block;
+  opacity: 0;
+  transform: translateY(30px);
 }
 
 .menu-item:hover {
   color: #f0f0f0;
-  transform: translateX(10px);
+  transform: translateX(10px) translateY(0);
 }
 
 .menu-item::before {

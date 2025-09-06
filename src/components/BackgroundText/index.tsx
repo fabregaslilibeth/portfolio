@@ -59,8 +59,8 @@ export default function BackgroundText({ className = '' }: BackgroundTextProps) 
     // Background text blur effect on scroll
     gsap.to('.background-text', {
       scrollTrigger: {
-        trigger: '.projects-section',
-        start: 'top top',
+        trigger: '.background-text',
+        start: 'bottom center',
         end: 'bottom center',
         scrub: true,
       },
